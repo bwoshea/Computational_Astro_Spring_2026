@@ -1,0 +1,87 @@
+\documentclass[10pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts,color, titling}
+ \usepackage{listings}
+
+\setlength{\droptitle}{-20mm} 
+
+\usepackage[colorlinks=true,linkcolor=red,urlcolor=blue]{hyperref}
+
+\title{Pre-class assignment \# 14}
+\author{Brian O'Shea, \\PHY-905-002, Computational Astrophysics and
+  Astrostatistics\\Spring 2021}
+ \date{} % leave blank to have no date
+
+\begin{document}
+ 
+\maketitle
+
+\vspace{-5mm}
+
+\noindent
+\textbf{This assignment is due the evening of Sunday March 14, 2021.}
+ Turn in all materials via GitHub.
+
+\vspace{5mm}
+
+\noindent
+\textbf{Reading:}
+
+\begin{enumerate}
+
+\item Chapter 7 (``Euler Equations: Theory'') of Mike Zingale's
+\href{http://bender.astro.sunysb.edu/hydro_by_example/CompHydroTutorial.pdf}{Computational
+Hydrodynamics Tutorial}, which you can find in the pre-class
+assignment for Day 8.  Focus on Sections 7.1 and 7.2, and ensure
+that you understand where each equation comes from using a ideal gas
+(constant $\gamma$) equation of state.  Skim Section 7.3 and make sure
+you get the general concept.
+
+\item
+\href{https://en.wikipedia.org/wiki/Rankine%E2%80%93Hugoniot_conditions}{Wikipedia
+page on the Rankine-Hugoniot jump conditions}.  This is a really
+useful resource for understanding how we derive the jump in conditions
+across shocks from both first principles and the Euler equations.  
+
+\end{enumerate}
+
+\noindent
+\textbf{Your assignment:}  Work through the derivations in Sections
+7.1 and 7.2 and make sure you understand the math, using an ideal gas
+law (constant $\gamma$) equation of state as needed.  Answer the
+following questions in \texttt{ANSWERS.md}, and be prepared to discuss
+those answers in class:
+
+\begin{enumerate}
+  
+\item Why might we want to use both the conserved form and primitive
+form of the Euler equations?  In other words, what might each set of
+equations potentially tell us?
+
+ \item How are the Euler equations similar to the linear advection
+equation and/or Burgers' equation, and how are they different?
+
+\item What's the point of all of the linear algebra in this
+chapter?  In other words, what does it tell you about the Euler
+equations and how they propagate information?
+
+\item What are the types of waves that are in the Riemann problem
+for the Euler equations?  How does your answer differ from Burgers'
+equation?  (And how does this relate to the previous question, about
+linear algebra?)
+
+\item What, if anything, do you want to know more about the Euler equations after
+working through this chapter?
+
+\item What are at least two questions that you have from the readings
+that you'd like us to address in class?
+
+\end{enumerate}
+
+
+\noindent \textbf{Handing it in:} Submit via GitHub as usual.  Include
+anything necessary, including code, plots, and 
+your answers to the questions about the readings (in the file
+\texttt{ANSWERS.md}) as part of your assignment.
+
+\end{document}

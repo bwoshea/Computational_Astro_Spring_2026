@@ -1,0 +1,206 @@
+\documentclass[10pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts,color, titling}
+ \usepackage{listings}
+
+\setlength{\droptitle}{-20mm} 
+
+\usepackage[colorlinks=true,linkcolor=red,urlcolor=blue]{hyperref}
+
+\title{Pre-class assignment \#5}
+\author{PHY-905-005\\Computational Astrophysics and
+  Astrostatistics\\Spring 2023}
+ \date{} % leave blank to have no date
+
+\begin{document}
+ 
+\maketitle
+
+\vspace{-5mm}
+
+\noindent
+\textbf{This assignment is due the evening of Wednesday January 25, 2023.}
+ Turn in your code and all materials via the GitHub Classroom.
+
+\vspace{5mm}
+
+\begin{center}
+\textit{``To err is human; to really foul things up requires
+a computer.''} \\-- Bill Vaughan (columnist) \footnote{This is not
+precisely the version that your professor first learned, but the
+language is more
+appropriate for polite company.}
+\end{center}
+
+\vspace{5mm}
+
+\noindent
+\textbf{Numerical Linear Algebra Reading:}
+
+\begin{enumerate}
+
+\item Sections 6.2-6.4 of \textit{Computational Physics}, by
+  M. Newman.  \textbf{NOTE:}  Section 6.3 is long and complex -- just
+  skim that to get the general idea, and focus on Sections 6.2 and 6.4!
+
+\item Section 5.4 of \textit{An Introduction to Computational Physics},
+  by T. Pang (optional; PDF provided)
+
+\item 
+  \href{https://docs.scipy.org/doc/numpy/reference/routines.linalg.html}{NumPy
+  linear algebra routines}  (reference)
+
+\item 
+  \href{https://docs.scipy.org/doc/scipy/reference/linalg.html}{SciPy
+  linear algebra routines}  (reference)
+
+\end{enumerate}
+
+
+\vspace{3mm}
+
+\noindent
+\textbf{Debugging Reading:}
+
+\begin{enumerate}
+
+\item ``Debugging truths'' (included PDF)
+
+\item \href{http://www.patriciashanahan.com/debug/}{Debugging
+    Strategy} - Patricia Shanahan, Association for Computing Machinery.
+  Note that if this website seems to be non-functional, you can look
+  at a saved version on the
+  \href{https://web.archive.org/web/20210502035235/http://www.patriciashanahan.com/debug/}{Internet Archive}
+
+\item Documentation for \href{https://docs.python.org/3/library/pdb.html}{pdb -- the
+    Python debugger}.  Also read this short but useful
+  \href{https://pythonconquerstheuniverse.wordpress.com/2009/09/10/debugging-in-python/}{pdb tutorial}
+
+\end{enumerate}
+
+\vspace{3mm}
+
+\noindent
+\textbf{Some potentially helpful debugging resources:}
+
+\begin{enumerate}
+
+\item A handy reference sheet of
+  \href{http://web.stanford.edu/class/physics91si/2013/handouts/Pdb_Commands.pdf}{pdb
+  commands}
+
+\item \href{http://www.pythontutor.com/}{Python Tutor}, a tool that
+  graphically visualizes the line-by-line execution of a piece of
+  code.
+
+\item 
+  \href{https://pypi.org/project/ipdb/}{ipdb}, the Python debugger for
+  \href{https://ipython.org/}{IPython}, which is a more feature-rich
+  Python interpreter 
+
+  \item
+  \href{https://jupyterlab.readthedocs.io/en/stable/user/debugger.html}{JupyterLab
+  Debugger} documentation for the
+\href{https://jupyterlab.readthedocs.io/en/stable/}{JupyterLab}
+notebook user interface.
+
+\item \href{https://pypi.org/project/pudb/}{pudb}, the full-screen,
+  console-based debugger for the true command line fanatic.
+
+\item
+  \href{https://code.visualstudio.com/docs/python/debugging}{VSCode
+    Python debugger}, the Python debugger module for
+  \href{https://code.visualstudio.com/}{Visual Studio Code} (which is
+  a really awesome and useful integrated development environment, or IDE)
+
+
+\end{enumerate}
+
+\vspace{5mm}
+
+
+\textbf{Note:} additional material is on the next page!
+
+\newpage
+
+\noindent
+\textbf{Coding assignment:}  
+\vspace{3mm}
+
+Consider the following pair of functions:
+
+\begin{equation}
+\mathrm{f_1(x,y) = x^2 e^{-(x^2+y^2)/4}}
+\end{equation}
+
+\noindent
+and
+
+\begin{equation}
+\mathrm{f_2(x,y) = 4 x^2 + 1.5 y^2}
+\end{equation}
+
+\noindent 
+which can be found in the file \texttt{func.py}.
+
+Implement the \textbf{multivariable Secant method} (not Newton's
+method - calculate the derivative numerically, modifying code you've
+written in the past!) to find the joint root
+of f$_1$ and f$_2$ (which can be found by inspection to be at
+$x=y=0$).  Choose a starting point that is near zero but not precisely
+at zero (say, $x=y=1$), and move progressively further away.  How does
+that impact convergence and number of iterations?  Compare this to the
+\href{https://docs.scipy.org/doc/scipy-0.18.1/reference/generated/scipy.optimize.root.html#scipy.optimize.root}{\texttt{root}}
+method in the
+\href{https://docs.scipy.org/doc/scipy-0.18.1/reference/optimize.html}{\texttt{scipy.optimize}}
+package.  How do your results compare, particularly as you experiment
+with different methods in \texttt{root}?
+
+\vspace{2mm}
+
+\noindent \textbf{Handing it in:} 
+Submit your \textit{easy-to-read and commented} code to the
+repository (using the class coding standard as a template).  Also, put any remaining questions that you might have
+about the linear algebra readings or this particular assignment in
+the file \texttt{ANSWERS.md}.
+
+\vspace{5mm}
+
+\noindent
+\textbf{Debugging assignment:}  
+
+\begin{enumerate}
+
+\item A simple but broken code has been included in the file
+  \texttt{string\_reversal.py}, with a Jupyter Notebook version in the
+  file \texttt{string\_reversal\_notebook.ipynb}.  Edit this code to add python break
+  points and then use python or
+  IPython at the command line, or the JupyterLab debugger in
+  JupyterLab,
+  to step through the code to identify the
+  broken piece of code (following the suggestions in the code's
+  comments as to what you should print out, where you should put break
+  points, etc.)  When you fix the code, what happens?
+
+\item Thinking about the two readings on debugging, what
+  ideas/suggestions seem the most useful for you?  Which ones seem
+  the hardest to implement in your day-to-day programming?  
+
+\item Do you have a favorite debugging tip or trick that wasn't in the
+  readings?  What about a favorite debugger that's part of an editor
+  or Integrated Development Environment (IDE)?  Please share it in \texttt{ANSWERS.md}.
+
+\item Do you have any additional questions, comments, or concerns
+  about debugging?   Please share it in \texttt{ANSWERS.md}.
+
+\end{enumerate}
+
+%\vspace{5mm}
+
+\noindent \textbf{Handing it in:} Include your modified code and
+your answers to the questions (in the file \texttt{ANSWERS.md})
+in your assignment.
+
+
+
+\end{document}

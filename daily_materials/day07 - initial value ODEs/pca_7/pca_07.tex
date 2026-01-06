@@ -1,0 +1,116 @@
+\documentclass[10pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts,color, titling}
+ \usepackage{listings}
+
+\setlength{\droptitle}{-20mm} 
+
+\usepackage[colorlinks=true,linkcolor=red,urlcolor=blue]{hyperref}
+
+\title{Pre-class assignment \#7}
+\author{PHY-905-005\\Computational Astrophysics and
+  Astrostatistics\\Spring 2023}
+ \date{} % leave blank to have no date
+
+\begin{document}
+ 
+\maketitle
+
+\vspace{-5mm}
+
+\noindent
+\textbf{This assignment is due the evening of Wednesday, February 1, 2023.}
+ Turn in your code
+and all materials via the GitHub Classroom.
+
+\vspace{5mm}
+
+\noindent
+\textbf{Reading:}
+
+\begin{enumerate}
+
+\item Methods of solving initial value ODEs: Sections 8.1-8.5 of
+  \textit{Computational Physics}, by Newman.   Note: you can skim
+  Sections 8.5.2-8.5.6, but try to get the general idea of why these
+  various methods exist!
+
+\item 
+  \href{https://en.wikipedia.org/wiki/Semi-implicit_Euler_method}{Wikipedia article
+    on the Euler-Cromer method}  
+
+\item 
+  \href{https://en.wikipedia.org/wiki/Midpoint_method}{Wikipedia article
+    on the midpoint method} 
+
+\item (Optional) Methods of solving initial value ODEs: Sections 4.1-4.4  of \textit{An Introduction to Computational Physics},
+  by T. Pang (PDF provided)
+
+
+\end{enumerate}
+
+%\vspace{5 mm}
+
+\noindent
+\textbf{Your assignment:}
+Consider the simple mass on a spring, acting in the absence of gravity
+so that the only force acting on it is a linear restoring force
+pointing toward its resting position:
+
+\begin{equation}
+F = -k x
+\end{equation}
+
+where F is force, k is a spring constant, and x is position.  The
+total energy of the spring is:
+
+\begin{equation}
+E = \frac{1}{2} k x^2 + \frac{1}{2}  m v^2
+\end{equation}
+
+where m is the mass of the object at the end of the spring and v is
+its velocity.  Assume that at $t=0$ the spring is at its resting
+position ($x=0$) with $v=1$.  The object on the spring as $m=1$ and
+the spring constant is $k=1$.  Analytically, we can easily derive
+the position and velocity of the object on the spring as a function of
+time:
+
+\begin{equation}
+x(t) = x_m \sin(\omega t)
+\end{equation}
+
+\begin{equation}
+v(t) = x_m \omega \cos(\omega t)
+\end{equation}
+
+with $\omega = (k/m)^{1/2} = 1$ and $x_m = 1$.
+Integrate the ODEs that describe this system from $t=0$ to $t=4\pi$
+using two different methods -- the Euler method and the
+leapfrog method (described in Sections 8.1 and 8.5.1 of Newman,
+respectively).  Use functions as appropriate, and also use the class
+coding standard!
+Use fixed timesteps of $\Delta t = 0.1 \pi$, $0.01 \pi$, and
+$0.001 \pi$.  Using \textbf{one graph per method}, plot the position as a
+function of time for the analytic solution and each of the three time
+steps, using different colors or symbols so you can clearly
+differentiate the time steps and adding a legend as appropriate.  Then, \textbf{on a single graph}, show
+how well energy is conserved by both methods for the three choices of
+time step between the starting time and $t = 4 \pi$.  You can do this
+by making a plot of relative change in energy, $\epsilon$, between the beginning ($e_0$)
+and end ($e_f$) of the simulation: 
+
+\begin{equation}
+\epsilon =
+\frac{|e_f - e_0|}{e_0}
+\end{equation}
+
+\textbf{Make sure to double-check that you're comparing the same times!}  If you
+don't take the same timesteps, and end up with the same actual time
+(due to accumulation of floating-point error) you might have slightly
+different answers.
+
+Do you see a difference in behavior between the two methods?  Record
+your observations, as well as any questions you have after doing the
+readings and this assignment, in the file \texttt{ANSWERS.md}.
+
+\end{document}

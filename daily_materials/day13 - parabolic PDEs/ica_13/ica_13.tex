@@ -1,0 +1,68 @@
+\documentclass[10pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts,color, titling,graphicx}
+ \usepackage{listings}
+
+\setlength{\droptitle}{-20mm} 
+
+\usepackage[colorlinks=true,linkcolor=red,urlcolor=blue]{hyperref}
+
+\title{In-class assignment \#13}
+\author{PHY-905-005\\Computational Astrophysics and
+  Astrostatistics\\Spring 2023}
+ \date{} % leave blank to have no date
+
+\begin{document}
+ 
+\maketitle
+
+\vspace{-5mm}
+
+
+\noindent \textbf{Instructions:} In today's class we are going to
+experiment with the backward-Euler implicit discretization of the 1D
+diffusion equation with constant constant of diffusivity in a
+\textit{finite-volume grid} and test it using the same Gaussian pulse
+as in the pre-class assignment (i.e., Equation 10.14 in Zingale with
+constants as in exercise 10.2).  The equation we're going to solve is:
+
+\begin{equation}
+\frac{\partial \phi}{\partial t} = k \frac{\partial^2 \phi}{\partial^2 x}
+\end{equation}
+
+\noindent Do the following:
+
+\begin{enumerate}
+
+\item Analytically calculate the matrix coefficients for a
+backward-Euler implicit discretization assuming (i) Dirichlet boundary
+conditions with $\phi_L = \phi_R = 1$ and (ii) homogeneous Neumann
+boundary conditions at both ends of the grid.  Compare with your group
+members to make sure you've
+done it correctly!
+
+\item Implement the backward-Euler solution for the Dirichlet boundary
+condition version using the matrix method for a grid of arbitrary size
+N$_{grid}$ and Courant factor C.  (Hint: can you recycle any code from
+a previous pre-class or in-class assignment?)
+
+\item Test your solution for a variety of values of the Courant factor
+(C) and grid resolution (N$_{grid}$), from $C < 1$ to $C \gg 1$ and
+grid sizes where the initial pulse is poorly resolved to extremely
+well resolved (N$_{grid} \simeq 10$ to N$_{grid} \gg 100$).  What combinations of N$_{grid}$ and C produce good
+results?  Poor results?  How large can C be and still reproduce the
+expected analytic solution for a given N$_{grid}$?
+
+\end{enumerate}
+
+\noindent 
+If you still have time after you're done with this, think about how
+you might implement this problem using the Crank-Nicholson method
+rather than backward-Euler.  How much would you have to modify your
+code to do this?
+
+\vspace{5mm}
+\noindent
+As per usual, submit your code, plots, etc. via GitHub!
+
+\end{document}

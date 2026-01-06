@@ -1,0 +1,3 @@
+IMF_1.dat has a list of masses from a stellar cluster with a Chabrier IMF and a slope of 2.3 on the massive end.  The total cluster mass is 1,000 Msun.  Only stars with masses greater than 2 solar masses are shown.  A couple of stars with masses above 10 Msun have been removed.
+
+IMF_2.dat has a list of masses from a stellar cluster with a Chabrier IMF and a slope of ***1.8*** on the massive end.  The total cluster mass is 3,000 Msun.  Only stars with masses greater than 2 solar masses are shown, and a couple of extremely large stars have been removed.

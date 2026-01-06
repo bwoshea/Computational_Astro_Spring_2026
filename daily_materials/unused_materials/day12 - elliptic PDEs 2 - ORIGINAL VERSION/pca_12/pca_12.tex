@@ -1,0 +1,74 @@
+\documentclass[10pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts,color, titling}
+ \usepackage{listings}
+
+\setlength{\droptitle}{-20mm} 
+
+\usepackage[colorlinks=true,linkcolor=red,urlcolor=blue]{hyperref}
+
+\title{Pre-class assignment \#12}
+\author{PHY-905-005\\Computational Astrophysics and
+  Astrostatistics\\Spring 2023}
+ \date{} % leave blank to have no date
+
+\begin{document}
+ 
+\maketitle
+
+\vspace{-5mm}
+
+\noindent
+\textbf{This assignment is due the evening of Tuesday Mar. 13, 2023.}
+ Turn in all materials via GitHub.
+
+\vspace{5mm}
+
+\noindent
+\textbf{Reading:}
+
+\begin{enumerate}
+
+\item Chapter 9 of Mike Zingale's
+  \href{http://bender.astro.sunysb.edu/hydro_by_example/CompHydroTutorial.pdf}{Computational
+    Hydrodynamics Tutorial}  (PDF in a prior pre-class assignment)
+
+\item Section 9.2 of \textit{Computational Physics}, by Newman.
+
+\end{enumerate}
+
+\noindent
+\textbf{Your assignment:}  
+
+\begin{enumerate}
+
+\item After reading the assigned sections from Newman and Zingale's
+notes, list at least three questions or points of confusion that you have in the file
+\texttt{ANSWERS.md}.
+
+\item Implement one of the relaxation methods described in Section 9.3
+of Zingale's notes to solve the 2D Poisson equation for an $N \times
+N$ grid of user-specified size, which can also accept an arbitrary
+density distribution in the grid.  Make sure to appropriately include
+boundary conditions, which adds two cells in each dimension.  Write
+the code in a modular way -- have a function that generates the grid,
+one that sets the density field in a user-specified way, one that
+implements the boundary conditions, one that does the iteration, and
+one that measures the residual error (as defined by Equation 9.38 of
+Zingale).  Test to make sure that your solver is working correctly by
+inserting a single point-mass at the center (i.e., density in a single
+cell), and plot the residual, L$_2$, and L$_\infty$ norms as a
+function of iteration (measure L$_2$ and L$_\infty$ vs. the analytic
+solution for a point mass).
+%\textbf{We will be using this in class,
+%so make sure that your code works!}
+
+\end{enumerate}
+
+\vspace{5mm}
+
+\noindent \textbf{Handing it in:} Include your code, your plots, and
+your answers to the questions about (in the file \texttt{ANSWERS.md})
+in your assignment.
+
+\end{document}

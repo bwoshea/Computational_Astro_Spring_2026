@@ -1,0 +1,95 @@
+\documentclass[10pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts,color, titling,graphicx}
+ \usepackage{listings}
+
+\setlength{\droptitle}{-20mm} 
+
+\usepackage[colorlinks=true,linkcolor=red,urlcolor=blue]{hyperref}
+
+\title{In-class assignment \#27}
+\author{PHY-905-002, Computational Astrophysics and
+  Astrostatistics\\Fall 2018}
+ \date{} % leave blank to have no date
+
+\begin{document}
+ 
+\maketitle
+
+\vspace{-5mm}
+
+
+\noindent \textbf{Instructions:}   We're going to spend two days
+working through some of
+\href{https://staff.washington.edu/jakevdp/}{Jake VanderPlas'}
+tutorials on
+\href{https://en.wikipedia.org/wiki/Machine\_learning}{Machine
+Learning}.  Jake is one of the authors of the website
+\href{http://www.astroml.org/}{AstroML: Machine Learning and Data
+Mining for Astronomy} as well as a very good
+\href{https://www.amazon.com/Statistics-Mining-Machine-Learning-Astronomy/dp/0691151687/}{textbook
+on the same subject}, and also the author of the
+\href{http://shop.oreilly.com/product/0636920034919.do}{Python Data
+Science Handbook}.  These tutorials use the
+\href{http://scikit-learn.org/stable/}{\texttt{scikit-learn}} package, which is
+a set of open-source tools for data mining and data analysis.
+
+Before we do anything else, download Jake's
+\href{https://github.com/jakevdp/sklearn\_tutorial}{scikit-learn
+  tutorial}\footnote{\texttt{git clone
+  https://github.com/jakevdp/sklearn\_tutorial.git}} and make sure
+that you have the correct packages installed by running the notebook
+\texttt{01-Preliminaries.ipynb}.  You will probably have to install
+the \href{https://seaborn.pydata.org/}{Seaborn} visualization library,
+which is based on matplotlib and useful for making pretty statistical
+graphs.  You can do this by typing ``\texttt{pip install seaborn}'',
+and you will probably have to restart your Jupyter Notebook
+server after you do so to have access to Seaborn.
+
+\vspace{5mm}
+
+\noindent
+\textbf{Useful machine learning resources:}
+
+\begin{itemize}
+
+\item \href{http://www.astroml.org/}{AstroML: Machine Learning and Data
+Mining for Astronomy} website -- lots of helpful resources and tutorials!
+
+\item \href{http://scikit-learn.org/stable/}{\texttt{scikit-learn}}
+  website -- broadly used machine learning toolkit; lots of resources.
+
+\item Book:
+  \href{https://www.amazon.com/Statistics-Mining-Machine-Learning-Astronomy/dp/0691151687/}{Statistics,
+    Data Mining, and Machine Learning in Astronomy: A Practical Python
+    Guide for the Analysis of Survey Data} by Ivezic et al.
+
+\item Book: \href{http://shop.oreilly.com/product/0636920034919.do}{Python Data
+Science Handbook} by Jake VanderPlas.
+(Also download \href{https://github.com/jakevdp/PythonDataScienceHandbook}{the
+  Jupyter Handbook version of the entire book, c/o Jake V.})
+
+\item A Coursera
+  \href{https://www.coursera.org/learn/machine-learning}{course on
+    machine learning}, taught by
+  \href{http://www.andrewng.org/}{Andrew Ng} of Stanford.  This course
+  was heavily recommended to me by my CMSE colleagues whose expertise
+  is machine learning.
+
+\item
+  \href{https://github.com/LocalGroupAstrostatistics2015}{Astronomical
+    Machine
+    Learning Tutorial} from the 2015 \href{http://dept.astro.lsa.umich.edu/lgastrostatistics/}{Local Group
+    Astrostatistics workshop} at the University of Michigan.  (This is
+less complete than the other references listed here, but has the
+advantage of brevity.)
+
+\item \href{https://www.lsstcorporation.org/fellowship\_program}{LSST
+    Data Science Fellowship} -- A two-year fellowship that is open to grad students; you can apply
+  for this next year!  Even if you don't do the fellowship the
+  \href{https://github.com/LSSTC-DSFP/LSSTC-DSFP-Sessions}{training
+    session materials are available on GitHub}.
+
+\end{itemize}
+
+\end{document}

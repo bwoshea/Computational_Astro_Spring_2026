@@ -1,0 +1,75 @@
+\documentclass[10pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts,color, titling}
+ \usepackage{listings}
+
+\setlength{\droptitle}{-20mm} 
+
+\usepackage[colorlinks=true,linkcolor=red,urlcolor=blue]{hyperref}
+
+\title{In-class assignment \# 2}
+\author{Brian O'Shea, \\PHY-905-005, Computational Astrophysics and
+  Astrostatistics\\Spring 2023}
+ \date{} % leave blank to have no date
+
+\begin{document}
+ 
+\maketitle
+
+\vspace{-5mm}
+
+\noindent
+\textbf{Note:} Before you get started with writing code, read the
+instructions below and \textbf{make a prediction for the plot that you think
+you're going to see}  Write that down in the file called
+\texttt{ANSWERS.md} and then commit and push those changes to the repository.
+
+\vspace{5mm}
+
+\noindent 
+\textbf{Instructions:} Implement the two-point, three-point,
+and five-point formulae for numerical differentiation (Newman
+equations 5.90 and
+5.107, and Table 5.1; alternately, Pang equations
+3.4, 3.6, and 3.9) in a single function, using a function argument to
+decide which one you're going to use.  Have the arguments to the
+function be (1) the point X where you are interested in calculating a
+derivative,
+ (2) a function f(x) whose derivative you wish to calculate
+at point X (specifically, a software function that returns the value
+of a mathematical expression!), 
+(3) the grid spacing $\Delta x$, and (4) a flag showing which of
+the three methods of estimating the derivative you wish to use.
+Invent a somewhat complex mathematical function of your own choosing
+that has a non-zero analytic first derivative that you can calculate, and use that to
+verify the correctness of your implementations.
+
+Then, at a point X and initial grid spacing $h_0$ of your choosing,
+calculate the fractional error of each of these approximations for a
+variety of grid spacings $h(N) = h_0 / 10^N$, $N=0, 1, 2, ..., 20$ (or
+even higher).  Recall that the fractional error, $\epsilon$, is
+defined as $\epsilon_N = \frac{|f'(X)_{num,N} -
+f'(X)_{an}|}{|f'(X)_{an}|}$, where $f'(X)_{an}$ is the analytic
+solution to the derivative at a point X and $f'(X)^N_{num}$ is the
+numerical solution to the derivative using an interval size $h(N)$.
+Plot the fractional error for each of the three numerical derivatives as a
+function of grid spacing.  How do they behave?  Is this what you
+expected?  Make sure to describe this in \texttt{ANSWERS.md}.
+
+Finally, compare the results to your predictions.  Do they make sense?
+Why do you think that you see this outcome?
+
+\textbf{If you have time} and are inclined to do so, try to duplicate
+the results from your own code using
+\href{https://docs.scipy.org/doc/scipy/reference/generated/scipy.misc.derivative.html}{scipy.misc.derivative}.
+Do you get the same answer?
+
+\vspace{5mm}
+
+\noindent 
+\textbf{What to turn in:} Turn in \texttt{ANSWERS.md}, any
+source code you wrote, any plots you created (and the scripts you used
+to create them).  \textbf{Do not} turn in object files or
+executables!
+
+\end{document}

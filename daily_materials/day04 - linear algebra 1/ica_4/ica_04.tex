@@ -1,0 +1,49 @@
+\documentclass[10pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts,color, titling,graphicx}
+ \usepackage{listings}
+
+\setlength{\droptitle}{-20mm} 
+
+\usepackage[colorlinks=true,linkcolor=red,urlcolor=blue]{hyperref}
+
+\title{In-class assignment \#4}
+\author{PHY-905-005\\Computational Astrophysics and
+  Astrostatistics\\Spring 2023}
+ \date{} % leave blank to have no date
+
+\begin{document}
+ 
+\maketitle
+
+\vspace{-5mm}
+
+
+\noindent \textbf{Instructions:}   Consider the circuit diagram shown
+below.  Assuming $V_0 = 100$~V, $R_0 = 100~\Omega$, $R1 = R2 =
+50~\Omega$, and $R_3 = 75~\Omega$, use Kirchoff's current and voltage
+laws to create a set of linear equations that you can solve
+numerically to determine the currents going through each resistor.  Modify the Gaussian Elimination code you wrote for your
+pre-class assignment to solve a system of linear equations using
+backward substitution, and verify analytically that you have obtained
+the correct answer.  Also verify it using the appropriate SciPy linear
+algebra routine, which should be very easy to do.  Upload your code when you're done!
+
+\vspace{10mm}
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.75\textwidth]{circuit.pdf}
+  \caption{Simple circuit diagram.  Totally not an image of something
+  I wrote on a piece of paper and then took a picture of with my phone.}
+\end{figure}
+
+\vspace{5mm}
+\noindent
+\textbf{If you finish the problem listed above relatively quickly,}
+try to implement the algorithm for LU decomposition described in
+Section 6.1.4 of Newman so that you can calculate currents for an
+arbitrary input voltage, $V_0$, and verify analytically that this
+works.  Upload this code as well, in a separate file!
+
+\end{document}

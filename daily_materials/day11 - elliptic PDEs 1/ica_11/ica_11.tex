@@ -1,0 +1,45 @@
+\documentclass[10pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts,color, titling}
+ \usepackage{listings}
+
+\setlength{\droptitle}{-20mm} 
+
+\usepackage[colorlinks=true,linkcolor=red,urlcolor=blue]{hyperref}
+
+\title{In-class assignment \#11}
+\author{PHY-905-005\\Computational Astrophysics and
+  Astrostatistics\\Spring 2023}
+ \date{} % leave blank to have no date
+
+\begin{document}
+ 
+\maketitle
+
+
+\vspace{-5mm}
+
+\noindent \textbf{Instructions:} Solve the same problem from the
+pre-class assignment (the distortion of a bench due to a person
+sitting on it, as described in equations 7.64 and 7.67 of Pang) using
+the relaxation method (Section 7.5 of Pang).  For boundary conditions,
+try both the the Dirichlet (set functional values) and Neumann (first
+derivative) methods.
+ Pick a variety of different initial guesses for $u(x)$ (A
+good first guess is $u(x) = 0$ everywhere, but be creative) and see
+how your estimate for $u(x)$ and the residual change for each
+iteration, assuming a desired tolerance of $10^{-4}$.  By how much
+does the number of iterations vary depending on your initial guess for
+$u(x)$?
+
+% REMOVED - WE DON'T GET TO THIS UNTIL THE NEXT DAY OF CLASS!xs
+%If you implement Jacobi iteration vs. Gauss-Seidel iteration,
+%does that affect your convergence rate to the desired tolerance?
+
+\vspace{5mm}
+
+\noindent \textbf{Handing it in:}   Turn in all materials via GitHub.
+Include your code, plots, and anything else that you used to complete
+the assignment!
+
+\end{document}

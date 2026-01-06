@@ -1,0 +1,234 @@
+\documentclass[10pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts,color, titling}
+ \usepackage{listings}
+\usepackage{gensymb}
+
+\setlength{\droptitle}{-20mm} 
+
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+
+\title{Homework \# 4}
+\author{PHY-905-005\\Computational Astrophysics and
+  Astrostatistics\\Spring 2023}
+ \date{} % leave blank to have no date
+
+\begin{document}
+ 
+\maketitle
+
+
+\vspace{-5mm}
+
+\centerline{ {\large
+\textbf{This assignment is due by 11:59 p.m. on Friday May 5,
+  2023.} } }
+
+\vspace{5mm}
+
+\noindent
+\textbf{Instructions:}
+Turn in all materials via GitHub.  Include your code, plots, and
+answers to any questions asked in your assignment.  Your code must
+adhere to the class coding standards, use text files rather than
+Jupyter notebooks, and pass a PyLint test with an acceptably high score.
+The solutions to individual parts of the
+assignment should be saved in separate, clearly-named subdirectories
+named \texttt{part\_1}, \texttt{part\_2}, etc.  Plots should have
+easily readable and logical axis labels and titles, and the source
+code and data used to generate the plots should be included.
+Questions should be answered in a file in each subdirectory named
+\texttt{ANSWERS.md} or in a \LaTeX-created PDF document of a similar
+name (e.g., \texttt{ANSWERS.pdf}).
+
+
+\vspace{5mm}
+
+\noindent {\large\textbf{Part 1:}}  The galaxy
+\href{https://en.wikipedia.org/wiki/Luminosity_function_(astronomy)}{luminosity
+function} is a measure of the number of galaxies per luminosity (or
+magnitude) interval, and its behavior over time and in different
+galactic environments is an important probe of the astrophysics of
+galaxy evolution.
+
+The galaxy luminosity function is typically described as a \href{https://ui.adsabs.harvard.edu/abs/1976ApJ...203..297S}{Schechter luminosity function}, which takes the form
+
+\begin{equation}
+n(L)dL = \phi^* \big(\frac{L}{L^*}\big)^\alpha e^{-L/L^*}\frac{dL}{L^*}
+\end{equation}
+
+where n(L) is the number density of galaxies at a given
+lumosity L, $\alpha$ is the slope of the power law,  L$^*$ (typically pronounced ``L star'') is a characteristic
+luminosity where the power-law component of the function cuts off, and
+$\phi^*$ is a normalization parameter with units of (typically comoving) number density.
+Alternately, this equation can be written in terms of
+\href{https://en.wikipedia.org/wiki/Magnitude_(astronomy)}{magnitudes}\footnote{A
+unitless, logarithmic measurement of brightness of objects that is used in
+astronomy.  Its invention predates telescopes and its continued usage is
+traditional but difficult to justify in the 21st century, not unlike the CGS unit
+system.}:
+
+\begin{equation}
+n(M)dM = (0.4~\mathrm{ln}(10))\phi^* (10^{0.4(M^*-M)})^{\alpha+1}e^{-10^{0.4(M^*-M)}}dM
+\end{equation}
+
+Typical measurements for the constants in this equation in
+low-redshift field galaxies\footnote{``Field galaxies'' mean galaxies
+that are in a typical cosmic environment; galaxies in high-density
+environments (such as clusters) or low-density environments (such as
+in void walls) typically have quantitatively different luminosity functions, though the
+functional form is generally the same.} are $\alpha\simeq-1.25$,
+$\phi^*\simeq1.2\times10^{-2}$~h$^3$~Mpc$^{-3}$ (with h being the Hubble
+parameter in units of 100 km/s/Mpc), and M$^* \simeq -23$.
+
+\textbf{In this problem we are going to experiment with the significance of
+assumptions about Bayesian priors, the amount of data, the magnitude of errors in data,
+and the impact of these things on the resulting model fits.}  The file
+\texttt{luminosity\_schechter.py} contains two importable functions
+that have detailed doc strings explaining their inputs and outputs.
+One, \texttt{luminosity\_function()}, creates a synthetic ``observed''
+luminosity function where you can control the Schechter function model
+parameters ($\alpha$, $\phi^*$, and M$^*$), number of bins, and
+magnitude of the errors for each bin, and get back numpy arrays of
+\href{https://en.wikipedia.org/wiki/Absolute_magnitude}{absolute
+  magnitude} bins,
+comoving number density, and errors in number density.  The included
+figure \texttt{galaxy\_luminosity\_function.png} has an example of the
+output from this function. The second function,
+\texttt{schechter\_function()}, takes in a numpy array of magnitude
+bins and values for the Schechter function model parameters and
+returns number densities for each bin.
+
+Using the Bayesian Markov Chain Monte Carlo code we wrote in class as
+your starting point, conduct the following experiments and report the
+outcome in an appropriately-named file.  Use a reasonable likelihood
+function for comparing your model and data (reduced chi-square is
+fine) and create a function describing the Bayesian prior distribution
+for your input model parameters $\alpha$,~$\phi^*$, and M$^*$,
+assuming a lognormal distribution for each model parameter with a
+user-specified mean and variance.
+
+\newpage
+\noindent
+The experiments you will conduct are:
+
+\begin{enumerate}
+
+  \item Generate an ``observed'' luminosity function using the default
+number of magnitude bins ($n=10$), model parameters, and error levels.
+For your priors, assume that the mean is the ``correct'' model parameter (i.e.,
+the ones that generated the input dataset) and choose a large variance for each model
+parameter ( a value of roughly 1 for $\alpha$; a factor of a few for $\phi^*$; several magnitudes for
+M$^*$).  Use your MCMC code to find
+the ``best-fit'' model parameters and their probability distribution
+functions, and create a figure or figures showing (1) the posterior
+distributions for the model parameters and the ``triangle plot''
+showing their relationships and (2) a plot of the ``observed''
+luminosity function overplotted with the model your MCMC code declares
+is the most likely.  Briefly comment on the results -- do the things
+that you observe make sense to you?  This is your ``fiducial'' result
+and model parameters -- i.e., the result we're going to use as a basis
+of comparison for most of the remaining experiments.
+
+\item Repeat experiment \#1, but increase the number of model bins
+  from 10 to 20, and then try decreasing it to 5 (keeping all other
+  parameters the same as the fiducial model).  As you increase the number of
+  model bins, how does it affect the posterior distributions for your
+  model parameters compared to the fiducial result?  Why do you think
+  that is?
+
+\item Repeat experiment \#1 with the fiducial number of bins, but now
+try decreasing and increasing the errors in the ``observed''
+luminosity function by a factor of a few.  What happens to the
+posterior distribution, and why do you think that is?
+
+\item Repeat experiment \#1 with the fiducial number of bins and error
+level, but now modify your prior distributions.  Set the mean values
+of your priors to be far away from the ``correct'' model and
+significantly reduce the magnitude of your variance -- the goal is to
+ensure that the correct model is now several standard deviations away
+from the mean of your prior.  How does this affect the posterior
+distributions, and why do you think that is?  And, if you modify your
+prior distribution so that it is closer to the correct model by
+adjusting the mean value, how does the posterior distribution change? 
+
+\item Repeat the previous experiment (with modified priors), but now
+  try changing both the number of model bins and the error level.
+  Qualitatively, how do your posterior distributions behave as you
+  change these properties of your ``observed'' dataset?
+
+\item In the document describing your answers, reflect on the sum
+total of what you've observed as you experiment with the various
+components of Bayesian MCMC model fitting.  What intuition have you
+developed about the use of Bayesian priors in Markov Chain Monte
+Carlo?  In particular, comment on the relationships between the amount
+of observed data, the magnitude of the errors in observed data, your
+assumptions about the prior distribution, and the measured posterior
+distribution.
+  
+\end{enumerate}
+
+
+%\newpage
+
+\vspace{5mm}
+\noindent {\large\textbf{Part 2:}} We're going to examine exoplanet
+data obtained using two different methods -- by the transit method
+(using, e.g., the \href{https://kepler.nasa.gov/}{Kepler mission}),
+and by using radial velocity measurements of the central star.  For
+the transit method we will use the star
+\href{http://keplerebs.villanova.edu/overview/?k=8554498}{KIC-8554498}
+(in the data file \texttt{KIC-8554498\_lightcurve.dat}, which contains
+the relative flux of the star as a function of time since the start of
+the Kepler mission) and for radial velocity measurements we will use
+\href{http://exoplanet.eu/catalog/51_peg_b/}{51-Pegasi} (in the data
+file \texttt{51\_Pegasi\_RadVel.dat}, which contains the Julian date,
+the star's radial velocity, and the error in the radial velocity).
+
+\vspace{2mm}
+\noindent
+For each of the two files, do the following:
+
+\begin{enumerate}
+
+\item Plot the light curve or radial velocity data for each of the two
+planetary systems, zooming in as necessary to show interesting
+features.  Can you see by eye the evidence of exoplanets in the data?
+If so, what do you see?
+
+\item Use the SciPy or Astropy Lomb-Scargle periodogram routines to identify
+the orbital periods of the exoplanets orbiting these stars.  Include
+your plots, zooming in on regions as necessary.  Note any interesting
+features in the periodogram.  Are the results consistent with the
+expected periods of the planets orbiting 51 Peg ($P \simeq 4.23$~days)
+and KIC-8554498 ($P \simeq 4.78$~days)?  What features do you see in
+these graphs, and what do you hypothesize causes them?
+
+\end{enumerate}
+
+\vspace{5mm}
+
+\noindent {\large\textbf{Part 3:}} We're going to continue using the
+data for
+\href{https://en.wikipedia.org/wiki/51\_Pegasi\_b}{51-Pegasi}, which
+was the \href{http://adsabs.harvard.edu/abs/1995Natur.378..355M}{first
+  confirmed discovery} of a planet outside of our own solar system.
+Assuming a period of $P = 4.230785$~days, created a stacked radial
+velocity curve that folds all of the orbital data you have been
+provided into a single period.  Then, create a model for the observed
+radial velocity curve of a single planet in a circular orbit around a
+star (you may wish to
+\href{https://en.wikipedia.org/wiki/Doppler\_spectroscopy}{start
+  here}), and use a Bayesian Markov Chain Monte Carlo algorithm to
+determine the planet's mass (really $M \sin(i)$), the semi-major axis
+of the orbit, and the orbital period.  Take the mass of 51 Pegasi as a
+given (M$_* = 1.06$~M$_\odot$), and assume reasonably broad priors for
+the other quantities.  Use a reduced sum of squares to estimate the
+agreement between the model and the data.  Using the data and the
+errors provided, can you reproduce the values for the period,
+semi-major axis of the orbit, and mass of the planet?  Show 2D
+histograms for various combinations of the unknowns, and identify any
+degeneracies between model parameters that may exist.
+
+\end{document}
+

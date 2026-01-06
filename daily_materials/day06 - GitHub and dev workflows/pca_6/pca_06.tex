@@ -1,0 +1,231 @@
+\documentclass[10pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts,color, titling}
+ \usepackage{listings}
+
+\setlength{\droptitle}{-20mm} 
+
+\usepackage[colorlinks=true,linkcolor=red,urlcolor=blue]{hyperref}
+
+\title{Pre-class assignment \#6}
+\author{PHY-905-005\\Computational Astrophysics and
+  Astrostatistics\\Spring 2023}
+ \date{} % leave blank to have no date
+
+\begin{document}
+ 
+\maketitle
+
+\vspace{-5mm}
+
+\noindent
+\textbf{This assignment is due the evening of Monday January 30, 2023.}
+ Turn in all materials via the GitHub Classroom.
+
+\vspace{5mm}
+
+\noindent
+\textbf{The overall purpose of this pre-class assignment} is to help
+you think through the development of open source scientific software
+-- in particular, the techniques and tools that are considered to be
+``best practices'' by researchers who develop software that is likely
+to be used for a long time, and possibly by other researchers.  While
+you may not use all of these tools and practices right now, it's
+important for you to know about them, and to have some familiarity
+with their use for when it becomes relevant!
+
+Note that there are quite a few readings in this pre-class assignment.
+Most are quite short, but for the longer ones I want you to read
+quickly and try to take away the key points.  And, as you're reading,
+make notes on those key points and also about how you might use the
+things you're reading about in your own work!
+
+\vspace{5mm}
+
+\noindent
+\textbf{Readings about software development and workflows:}
+
+\begin{enumerate}
+
+\item Look at the E-CAM software library's
+  \href{https://e-cam.readthedocs.io/en/latest/best-practices/index.html#best-practices}{Scientific
+  Software Best Practices} -- in particular, the ``General Programming
+Guidelines'' section.  \textbf{Read this carefully!}
+
+\item Revisit the Git tutorial (which you looked at prior to the first
+  day of class):
+  \url{http://rogerdudler.github.io/git-guide/}
+
+\item
+  \href{https://www.pluralsight.com/blog/software-development/the-definitive-guide-to-forks-and-branches-in-git}{The
+  Definitive Guide to Forks and Branches in Git}  (blog post)
+
+\item \href{https://docs.github.com/en/pull-requests}{GitHub
+    documentation on Pull Requests} -- make sure to read the ``Getting Started,''
+  ``Create \& Delete Branches,'' ``About Pull Requests,'' ``Creating a
+  pull request,''  ``Creating a PR from a fork,'' ``About merge
+  conflicts,'' and ``Resolve merge conflicts'' sub-pages.  Browse the
+  rest if you have time.
+
+\item \href{https://docs.github.com/en/issues}{GitHub documentation on
+  issues} -- make sure to read the ``About issues,'' ``Create an
+Issue,'' ``Link PR to issue,'' and ``Assign issues \& PRs''
+sub-pages.  Browse the rest if you have time.
+
+\end{enumerate}
+
+
+\vspace{5mm}
+
+\noindent
+\textbf{Reading about software testing:}
+
+\begin{enumerate}
+
+\item
+  \href{https://www.atlassian.com/continuous-delivery/software-testing/types-of-software-testing}{Types
+  of software testing}.  
+
+\item
+  \href{https://en.wikipedia.org/wiki/Continuous_integration}{Wikipedia
+  article on continuous integration}  (as a software development process)
+
+
+\item \href{https://docs.github.com/en/actions}{GitHub Actions documentation}
+
+\item \href{https://docs.pytest.org/en/7.2.x/}{PyTest documentation}
+
+\item \href{https://docs.python.org/3/library/unittest.html}{unittest}
+  Python unit testing framework  (reference -- look at this in
+  comparison to PyTest)
+
+  \end{enumerate}
+
+
+  \vspace{5mm}
+
+\noindent
+\textbf{Reading about software style, linting, and static analysis:}
+
+\begin{enumerate}
+
+\item \href{https://peps.python.org/pep-0008/}{Python PEP 8 Style
+    Guide} (reference - only skim this to get the main point!)
+
+\item \href{https://pypi.org/project/pycodestyle/}{Pycodestyle documentation}
+  
+\item \href{https://en.wikipedia.org/wiki/Lint_(software)}{Wikipedia
+    article on software linting}
+
+\item
+  \href{https://en.wikipedia.org/wiki/Static_program_analysis}{Wikipedia
+  article on static program analysis}
+
+\item \href{https://pylint.readthedocs.io/en/latest/index.html}{Pylint
+  documentation}
+
+ \end{enumerate}
+
+
+\vspace{5mm}
+
+\noindent
+\textbf{Your assignment:}  
+%\vspace{3mm}
+
+\begin{enumerate}
+
+  \item For each of the sets of readings, summarize your key
+    takeaways and remaining questions in \texttt{ANSWERS.md}.  What
+    points that were made resonate with you?  What tools seem like
+    they might be particularly useful?
+  
+  \item Make sure that you can do the following things with git and
+  GitHub, by working through the Git tutorial and GitHub documents
+  linked to above.  In \texttt{ANSWERS.md}, make notes about what went well and
+  what you struggled with.  
+
+  \begin{enumerate}
+
+  \item Create an empty repository on GitHub.
+  \item Clone it to your local computer.
+  \item Add some code to it (from a previous pre- or in-class
+    assignment), commit the new code, and push the changes to GitHub.
+  \item Make a local branch (on your local computer), make changes to
+    the code in
+    that branch, and push those changes to GitHub.
+  \item Merge the changes from your branch into your master branch and
+    delete the old branch.  Push those changes to GitHub.
+  \end{enumerate}
+
+
+
+  \item Consider the code that you used for the in-class assignment on
+    debugging.  What kind of testing might you implement to make sure
+    that the bugs you found don't occur in that code again?  How might
+    you go about using either PyTest or unittest?  How might you
+    create an integration test for this code?
+
+  \item Find a relatively complicated piece of Python code that you've
+    written in the past and run both \texttt{Pycodestyle} and
+    \texttt{Pylint} on it.  If you are using the Anaconda python
+    distribution these should already be installed; if not, you will
+    have to install them at the command line with ``\texttt{pip
+      install pycodestyle}'' and ``\texttt{pip install pylint}'',
+    respetively.  Note that you cannot always run these on Jupyter Notebooks
+    -- you should try running it on standalone Pythone code.  Make
+    notes in \texttt{ANSWERS.md} about the similarities and
+    differences between the two tools.
+
+  \item For the piece of code described above, what do you have to do
+    in order to get rid of all of the errors produced by
+    \texttt{Pylint}?  Does it seem to produce better code?
+    (And what does ``better'' mean to you?)
+
+  \item Finally, \textbf{pick one} of the following astrophysics community
+    codes, look at its GitHub project page, and try to identify which of the
+    best practices described in the readings are (or aren't!)
+    implemented.  Make sure to look at the Issues, Pull Requests, and
+    Actions tabs for the one you've chosen and see what's going on
+    there.  Also look at the documentation and see what seems
+    particularly useful to a new user!
+    Make some notes in
+    \texttt{ANSWERS.md} about your findings.
+
+    \begin{enumerate}
+      \item \href{https://github.com/yt-project/yt}{YT GitHub}
+        (\href{https://yt-project.org/}{Project web page};
+        \href{http://yt-project.org/docs/dev/}{documentation}).  YT is
+        a widely-used data analysis and visualization tool.
+      \item \href{https://github.com/enzo-project/enzo-dev}{Enzo GitHub}
+        (\href{https://enzo-project.org/}{Project web page};
+        \href{https://enzo.readthedocs.io/en/latest/}{documentation}).
+        Enzo is a multiphysics self-gravitating fluid dynamics code
+        that is primarily used for cosmological structure formation
+        and star formation.  
+      \item \href{https://github.com/tardis-sn/tardis/}{Tardis
+          GitHub}.  Tardis is a a radiative transfer spectral
+        synthesis code used to model supernova ejecta.
+        (\href{https://tardis-sn.github.io/tardis/}{Project web page}; \href{https://tardis-sn.github.io/tardis/}{documentation})
+      \item
+        \href{https://github.com/parthenon-hpc-lab/parthenon}{Parthenon
+        GitHub}
+      (\href{https://github.com/parthenon-hpc-lab/parthenon/tree/develop/docs}{documentation}).
+      Parthenon is a GPU-optimized adaptive mesh framework based off of the
+      Athena++ code, which serves as the basis for several very fast
+      and scalable plasma astrophysics and numerical relativity codes.
+    \end{enumerate}
+
+\end{enumerate}
+
+
+ 
+\vspace{5mm}
+
+\noindent \textbf{Handing it in:} Include your modified code and
+your answers to the questions (in the file \texttt{ANSWERS.md})
+in your assignment.
+
+
+
+\end{document}

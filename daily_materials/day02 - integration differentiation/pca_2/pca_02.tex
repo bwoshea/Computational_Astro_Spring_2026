@@ -1,0 +1,126 @@
+\documentclass[10pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts,color, titling}
+ \usepackage{listings}
+
+\setlength{\droptitle}{-20mm} 
+
+\usepackage[colorlinks=true,linkcolor=red,urlcolor=blue]{hyperref}
+
+\title{Pre-class assignment \# 2}
+\author{Brian O'Shea, \\PHY-905-005, Computational Astrophysics and
+  Astrostatistics\\Spring 2023}
+ \date{} % leave blank to have no date
+
+\begin{document}
+ 
+\maketitle
+
+\vspace{-5mm}
+
+\noindent
+\textbf{This assignment is due the evening of Wednesday, Jan. 11, 2023.}
+
+\vspace{5mm}
+
+\noindent
+\textbf{Instructions:} Read the materials below and follow the
+instructions/answer the questions at the end.  Turn in your code and
+all materials via the GitHub Classroom - in the directory where this
+assignment exists (i.e., the directory corresponding to the Git
+repository that you have cloned), add whatever new files you have
+created to the repository by typing ``git add mynewfile'' (you can use
+wild cards as well).  Then, commit the new files and any changed files
+by typing ``git commit -a'' (the ``-a'' means ``commit every change
+and new thing'' -- if you typed ``git commit mynewfile'' it would just
+commit that file).  Finally, push your changes to the repository by
+typing ``git push''.
+
+\vspace{5mm}
+
+\noindent
+\textbf{What to turn in:}
+Turn in plots (and the Python scripts or Jupyter notebooks
+used to generate them), text files, etc.  \textbf{Do not} turn in
+object files, binary files, or very large files of any kind unless you
+are explicitly asked to do so!
+
+
+\vspace{5mm}
+
+\noindent
+\textbf{Reading:}
+
+\begin{enumerate}
+
+\item Chapter 5 of \textit{Computational Physics}, by M. Newman
+
+\item ``What every computer scientist should know about floating-point
+  arithmetic,'' by D. Goldberg \\
+  (\href{http://dl.acm.org/citation.cfm?id=103163}{doi:10.1145/103162.103163};
+  PDF provided)
+
+\item Sections 3.1 and 3.2 of \textit{An Introduction to Computational Physics},
+  by T. Pang (optional reading; PDF provided) 
+
+\item 
+  \href{https://en.wikipedia.org/wiki/Floating_point}{Wikipedia article
+    on floating-point numbers}  (optional reading)
+
+\item
+  \href{https://en.wikipedia.org/wiki/Numerical_differentiation}{Wikipedia
+  article on numerical differentiation}  (optional reading)
+
+\item
+  \href{https://en.wikipedia.org/wiki/Numerical_integration}{Wikipedia
+  article on numerical integration}  (optional reading)
+
+\end{enumerate}
+
+\vspace{5 mm}
+
+\noindent
+\textbf{Questions:}
+
+\begin{enumerate}
+
+\item Consider the function $f(x) = e^x \sin(x)$.  Calculate the
+derivative $f'(x) = \frac{df}{dx}$ at $x=2$ using the three-point
+formula given in Equation 5.102 of Newman (Equation 3.6 of Pang), with $h(N) =
+0.5/10^N$ and N=1,2,3,4,5,6.  Note: you should do
+this in a general way: write a function that takes as arguments f(x),
+X (the point where you wish to evaluate $f'(x)$), and $h(N)$, and returns
+the value of $f'(X)$.  Create a plot that shows $f'(X)$ as calculated
+at $X=2$ for the values of N shown above.
+
+\item Using the trapezoidal rule (Equation 5.3 in Newman or Equation 3.23 in Pang) and the same
+function f(x) as above, calculate $F = \int_0^{10} f(x)dx$ using
+$10^N$ equally-sized steps in the interval $x=0$ to $x=10$, with
+N=1,2,3,4,5,6.  Note: write a function that takes as arguments f(x),
+the starting and ending points of the interval over which you wish to
+integrate, and the number of equal-sized steps you wish to take over
+the interval, and returns the integrated quantity F.  Create a plot
+that shows F as calculated over the given interval for the values of N
+shown above.
+
+\item 
+We define $f'(X)_{an}$ to be the analytic solution to the derivative
+  described in the first question, and $f'(X)^N_{num}$ to be the
+  numerical solution to the integral using an interval size $h(N)$.
+  The fractional error, $\epsilon$, is defined as
+  $\epsilon_N = \frac{|f'(X)_{num,N} - f'(X)_{an}|}{|f'(X)_{an}|}$.  Create a
+  \textbf{log-log plot} that shows $\epsilon_N$ as a function of
+  $h(N)$ for the values of N shown.  If you fit a power law to it,
+  approximately what is the exponent of the best-fit power law?
+  (Note: I'm asking you to eyeball it, not calculate the fit precisely.)
+
+\item After you have done the readings and completed the assignment
+  above, please put at least one question that you have about each
+  part of the reading (Chapter 5 of Newman and the Goldberg article)
+  in the file called \texttt{ANSWERS.md}.  Please also make a note in that
+  text file that says how long it took you to do this assignment!
+
+\end{enumerate}
+
+
+\end{document}

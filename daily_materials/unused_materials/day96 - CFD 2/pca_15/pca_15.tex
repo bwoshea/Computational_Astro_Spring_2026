@@ -1,0 +1,83 @@
+\documentclass[10pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts,color, titling}
+ \usepackage{listings}
+
+\setlength{\droptitle}{-20mm} 
+
+\usepackage[colorlinks=true,linkcolor=red,urlcolor=blue]{hyperref}
+
+\title{Pre-class assignment \# 15}
+\author{Brian O'Shea, \\PHY-905-002, Computational Astrophysics and
+  Astrostatistics\\Spring 2021}
+ \date{} % leave blank to have no date
+
+\begin{document}
+ 
+\maketitle
+
+\vspace{-5mm}
+
+\noindent
+\textbf{This assignment is due the evening of Tuesday March 16, 2021.}
+ Turn in all materials via GitHub.
+
+\vspace{5mm}
+
+\noindent
+\textbf{Reading:}
+
+\begin{enumerate}
+
+\item Chapter 8 (``Euler Equations: Numerical Methods) of Mike
+Zingale's
+\href{http://bender.astro.sunysb.edu/hydro_by_example/CompHydroTutorial.pdf}{Computational
+Hydrodynamics Tutorial}, which you can find in the pre-class
+assignment for Day 8.  Focus your attention on Sections 8.1-8.5 and
+8.9.1 (``Shock tubes''), but skim Section 8.2.3 (piecewise parabolic
+reconstruction) rather than diving deeply into the mathematics. Also skim the other sections in Chapter 8 to get the general
+idea.
+
+\item \href{https://en.wikipedia.org/wiki/Riemann_solver}{Wikipedia
+page on Riemann solvers}.  This is a short but useful resource for
+understanding the various types of Riemann solver that exist.
+
+\end{enumerate}
+
+\noindent
+\textbf{Your assignment:}  Work through the sections listed above and
+make sure you understand the math.  Answer the following questions in
+\texttt{ANSWERS.md}, and be prepared to discuss those answers in
+class:
+
+\begin{enumerate}
+  
+\item What are the key components of a code that solves the Euler
+equations for the 1D Sod Shock Tube (described in Section 8.9.1)?  How
+is this similar to, or different from, the codes you've created so far
+for the linear advection equation and Burgers' equation?
+
+\item What are the benefits and drawbacks of using different methods
+of reconstructing the states of cell interfaces?  Specifically,
+compare and contrast piecewise constant, piecewise linear, and
+piecewise parabolic reconstruction (as discussed in Sections 8.2.1-3)
+in terms of accuracy, simplicity, and speed.
+
+\item Why is there such a profusion of Riemann solvers for
+computational fluid dynamics?  Why doesn't everybody use the best one?
+
+\item What, if anything, do you want to know more about numerically
+solving the Euler equations after working through this chapter?
+
+\item What are at least two questions that you have from the readings
+that you'd like us to address in class?
+
+\end{enumerate}
+
+
+\noindent \textbf{Handing it in:} Submit via GitHub as usual.  Include
+anything necessary, including code, plots, and 
+your answers to the questions about the readings (in the file
+\texttt{ANSWERS.md}) as part of your assignment.
+
+\end{document}

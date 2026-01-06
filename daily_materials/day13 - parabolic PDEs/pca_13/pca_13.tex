@@ -1,0 +1,69 @@
+\documentclass[10pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts,color, titling}
+ \usepackage{listings}
+
+\setlength{\droptitle}{-20mm} 
+
+\usepackage[colorlinks=true,linkcolor=red,urlcolor=blue]{hyperref}
+
+\title{Pre-class assignment \#13}
+\author{PHY-905-005\\Computational Astrophysics and
+  Astrostatistics\\Spring 2023}
+ \date{} % leave blank to have no date
+
+\begin{document}
+ 
+\maketitle
+
+\vspace{-5mm}
+
+\noindent
+\textbf{This assignment is due the evening of Wednesday March 15, 2023.}
+ Turn in all materials via GitHub.
+
+\vspace{5mm}
+
+\noindent
+\textbf{Reading:}
+
+\begin{enumerate}
+
+\item Chapter 7.7-7.8 of \textit{An Introduction to Computational Physics},
+  by T. Pang (PDF; provided)
+
+\item Chapter 10.1-10.5 of Zingale's \href{http://bender.astro.sunysb.edu/hydro_by_example/CompHydroTutorial.pdf}{Computational
+  Hydrodynamics Tutorial} (PDF; provided in a previous pre-class
+assignment).  Note: carefully read sections 10.1-10.3, and skim 10.4-10.5.
+
+\end{enumerate}
+
+\noindent
+\textbf{Your assignment:}  
+
+\begin{enumerate}
+
+\item Exercise 10.2 in Zingale (p. 187): Implement a 1-D
+\textit{explicit} diffusion solver for the domain [0,1] with Neumann
+boundary conditions at each end and k = 1, using the discretization of
+Eq. 10.6.  Begin with a Gaussian pulse as shown in Zingale's exercise
+10.2, and compare to the analytic solution for solutions with $C =
+0.8$ and $C = 2.0$ at the end point of the simulation.  What
+difference do you see in the behavior of the solver in those two
+cases?  When do you see numerical instabilities develop in either of
+the cases, if it happens at all?  (Note: you may need to examine times
+between $t=0$ and $t=t_{end}$ to see this.)
+
+\item After doing the assigned reading, list at least two questions
+that you have about solving diffusion-like equations (i.e., parabolic
+PDEs) in the file \texttt{ANSWERS.md}.
+
+\end{enumerate}
+
+\vspace{5mm}
+
+\noindent \textbf{Handing it in:} Include your code, your plots, and
+your answers to the questions about (in the file \texttt{ANSWERS.md})
+in your assignment.
+
+\end{document}

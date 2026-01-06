@@ -1,0 +1,167 @@
+\documentclass[10pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts,color, titling}
+ \usepackage{listings}
+\usepackage{gensymb}
+
+\setlength{\droptitle}{-20mm} 
+
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+
+\title{Homework \# 3}
+\author{PHY-905-003, Computational Astrophysics and
+  Astrostatistics\\Spring 2017}
+ \date{} % leave blank to have no date
+
+\begin{document}
+ 
+\maketitle
+
+\vspace{-5mm}
+
+\noindent \textbf{This assignment is due on Sunday April 2, 2017.}  
+Turn in all materials via GitHub.  Include your code, plots, and
+answers to any questions asked in your assignment.  Your code must (1)
+be easily readable, with good use of whitespace, clear variable names,
+and adequate commenting (which documents design and purpose, not
+mechanics) and (2) use functions to break up code into logical
+components.  The solutions to individual problems should be saved in
+separate, clearly-named source files or Jupyter notebooks.  Plots
+should have easily readable and logical axis labels and titles, and
+the source code and data used to generate the plots should be
+included.  Questions should be answered in the file
+\texttt{ANSWERS.md} or in a \LaTeX-created PDF document of a similar
+name (e.g., \texttt{ANSWERS.pdf}).
+
+\vspace{2mm}
+
+\noindent
+Please note that \textbf{solutions containing loops rather than Numpy
+  array operations 
+are not going to be graded!} The only exception is the \texttt{while}
+ time loop.
+
+\vspace{2mm}
+
+\noindent
+\textit{Hints: Read the relevant sections in Toro carefully and
+consider how the equations translate into code.  This assignment
+should not require a great deal of additional code beyond your working
+1D hydro code.  As a rule of thumb, one equation in Toro should
+correspond to one line of code in Python when you use Numpy array
+operations rather than loops.}
+
+\vspace{5mm}
+
+\noindent {\large\textbf{Part 1:}}   
+In the two classes immediately before Spring Break you implemented the HLL
+Riemann solver within a 1-D MUSCL-Hancock framework to solve the
+compressible Euler equations.  Now, use your previous code to
+implement the HLLC Riemann solver.  The analytic background is
+presented in Section 10.4 in Toro.  A practical summary of how the
+pieces fit together is given in Section 10.6.  Then, do/answer the
+following:
+
+\begin{enumerate}
+
+\item Plot the primitive quantities and compare the results at $t=0.2$ 
+for the shock-tube problem (discussed in class with 
+$x_0 = 0.2$,
+$\rho_L = 1$,
+$u_L = 0.75$,
+$p_L = 1$,
+$\rho_R = 0.125$,
+$u_R = 0$, and
+$p_R = 0.1$,
+) between using the HLL and HLLC Riemann solver.
+What did you expect to see and how does it compare to what you see?
+How can you explain the differences, if your expectation and result 
+are not in agreement?
+
+\item Plot the primitive quantities and compare the results at $t=1$ 
+between HLL and HLLC Riemann solver for 
+$x_0 = 0.5$,
+$\rho_L = 1.4$,
+$u_L = 0$,
+$p_L = 1$,
+$\rho_R = 1$,
+$u_R = 0$, and
+$p_R = 1$.
+What kind of problem/situation does this set of initial conditions correspond to?
+How do the results compare to the shock-tube problem?
+
+\item Plot the primitive quantities and compare the results at $t=1$ 
+between HLL and HLLC Riemann solver for 
+$x_0 = 0.5$,
+$\rho_L = 1.4$,
+$u_L = 0.1$,
+$p_L = 1$,
+$\rho_R = 1$,
+$u_R = 0.1$, and
+$p_R = 1$.
+What kind of problem/situation does these initial conditions correspond to?
+How do the results compare to the previous two problems?
+
+\item With the insights obtained from Question 3 how can you explain
+	the results of Question 1?
+	Can you prove your explanation? 
+	Provide appropriate initial conditions
+	and plot(s) to support your statement.
+
+\end{enumerate}
+
+\newpage
+
+\vspace{5mm}
+
+\noindent {\large \textbf{Part 2:}}  
+Use a separate Jupyter notebook or text file to extend your 1-D
+implementation to 2-D.  A general introduction to multi-dimensional
+extension is given in Chapter 16 of Toro.  Specifically look at
+Sections 16.4.1 and 16.5 (p. 561) for the most important conceptual
+steps regarding the MUSCL-Hancock scheme in 2-D.
+
+\textit{Hint: Remember to update your boundary conditions and timestep
+calculation (see 16.3.2) for 2-D. You also might need to use lower CFL
+values, e.g. 0.6, than in 1-D for stable simulations.}
+
+Then, do/answer the following:
+\begin{enumerate}
+\item In order to verify your framework, implement the
+	initial conditions for the shock-tube problem in 2-D for
+	\begin{itemize}
+		\item a plane shock in the x-direction and
+		\item a plane shock in the y-direction.
+	\end{itemize}
+Plot and compare the solutions for the density across the domain along
+the corresponding shock direction and at different positions (for both
+HLL and HLLC Riemann solver).  How do the results compare to each
+other (with respect to shock direction) and to the 1-D results?
+
+\item Implement the initial conditions for a 2-D spherical
+	explosion (the Sedov-Taylor blast wave; see Toro Sections 17.1 and 17.2), 
+	i.e. 
+	\begin{itemize}
+		\item a 2-D domain $[0,2] \times [0,2]$ with $\mathrm{Nx} = \mathrm{Ny} = 101$,
+			with an
+		\item inner sphere centered at $[1,1]$ with radius $R_s = 0.4$ with
+			$\rho_s = 1$, $u_x = u_y = 0$ and $p_s = 1$, and an
+		\item ambient medium outside the sphere with 
+			$\rho_a = 0.125$, $u_x = u_y = 0$ and $p_a = 0.1$.
+	\end{itemize}
+Plot and compare the primitive quantities at $t=0.25$ across the
+center of the domain in x-, y-, and both diagonal directions as a
+function of distance from the center of the domain.  How do these
+results differ from the plane shock, and why?  Also, you can create
+the inner high-pressure sphere using a variety of radii and means of
+smoothing the edges (i.e., mapping a circle/sphere onto a Cartesian
+grid in a way that minimizes the 'stair-step' appearance of the
+initial conditions).  Does changing how you initialize the inner
+region affect your results either qualitatively or quantitatively?
+Try varying the radius and, separately, smoothing the edges of the
+over-pressured region to see what happens and describe what you see.
+
+\end{enumerate}
+
+\end{document}
+

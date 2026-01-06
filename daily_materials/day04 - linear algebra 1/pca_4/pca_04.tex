@@ -1,0 +1,77 @@
+\documentclass[10pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts,color, titling}
+ \usepackage{listings}
+
+\setlength{\droptitle}{-20mm} 
+
+\usepackage[colorlinks=true,linkcolor=red,urlcolor=blue]{hyperref}
+
+\title{Pre-class assignment \# 4}
+\author{PHY-905-005\\Computational Astrophysics and
+  Astrostatistics\\Spring 2023}
+ \date{} % leave blank to have no date
+
+\begin{document}
+ 
+\maketitle
+
+\vspace{-5mm}
+
+\noindent
+\textbf{This assignment is due the evening of Monday January 23, 2023.}
+ Turn in your code
+and all materials via the GitHub Classroom.
+
+\vspace{5mm}
+
+\noindent
+\textbf{Reading:}
+
+\begin{enumerate}
+
+\item Section 6.1 of \textit{Computational Physics}, by M. Newman 
+
+\item 
+  \href{https://en.wikipedia.org/wiki/Gaussian_elimination}{Wikipedia article
+    on Gaussian elimination} 
+
+\item Numerical methods for matrices, part 1: Sections 5.1-5.3  of \textit{An Introduction to Computational Physics},
+  by T. Pang (optional; PDF provided)
+
+\item 
+  \href{https://docs.scipy.org/doc/numpy/reference/routines.linalg.html}{NumPy
+  linear algebra routines}  (reference)
+
+\item 
+  \href{https://docs.scipy.org/doc/scipy/reference/linalg.html}{SciPy
+  linear algebra routines}  (reference)
+
+\end{enumerate}
+
+\noindent
+\textbf{Your assignment:}  
+\vspace{3mm}
+
+For the matrices A and B in the included
+file \texttt{matrix\_1.py}, write two functions that uses Gaussian
+elimination with partial pivoting to (1) get the upper-triangular
+matrix and (2) calculate the determinant of the matrix using the
+upper-triangular matrix.  Do this without destroying the original
+matrix by making a copy of the matrix (with \texttt{numpy.copy}) and
+compare your calculated determinant to the output of the
+\href{https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.det.html#scipy.linalg.det}{\texttt{scipy.linalg.det}}
+  routine, as run on the same matrix.  Suggestion: invent your own
+  small matrix (perhaps a $3 \times 3$ matrix) to test your routines on so that
+  you can verify that it's behaving correctly on a step-by-step basis!
+  \textbf{Make sure to write your code as functions that take input
+    matrices -- you're going to need those functions in class!}
+
+
+Submit your \textit{easy-to-read and commented} code to the
+repository (use the \texttt{class\_coding\_standard.md} document as a
+basis for this, which is included in this repository).  Also, put any remaining questions that you might have 
+ in the file \texttt{ANSWERS.md}, and push all of the files as your
+ homework submission!
+
+\end{document}

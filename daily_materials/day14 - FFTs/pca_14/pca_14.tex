@@ -1,0 +1,103 @@
+\documentclass[10pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts,color, titling}
+ \usepackage{listings}
+
+\setlength{\droptitle}{-20mm} 
+
+\usepackage[colorlinks=true,linkcolor=red,urlcolor=blue]{hyperref}
+
+\title{Pre-class assignment \#14}
+\author{PHY-905-005\\Computational Astrophysics and
+  Astrostatistics\\Spring 2023}
+ \date{} % leave blank to have no date
+
+\begin{document}
+ 
+\maketitle
+
+\vspace{-5mm}
+
+\noindent
+\textbf{This assignment is due the evening of Sunday March 21, 2021.}
+ Turn in all materials via the GitHub Classroom.
+
+\vspace{5mm}
+
+\noindent
+\textbf{Reading:}
+
+\begin{enumerate}
+
+\item Chapter 7 of \textit{Computational Physics}, by M. Newman
+  \textbf{(required)} -- read Sections 7.1, 7.2, and 7.4, but focus on
+  general conceptual understanding rather than  diving into the
+  details regarding derivations.
+
+\item
+  \href{http://practicalcryptography.com/miscellaneous/machine-learning/intuitive-guide-discrete-fourier-transform/}{An
+    intuitive guide to the discrete Fourier transform}
+  \textbf{(required)} -- short but helps to build intuition.
+
+\item
+  \href{https://docs.scipy.org/doc/scipy/tutorial/fft.html}{\texttt{scipy.fft}
+    tutorial} \textbf{(required)}
+
+\item 
+  \href{https://docs.scipy.org/doc/numpy/reference/routines.fft.html}{NumPy
+  FFT routines}  (reference)
+
+\item \href{http://www.jezzamon.com/fourier/index.html}{An Interactive
+    Introduction to Fourier Transforms} (optional, but highly
+  recommended -- it's useful
+    for building intuition!)
+
+\item
+  \href{http://jakevdp.github.io/blog/2013/08/28/understanding-the-fft/}{Understanding
+    the FFT algorithm} (optional, but useful for building
+    intuition)
+
+  
+
+%\item  Sections 6.1-6.4  of \textit{An Introduction to Computational Physics},
+%  by T. Pang (PDF provided; optional)
+
+
+\end{enumerate}
+
+\noindent
+\textbf{Your assignment:}  After you read the appropriate chapter of
+Wilson and the ``Intuitive guide to the discrete Fourier transform,''
+work through the examples in the \texttt{scipy.fft} tutorial and
+use those to examine the spectral properties of the functions defined
+in the file \texttt{functions.py} (included with this assignment).
+Please note that we're going to use this code in class, so you may
+wish to make sure that your code is well-commented!
+
+\begin{enumerate}
+
+\item Plot both the function \texttt{fx} and \texttt{fx\_noisy} as a
+function of time (you may have to zoom in on a small window of time to
+see what's going on).
+
+\item Calculate the 1D FFT of both functions for $N=10,000$.  Does the
+result in frequency space like what you expected for these two
+functions?  Why or why not?  And, how are the results for the two
+functions different?
+
+\item Calculate the 1D FFT of both functions for $N=5000, 2000, 1000,
+500, 250, 100$.  As you decrease the number of samples, what happens?
+Given what you know about how a discrete Fourier transform is
+calculated, why do you think you see this behavior?
+
+\item Do you have any questions or things you'd like us to discuss in
+class?
+
+\end{enumerate}
+
+\noindent
+\textbf{Handing it in:}
+Include your code, your plots, and your answers to the questions about
+FFTs (in the file \texttt{ANSWERS.md}) in your assignment.
+
+\end{document}

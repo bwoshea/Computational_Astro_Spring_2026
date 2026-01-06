@@ -1,0 +1,2 @@
+# Computational_Astro_Spring_2026
+Spring 2026 computational astrophysics course

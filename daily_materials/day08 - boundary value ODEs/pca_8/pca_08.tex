@@ -1,0 +1,83 @@
+\documentclass[10pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts,color, titling}
+ \usepackage{listings}
+
+\setlength{\droptitle}{-20mm} 
+
+\usepackage[colorlinks=true,linkcolor=red,urlcolor=blue]{hyperref}
+
+\title{Pre-class assignment \#8}
+\author{PHY-905-005\\Computational Astrophysics and
+  Astrostatistics\\Spring 2023}
+ \date{} % leave blank to have no date
+
+\begin{document}
+ 
+\maketitle
+
+\vspace{-5mm}
+
+\noindent
+\textbf{This assignment is due the evening of Monday, February 6, 2023}
+ Turn in your code
+and all materials via the GitHub Classroom.
+
+\vspace{5mm}
+
+\noindent
+\textbf{Reading:}
+
+\begin{enumerate}
+
+
+\item Section 8.6 of  \textit{Computational Physics}, by Newman. 
+
+\item  (optional)
+  \href{https://en.wikipedia.org/wiki/Shooting_method}{Wikipedia article
+    on the Shooting method} 
+
+\item (optional)
+  \href{https://en.wikipedia.org/wiki/Boundary_value_problem}{Wikipedia article
+    on boundary value problems}  
+
+\item (optional) Methods of solving initial value ODEs: Sections 4.6-4.9  of \textit{An Introduction to Computational Physics},
+  by T. Pang (PDF; provided)
+
+\end{enumerate}
+
+\noindent
+\textbf{Your assignment:}
+
+\vspace{3mm}
+\noindent
+Consider the equation
+
+\begin{equation}
+y'' = 4y
+\end{equation}
+
+over the interval of $[0,2]$.  It has the boundary conditions $y(0) =
+5$ and $y'(2) = 218.282706$.  Implement your own version of the
+Shooting Method described in Section 8.6.1 of Wilson (Section 4.7 of Pang), and verify that the
+solution over the given interval matches this expression for y:
+
+\begin{equation} 
+y(x) = 2 e^{2x} + 3 e^{-2x}
+\end{equation}
+
+Demonstrate agreement by plotting the numerical answer and the
+analytic one on the same plot.  Re-use your code for the secant method
+and one of your better numerical integrators (midpoint/RK2 or RK4 -
+not Euler's method!) when creating this new method!
+
+Separately, solve the problem using the
+SciPy
+\href{https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_bvp.html}{\texttt{integrate.solve\_bvp}}
+method.  Do you get the same answer?
+
+Put your answers and observations, as well as any remaining questions
+that you might have, in the file \texttt{ANSWERS.md}.  Commit that, as
+well as your code, plots, and related materials, to the repository.
+
+\end{document}

@@ -1,0 +1,49 @@
+\documentclass[10pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts,color, titling,graphicx}
+ \usepackage{listings}
+
+\setlength{\droptitle}{-20mm} 
+
+\usepackage[colorlinks=true,linkcolor=red,urlcolor=blue]{hyperref}
+
+\title{In-class assignment \# 10}
+\author{Brian O'Shea, \\PHY-905-005, Computational Astrophysics and
+  Astrostatistics\\Spring 2023}
+ \date{} % leave blank to have no date
+
+\begin{document}
+ 
+\maketitle
+
+\vspace{-5mm}
+
+
+\noindent \textbf{Instructions:}  In today's class we are going to do
+two things:
+
+\begin{enumerate}
+
+\item Verify that the 2$^{nd}$ order finite-volume advection code you
+wrote in the pre-class assignment works correctly for the various
+conditions we've described -- left- and right-traveling top hat and
+Gaussian boundary conditions, with both periodic and Dirichlet
+boundary conditions.  Test each of the four sets of initial conditions
+with periodic boundary conditions for 1 full period, and do the same
+for one of the sets of boundary conditions for the Dirichlet BCs and
+verify that the wave disappears when it hits the boundaries.
+
+\item Implement the \texttt{minmod} flux limiter (equations 5.11 and
+5.12) in Zingale into your code.  First spend some time discussing it
+with your group, and then implement it and test it for the velocities
+and initial conditions described above (but just use periodic boundary
+conditions), running for 1 period.  Do you see the same results shown
+in Figures 5.4 and 5.10 of Zingale's notes?
+
+\end{enumerate}
+
+\vspace{5mm}
+\noindent
+As per usual, submit your code, plots, etc. via GitHub!
+
+\end{document}

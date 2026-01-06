@@ -1,0 +1,62 @@
+\documentclass[10pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts,color, titling,graphicx}
+ \usepackage{listings}
+
+\setlength{\droptitle}{-20mm} 
+
+\usepackage[colorlinks=true,linkcolor=red,urlcolor=blue]{hyperref}
+
+\title{In-class assignment \#14}
+\author{PHY-905-005\\Computational Astrophysics and
+  Astrostatistics\\Spring 2023}
+ \date{} % leave blank to have no date
+
+\begin{document}
+ 
+\maketitle
+
+\vspace{-5mm}
+
+
+\noindent \textbf{Instructions:}   The file \texttt{functions.py}
+includes two versions of the function
+
+\begin{equation}
+f(t) = 4 \sin(30 \pi t) + 1.5 \cos(60 \pi t) + 3 \cos(120 \pi t)
+\end{equation}
+
+\noindent
+given to you in an array that spans the time range t$ = [0,4\pi]$~s.
+By inspection, you can see that there are oscillations at frequencies
+of 15, 30, and 60 Hz.  \textbf{Write a function} based on your
+pre-class assignment that takes in the array of values of $f(t)$ (and
+any other necessary information) and returns a new array containing
+$g(t)$, which is $f(t)$ containing only oscillations that have
+frequencies between $f_{min}$ and $f_{max}$, and verify that it is
+behaving correctly by plotting both $f(t)$ and $g(t)$ together.  This
+is what is known as a
+\href{https://en.wikipedia.org/wiki/Band-pass_filter}{band-pass
+filter}.  The special case with $f_{min} = 0, f_{max} \neq \infty$ is a low-pass filter,
+and $f_{min}  \neq 0, f_{max} = \infty$ is a high-pass filter.  Answer the following
+questions in the file \texttt{ANSWERS.md}:
+
+\begin{enumerate}
+
+\item How does the plot change as you increase/decrease the range
+  $f_{min} - f_{max}$?  Why do you think that is?
+
+\item Do you see any unexpected features?  What do you think is going
+  on?
+
+\item Try using the noisy version of the function.  Does this behave
+  differently?  What happens as you increase the level of noise?
+
+\item How might this type of filter be used in astronomical observations?
+
+\end{enumerate}
+
+\noindent
+\textbf{Hand in} plots, code, and answers using the usual mechanism!
+
+\end{document}

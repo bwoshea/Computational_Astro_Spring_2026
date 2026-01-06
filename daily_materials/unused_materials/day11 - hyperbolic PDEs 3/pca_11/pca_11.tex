@@ -1,0 +1,71 @@
+\documentclass[10pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts,color, titling}
+ \usepackage{listings}
+
+\setlength{\droptitle}{-20mm} 
+
+\usepackage[colorlinks=true,linkcolor=red,urlcolor=blue]{hyperref}
+
+\title{Pre-class assignment \# 11}
+\author{Brian O'Shea, \\PHY-905-005, Computational Astrophysics and
+  Astrostatistics\\Spring 2023}
+ \date{} % leave blank to have no date
+
+\begin{document}
+ 
+\maketitle
+
+\vspace{-5mm}
+
+\noindent
+\textbf{This assignment is due the evening of Wednesday Feb. 15, 2023.}
+ Turn in all materials via GitHub.
+
+\vspace{5mm}
+
+\noindent
+\textbf{Reading:}
+
+\begin{enumerate}
+
+\item Chapter 6 (``Burgers' Equation'') of Mike Zingale's
+\href{http://bender.astro.sunysb.edu/hydro_by_example/CompHydroTutorial.pdf}{Computational
+Hydrodynamics Tutorial}, which you can find in the pre-class
+assignment for Day 8.  Focus on Sections 6.1-6.2, but make sure to
+read the remainder of the chapter as well (which is only a few pages).
+
+\item
+\href{https://en.wikipedia.org/wiki/Burgers%27_equation}{Wikipedia
+page on Burgers' Equation} (optional, but the animations are useful to
+look at).
+
+\end{enumerate}
+
+\noindent
+\textbf{Your assignment:}  
+
+
+\begin{enumerate}
+  
+\item Extend your code from the previous class to implement the finite
+  volume (i.e., conservative-form) solution to the inviscid Burgers'
+  equation (Eqtn. 6.1 in Zingale) using whichever limiter you
+  implemented in class and Dirichlet boundary conditions.  Set up the rarefaction wave initial
+  conditions (shown in Figure 6.4 and described in the text) and the
+  sinusoidal initial conditions (Equation 6.19 and Figure 6.5), and
+  verify that they evolve correctly until the wave hits the boundary
+  of the box.
+
+\item What are at least two questions that you have from the readings
+that you'd like us to address in class?
+Put those questions in \texttt{ANSWERS.md}.
+
+\end{enumerate}
+
+
+\noindent \textbf{Handing it in:} Include your code, your plots, and
+your answers to the questions about the readings (in the file \texttt{ANSWERS.md})
+in your assignment.
+
+\end{document}

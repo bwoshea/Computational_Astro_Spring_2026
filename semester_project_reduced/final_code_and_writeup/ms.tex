@@ -1,0 +1,107 @@
+%\documentclass[10pt,preprint]{aastex}  % for e-submission to ApJ - one column
+%\documentclass[12pt,preprint2]{aastex}  % for e-submission to ApJ - two column
+
+\documentclass[iop,apjl, twocolappendix]{emulateapj}   % makes it look like the ApJ format
+
+\pdfoutput=1
+
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{amsmath}
+\usepackage{subfigure} 
+\usepackage{hyperref}
+\usepackage{amssymb}
+\usepackage{apjfonts}
+\usepackage{amsmath}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{hyperref}
+\usepackage[all]{hypcap}    %for going to the top of an image when a figure reference is clicked
+\hypersetup{
+    colorlinks,
+    citecolor=blue,
+    filecolor=blue,
+    linkcolor=blue,
+    urlcolor=blue
+}
+
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\newcommand{\green}[1]{\textcolor{green}{#1}}
+
+\shorttitle{My Clever Title} 
+\shortauthors{S. Student et al.}
+
+\begin{document}\title{My super-clever and really interesting title}
+
+\author{
+  Some Astrophysics Student\altaffilmark{1}
+}
+
+\affil{$^{1}${Department of Physics and Astronomy and possibly the National
+    Superconducting Cyclotron Laboratory, Michigan State
+    University, East Lansing, MI 48824, USA
+    \href{mailto:student@msu.edu}{student@msu.edu}}}
+
+\label{firstpage}
+
+\begin{abstract}
+This is my abstract, full of abstracty goodness.
+\end{abstract}
+
+\keywords{coffee: science: awesomeness}
+
+\section{Introduction}
+\label{sec:intro}
+
+Intro here!  You can use two different formats of citations.  \citet{1974ApJ...187..425P} refers to references one way.
+\citep{1974ApJ...187..425P} does it another.
+
+\section{Methods}
+\label{sec:methods}
+
+Methods here!  Kitten can be found in Figure~\ref{fig:kitten}.  You
+can put hyperlinks in \LaTeX papers using
+\href{https://en.wikibooks.org/wiki/LaTeX/Hyperlinks}{the hyperref package}.
+
+\begin{figure}[b]
+\centering
+  \includegraphics[width=0.3\textwidth]{kitten.jpg}\\
+  \caption{A kitten.  There are many ways to mess with figure
+    placement using the
+    \href{https://en.wikibooks.org/wiki/LaTeX/Floats,\_Figures\_and\_Captions}{appropriate
+    commands}.  Note that this is a huge time sink.}
+  \label{fig:kitten}
+\end{figure}
+
+
+
+\section{Results}
+\label{sec:results}
+
+Results here!  You can use color macros to \red{change the color} of
+text to \blue{make a point} or \green{remind yourself to do something
+  later}.  Just remember to remove it at some point, because it's
+actually pretty annoying when people think that it's a URL or a citation.
+
+\section{Discussion}
+\label{sec:disc}
+
+Discussion here!
+
+
+
+\acknowledgments
+\section{Acknowledgments}
+
+This is where you put in a long, flowery acknowledgment to thank all
+the people who deserve it, and some who don't but would be upset if
+you didn't acknowledge them.
+
+%\input{apj-bib}
+\bibliographystyle{apj}
+
+\bibliography{apj-jour,ms}
+
+\end{document}

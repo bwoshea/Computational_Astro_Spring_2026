@@ -1,0 +1,100 @@
+\documentclass[10pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts,color, titling}
+ \usepackage{listings}
+
+\setlength{\droptitle}{-20mm} 
+
+\usepackage[colorlinks=true,linkcolor=red,urlcolor=blue]{hyperref}
+
+\title{Pre-class assignment \#19}
+\author{PHY-905-005\\Computational Astrophysics and
+  Astrostatistics\\Spring 2023}
+ \date{} % leave blank to have no date
+
+\begin{document}
+ 
+\maketitle
+
+\vspace{-10mm}
+
+\noindent
+\textbf{This assignment is due the evening of Wednesday April 12, 2023.}
+ Turn in all materials via GitHub.
+
+\vspace{5mm}
+
+\noindent
+\textbf{Reading:}
+
+\begin{enumerate}
+
+\item Wikipedia article on
+  \href{https://en.wikipedia.org/wiki/Markov\_chain\_Monte\_Carlo}{Markov
+    Chain Monte Carlo} techniques.
+
+\item Wikipedia article on the
+  \href{https://en.wikipedia.org/wiki/Metropolis\%E2\%80\%93Hastings_algorithm}{Metropolos-Hastings
+    Algorithm}.
+
+\item Tutorial on
+  \href{https://sciencehouse.wordpress.com/2010/06/23/mcmc-and-fitting-models-to-data/}{MCMC
+  and fitting models to data}.
+
+\item \href{http://www.mcmchandbook.net/HandbookChapter1.pdf}{Chapter 1} of the
+  \href{http://www.mcmchandbook.net/}{\textit{The MCMC Handbook}} by
+  Brooks et al.  (PDF included; Optional, but highly recommended).
+
+\item Reference for later:  Annual Review article on ``Markov Chain Monte Carlo Methods for
+  Bayesian Data Analysis in Astronomy,'' by Sharma (\href{https://www.annualreviews.org/doi/10.1146/annurev-astro-082214-122339}{Publisher
+    version}; \href{https://arxiv.org/abs/1706.01629}{arXiv version})
+
+\item Reference for later:  ``Data Analysis Recipes: Using Markov
+  Chain Monte Carlo'' by Hogg \& Foreman-Mackey
+  (\href{https://iopscience.iop.org/article/10.3847/1538-4365/aab76e}{2018,
+  ApJS, 236, 11})
+
+\end{enumerate}
+
+\noindent
+\textbf{Your assignment:}
+
+\begin{enumerate}
+
+\item Work through the tasks in the included Jupyter notebook, and
+answer the questions at the bottom of the notebook.  Make sure to work
+through the MCMC code and see how it behaves!
+
+\item In the file \texttt{ANSWERS.md}, write down any questions that
+you have about the material you read or the work you did in the
+Jupyter notebook, any points that are not clear, or anything you'd
+like to know more about.  Aim for at
+least 3 questions/unclear points/etc. 
+
+\end{enumerate}
+
+\noindent \textbf{Handing it in:} Include your modified notebook and
+your answers to the questions (in the file \texttt{ANSWERS.md})
+in your assignment.
+
+\vspace{5mm}
+
+\noindent
+\textbf{Some open-source MCMC Python packages:}  This will probably be useful
+for you in the future!
+
+\begin{enumerate}
+\item \href{https://emcee.readthedocs.io/en/stable/}{emcee - the MCMC
+    hammer}.  This package is widely used in astronomy.
+
+\item \href{https://www.pymc.io/}{PyMC} - a package that
+  implements Bayesian statistical models and fitting tools, including MCMC.
+
+\item \href{https://bmcmc.readthedocs.io/en/latest/}{bmcmc} - a
+  general-purpose Bayesian MCMC package  (\href{https://github.com/sanjibs/bmcmc/}{GitHub repository}).
+  Note: this is less mature than emcee and PyMC, but by the author of
+  the Annual Reviews article linked to above.
+
+\end{enumerate}
+
+\end{document}

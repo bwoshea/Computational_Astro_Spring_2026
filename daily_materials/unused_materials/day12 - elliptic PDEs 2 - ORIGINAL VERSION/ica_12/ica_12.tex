@@ -1,0 +1,81 @@
+\documentclass[10pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts,color, titling}
+ \usepackage{listings}
+
+\setlength{\droptitle}{-20mm} 
+
+\usepackage[colorlinks=true,linkcolor=red,urlcolor=blue]{hyperref}
+
+\title{In-class assignment \#12}
+\author{PHY-905-005\\Computational Astrophysics and
+  Astrostatistics\\Spring 2023}
+ \date{} % leave blank to have no date
+
+\begin{document}
+ 
+\maketitle
+
+
+\vspace{-5mm}
+
+\noindent \textbf{Instructions:} Today we're going to think through
+how to write a geometric multigrid solver (as described by Section 9.4
+of Zingale's lecture notes), and work through an example of it from
+his \href{https://github.com/python-hydro/hydro_examples}{example
+codes}.
+
+Before you do anything else, spend some time talking to the people
+in your discussion group, and work through how you would come up with a modular
+multigrid code.  For simplicity, you can assume that the
+\textit{active region} of your 1-d grid is composed of 2$^N$ cells,
+with one guard cell.  Use a text file or shared whiteboard in Zoom to create the pseudo-code
+for this problem!
+
+Then, clone Zingale's
+\href{https://github.com/python-hydro/hydro_examples}{repository of example
+codes}.   The multigrid example is in the subdirectory
+\texttt{multigrid/}.  The files are well-commented and their purpose
+is easy to understand from the comment blocks at the top of the file, but the ones that
+are particularly imporant here are:
+
+\begin{itemize}
+
+\item \texttt{multigrid.py}  -- The file containing the multigrid
+  class for cell-centered data, which implements the V-cycle method.
+
+\item \texttt{patch1d.py} -- A class for 1-d cell-centered data, which
+  performs data management, prolongation, and restriction.  It is used
+  by \texttt{multigrid.py}
+
+\item \texttt{mg\_test.py} -- A driver for the multigrid solver that
+  calls \texttt{multigrid.py}, and which sets up and solves a Poisson
+  problem and makes some plots of its behavior.
+
+\end{itemize}
+
+Before you do anything else, look through \texttt{patch1d.py} and
+\texttt{multigrid.py}, and identify the routines that correspond to
+what you've sketched out as pseudo-code.  Are you missing anything?
+What does it do, and what equations in Section 9.4 does it correspond
+to?
+
+Once you've identified the routines, examine the files
+\texttt{mg\_test.py} and \texttt{mg\_converge.py} to make sure that
+you understand what they do, and how they use \texttt{multigrid.py}.
+Run them, and examine the results.
+
+Finally, we're going to examine the way that filling in the guard
+cells (i.e., the boundary
+conditions) can affect the results, by modifying the routine
+\texttt{fill\_BC} in the file \texttt{patch1d.py}.  Modify this so
+that it incorrectly fills in the boundary conditions, and then examine
+the outputs of  \texttt{mg\_converge.py} again.  How has it changed?
+
+\vspace{5mm}
+
+\noindent \textbf{Handing it in:}   Turn in all materials via GitHub.
+Include your code, plots, and anything else that you used to complete
+the assignment!
+
+\end{document}

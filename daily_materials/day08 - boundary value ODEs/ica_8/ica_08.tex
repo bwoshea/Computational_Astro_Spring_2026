@@ -1,0 +1,56 @@
+\documentclass[10pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts,color, titling}
+ \usepackage{listings}
+
+\setlength{\droptitle}{-20mm} 
+
+\usepackage[colorlinks=true,linkcolor=red,urlcolor=blue]{hyperref}
+
+\title{In-class assignment \#8}
+\author{PHY-905-003\\Computational Astrophysics and
+  Astrostatistics\\Spring 2023}
+ \date{} % leave blank to have no date
+
+\begin{document}
+ 
+\maketitle
+
+\vspace{-5mm}
+
+\noindent \textbf{Instructions:}   We're going to re-use the code for
+your pre-class assignment, where you used the shooting method to solve
+a boundary value problem.  Given the equation:
+
+\begin{equation}
+\nabla^2 u = -\pi^2(u-3)
+\end{equation}
+
+whose analytic solution has the form 
+
+\begin{equation}
+u(x) = \cos(\pi x) + 2 \sin(\pi x) + 3,
+\end{equation}
+
+Show that you can calculate the solution using the shooting method on
+the interval $[0,1]$ for the initial conditions $u(0) = 4$, $u'(1) =
+-2\pi$ as well as the initial conditions $u(1) = 2$, $u'(0) = 2\pi$.
+Can you write a general version of the shooting method code that can
+take in any arbitrary pair of $u(x)$ and $u'(x)$ values at the
+boundaries (one on each side of the interval - either $u$ or $u'$ on
+each side, and could be $u$ on both sides, $u'$ on both sides, or a
+mixed pair of $u$ and $u'$) and get the correct solution?  Test it by
+coming up with a few different few different expressions for $u$ and
+verify that it works correctly.  Can you find any analytic expressions
+for $u$ that are unsolvable with the shooting method?
+
+\vspace{5mm}
+
+\noindent 
+\textbf{What to turn in:} Turn in \texttt{ANSWERS.md}, any
+source code you wrote, any plots you created (and the scripts you used
+to create them).  \textbf{Do not} turn in object files or
+executables!
+
+
+\end{document}

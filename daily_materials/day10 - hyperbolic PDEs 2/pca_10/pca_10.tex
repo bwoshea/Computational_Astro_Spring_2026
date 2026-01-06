@@ -1,0 +1,100 @@
+\documentclass[10pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts,color, titling}
+ \usepackage{listings}
+
+\setlength{\droptitle}{-20mm} 
+
+\usepackage[colorlinks=true,linkcolor=red,urlcolor=blue]{hyperref}
+
+\title{Pre-class assignment \# 10}
+\author{Brian O'Shea, \\PHY-905-005, Computational Astrophysics and
+  Astrostatistics\\Spring 2023}
+ \date{} % leave blank to have no date
+
+\begin{document}
+ 
+\maketitle
+
+\vspace{-5mm}
+
+\noindent
+\textbf{This assignment is due the evening of Monday Feb. 13, 2023.}
+ Turn in all materials via GitHub.
+
+\vspace{5mm}
+
+\noindent
+\textbf{Reading:}
+
+\begin{enumerate}
+
+\item Chapter 5 (``Second- (and Higher-) Order Advection'') of Mike Zingale's
+\href{http://bender.astro.sunysb.edu/hydro_by_example/CompHydroTutorial.pdf}{Computational
+Hydrodynamics Tutorial}, which you can find in the pre-class assignment for Day 9.
+Focus on Sections 5.1-5.4, but make sure to read Section 5.5 as well and get a
+general sense of the motivations and tradeoffs with higher-order
+methods.
+
+\item \href{https://en.wikipedia.org/wiki/Flux_limiter}{Wikipedia page
+    on Flux Limiters}
+
+\end{enumerate}
+
+\noindent
+\textbf{Your assignment:}  
+
+
+\begin{enumerate}
+
+
+  
+\item Based on your linear wave advection code from the previous
+class, implement the 2$^{nd}$ order finite-volume advection in one
+dimension that is discussed in Sections 5.1 and 5.2 of Zingale's
+lecture notes.  Don't implement the minmod slope limiter (described in
+Section 5.2.1), but think about how you would do so since we'll do it
+in class!  Unlike in the pre-class assignment from the previous class,
+\textbf{make sure to include ghost zones in your NumPy arrays so you
+can set arbitrary boundary conditions.}  To do so, add the capability
+to your code to add an arbitrary number of ghost zones on each end of
+the arrays of values (1 or 2 is generally what we'll need), and also
+add a function to take care of boundary conditions.  Have options for
+periodic and Dirichlet (constant-value) boundary conditions.
+\textbf{Make sure that you test both sets of boundary conditions, as
+well as left- and right-traveling waves} (i.e., $u > 0$ and $u < 0$).
+Periodic boundary conditions should behave as they did before; with
+the Dirichlet boundary condition, waves should disappear when they
+reach the edges of the domain.
+
+\item Examine the behavior of both the square wave and the Gaussian wave
+after 1 and 10 periods (i.e., loops through the domain), and compare
+it to the 1$^{st}$ order upwind method you implemented prior to the
+last class.  Vary both the CFL condition and number of grid cells for
+both the finite-volume method and the upwind method, and describe how
+the behavior differs for the two.  Write a function that calculates
+and returns the L2 and infinity norms between the initial conditions
+and the end state (described in Section 1.2.4 of Zingale's notes), and use it to compared the two different methods
+for $C=1$ as a function of grid size from $N=16$ to $N=1{,}024$ --
+what do you see?  (Note: make sure that you're going the correct
+number of time steps - after one period, the centers of the pulses
+should be exactly on top of each other, or every norm measurement will
+have a huge offset!)
+
+\item Think about how you might implement a slope limiter into your
+code for the 2$^{nd}$ order finite-volume method, but don't actually
+implement it.  In \texttt{ANSWERS.md}, describe how this
+implementation differs from the previous question.
+
+\item What are at least three questions that you have from the readings
+that you'd like us to address in class?
+Put those questions in \texttt{ANSWERS.md}.
+
+\end{enumerate}
+
+
+\noindent \textbf{Handing it in:} Include your code, your plots, and
+your answers to the questions about (in the file \texttt{ANSWERS.md})
+in your assignment.
+
+\end{document}

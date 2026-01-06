@@ -1,0 +1,76 @@
+\documentclass[10pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts,color, titling}
+ \usepackage{listings}
+
+\setlength{\droptitle}{-20mm} 
+
+\usepackage[colorlinks=true,linkcolor=red,urlcolor=blue]{hyperref}
+
+\title{Pre-class assignment \#11}
+\author{PHY-905-005\\Computational Astrophysics and
+  Astrostatistics\\Spring 2023}
+ \date{} % leave blank to have no date
+
+\begin{document}
+ 
+\maketitle
+
+\vspace{-5mm}
+
+\noindent
+\textbf{This assignment is due the evening of Wednesday March 1, 2023.}
+ Turn in all materials via GitHub.
+
+\vspace{5mm}
+
+\noindent
+\textbf{Reading:}
+
+\begin{enumerate}
+
+% \item Sections 1.2.4, 2, and 3 of Mike Zingale's
+%   \href{http://bender.astro.sunysb.edu/hydro_by_example/CompHydroTutorial.pdf}{Computational
+%   Hydrodynamics Tutorial}  (also included in a previous pre-class assignment).  Note
+% that this comes with a really fantastic
+% \href{https://github.com/Open-Astrophysics-Bookshelf/numerical_exercises}{Git
+%   repository} full of example codes written in Python.
+
+\item Chapter 7.1-7.5 of of \textit{An Introduction to Computational Physics},
+  by T. Pang (PDF; provided) 
+
+\item (optional) Sections 9.1 and 9.2 of \textit{Computational Physics}, by Newman.
+
+\end{enumerate}
+
+\noindent
+\textbf{Your assignment:}  
+
+\begin{enumerate}
+
+% \item After reading the assigned sections of Zingale's notes, list at
+%   least two questions or points of confusion that you have in the file \texttt{ANSWERS.md}.
+
+\item After reading the assigned sections of Pang, list at least two questions that
+  you have about solving elliptical equations in the file \texttt{ANSWERS.md}.
+
+\item Solve the problem in Section 7.4 of Pang -- the distortion of a
+bench due to a person sitting on it, as described in Equations 7.64
+and 7.67 -- using the matrix method.  Note that you don't need to
+write your own linear algebra solver -- use the solver available in
+the SciPy
+\href{https://docs.scipy.org/doc/scipy/reference/linalg.html}{\texttt{linalg}}
+package.  Think carefully about the boundary condition that you use
+here, and how it is represented in the matrix!  In the file
+\texttt{ANSWERS.md}, comment on how you might treat other boundary
+conditions differently.
+
+\end{enumerate}
+
+\vspace{5mm}
+
+\noindent \textbf{Handing it in:} Include your code, your plots, and
+your answers to the questions about (in the file \texttt{ANSWERS.md})
+in your assignment.
+
+\end{document}

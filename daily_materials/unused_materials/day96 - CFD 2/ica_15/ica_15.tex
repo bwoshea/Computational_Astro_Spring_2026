@@ -1,0 +1,97 @@
+\documentclass[10pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts,color, titling,graphicx}
+ \usepackage{listings}
+
+\setlength{\droptitle}{-20mm} 
+
+\usepackage[colorlinks=true,linkcolor=red,urlcolor=blue]{hyperref}
+
+\title{In-class assignment \# 15}
+\author{Brian O'Shea, \\PHY-905-002, Computational Astrophysics and
+  Astrostatistics\\Spring 2021}
+ \date{} % leave blank to have no date
+
+\begin{document}
+ 
+\maketitle
+
+\vspace{-5mm}
+
+
+\noindent \textbf{Instructions:}  In today's class we are going to
+work with the \texttt{pyro2} code
+(\href{https://github.com/python-hydro/pyro2}{repository on GitHub};
+\href{https://pyro2.readthedocs.io/en/latest/index.html}{documentation}),
+which you have already downloaded and installed.  This is a
+Python 
+code written by Michael Zingale (and documented in
+\href{https://ui.adsabs.harvard.edu/abs/2014A%26C.....6...52Z/abstract}{Zingale
+(2014)}) which is intended to teach computational hydrodynamics,
+including the Euler equations.  We are going to be experimenting
+specifically with the
+\href{https://pyro2.readthedocs.io/en/latest/compressible_basics.html}{compressible
+  solvers}.  Please consult the
+\href{https://pyro2.readthedocs.io/en/latest/running.html}{``Running''}
+documentation for instructions on how to run the code, and the
+\href{https://pyro2.readthedocs.io/en/latest/analysis.html}{``Analysis
+  Routines''} documentation on plotting.  We're going to do the following:
+
+\begin{enumerate}
+  
+\item Examine the code in the \texttt{compressible/} subdirectory,
+  which implements the algorithms we've looked at in class.  Start in
+  the file \texttt{compressible/simulation.py} (which is called from
+  \texttt{pyro.py} in the top-level directory for \texttt{pyro2}), and
+  make sure you understand what the code is doing in terms of setting
+  up initial conditions, calculating the fluxes at cell faces, doing
+  Riemann solves, and updating the solution.
+
+%%%% NOTE:  USING bit.ly for the URLs below because OS X Preview does
+%%%% not do sensible things with the hashtag in the URL
+%%%% (see https://github.com/latex3/hyperref/issues/110; bit.ly is the workaround)
+  
+\item Run some test problems with the default compressible solver,
+  which is a 2$^{nd}$ order finite volume method.  In particular, try the
+  %\href{https://pyro2.readthedocs.io/en/latest/compressible_basics.html#sod}{Sod shock tube problem}
+  \href{https://bit.ly/30KRoTK}{Sod shock tube problem}
+  and the
+  %\href{https://pyro2.readthedocs.io/en/latest/compressible_basics.html#sedov}{Sedov blast wave problem}.
+  \href{https://bit.ly/3eKvxnK}{Sedov blast wave problem}.
+
+
+  Make plots of these and look at the
+  solutions compared to the analytic solutions using the comparison
+  scripts (follow the directions in the linked documentation).
+
+\item For the Sod shock tube problem, try re-running it with varied
+  parameters.  See the
+  %\href{https://pyro2.readthedocs.io/en/latest/compressible_basics.html#compressible-solver}{compressible solver documentation};
+  \href{https://bit.ly/3lnTaU9}{compressible solver documentation};
+
+  the general format to modify a parameter at the
+  command line is to add an argument that looks like
+  ``\texttt{section.option=value}'' -- i.e.,
+  ``\texttt{compressible.riemann=CGF}'' to change the Riemann solver
+  from the default (HLL.
+  For the \texttt{compressible} solver, turn on and off the flattening, modify the artificial viscosity,
+  change the limiter and Riemann solver, and change the EOS.  Use the
+  analysis tools to make plots compared to the analytic solution
+  (which will end up in a file named \texttt{sod\_compare.png},
+  probably in the \texttt{analysis/} directory).  Rename those plots
+  to something useful and submit them, along with an analysis of the
+  variation.  What trends do you see?
+
+ \item Time permitting, try doing the same thing with either the Sedov
+   blast problem \textbf{or} with one of the other compressible
+   solvers (\texttt{compressible\_rk}, \texttt{compressible\_fv4}, or
+   \texttt{compressible\_sdc}) and their modifiable parameters.  How
+   does this behave differently than the standard  2$^{nd}$ order finite volume method?
+
+\end{enumerate}
+
+\vspace{5mm}
+\noindent
+As per usual, submit your code, plots, etc. via GitHub!
+
+\end{document}
