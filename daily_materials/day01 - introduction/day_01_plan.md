@@ -25,8 +25,8 @@ Announcements:
 * Welcome
 * Quick round of introductions (me + students)
 * Talk about syllabus: course structure, expectations, grading
-* Talk about COVID and how that affects my expectations:
-  * This is a crazy time in the world and everybody's stressed out.
+* Talk about my expectations for this course
+  * This is a 900-level elective; I assume you're taking it for your own benefit!
   * Flexibility within reason in terms of deadlines.
   * I will do my best to keep the class manageable; if you're struggling, let me know!
   * My grading policy: 900-level elective.  Show up to class and do your best, I'll make sure you get at least a 3.5
