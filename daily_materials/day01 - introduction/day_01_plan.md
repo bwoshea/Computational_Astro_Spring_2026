@@ -29,10 +29,13 @@ Announcements:
   * This is a 900-level elective; I assume you're taking it for your own benefit!
   * Flexibility within reason in terms of deadlines.
   * I will do my best to keep the class manageable; if you're struggling, let me know!
-  * My grading policy: 900-level elective.  Show up to class and do your best, I'll make sure you get at least a 3.5
+  * My grading policy: 900-level elective.  Show up to class, do the work, and do the best you can with that work, I'll make sure you get at least a 3.5
   * Please, PLEASE communicate with me if you're struggling - I'm here to help!
 * Talk about course materials: books and supplemental readings
 * Talk about learning goals
+  * Computational skills are crucial to your success in astronomy and astrophysics
+  * Numerical methods and statistical methods are the core of what we do.
+  * Even if you don't find yourself implementing a lot of this stuff, it's important to have a basic understanding of how it works!
 * Discussion:
   * Questions about the syllabus?  (generally about course structure)
   * Questions/comments about course calendar?  anything missing?
