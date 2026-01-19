@@ -9,8 +9,8 @@
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
 
 \title{Homework \# 1}
-\author{PHY-905-005\\Computational Astrophysics and
-  Astrostatistics\\Fall 2023}
+\author{PHY-905-003\\Computational Astrophysics and
+  Astrostatistics\\Fall 2026}
  \date{} % leave blank to have no date
 
 \begin{document}
@@ -22,8 +22,8 @@
  
 \centerline{
   {\large
-    \textbf{This assignment is due by 11:59 p.m. on Friday February 24,
-      2023.}
+    \textbf{This assignment is due by 11:59 p.m. on Sunday February 15,
+      2026.}
   }
 }
 
@@ -89,7 +89,7 @@ particles is:
 where $m_i$ is the mass of the particle $i$, $\mathbf{r}_i$ and
 $\mathbf{v}_i$ are its position and velocity vectors with regard to
 the center of mass of the system, $\mathbf{\omega}$ is the spin vector,
-and $\mathbf{I}$ is the \href{https://en.wikipedia.org/wiki/Moment_of_inertia#The_inertia_tensor}{moment of inertia tensor}, which is defined as:
+and $\mathbf{I}$ is the \href{https://en.wikipedia.org/wiki/Moment_of_inertia#Inertia_tensor}{moment of inertia tensor}, which is defined as:
 
 \begin{equation}
 \mathbf{I} = \sum_{i=0}^{N} m_i ( \mathbf{r}_i \cdot  \mathbf{r}_i
@@ -227,10 +227,10 @@ test suite for the code you wrote in Part 2 that includes unit tests using
 \href{https://docs.pytest.org/}{\texttt{pytest}}, 
 integration tests that verifies the entire code works as expected,
 and a performance test that verifies that the code completes in an
-acceptable amount of time.  This test suite should run
+acceptable amount of time.  This test suite should run 
 using a single Python script that calls sub-programs as needed, and
 then report the outcome of the tests.  Note that this might require
-making some changes to your code from 
+making some changes to your code from the in-class assignment!
 
 The unit test suite should test the following:
 
@@ -251,7 +251,8 @@ appropriate for that algorithm.
 \end{enumerate}
 
 The integration tests should test the following.  If the earth and the
-comet are integrated for a single orbit using a fixed time step and,
+comet are integrated for a single orbit using a fixed time step
+($\simeq 1$ and $\simeq 5.2$ years for the planet and comet, respectively) and,
 separately, an adaptive time step, energy and angular momentum should
 conserve energy for each integration algorithm to within an acceptable
 (and algorithm-specific) tolerance of your choice.  Demonstrate that
@@ -285,17 +286,17 @@ class (which focused on open source software development) by working
 through GitHub's process for dealing with the creation of issues and
 pull requests, as well as branching, and forking.  This is going to
 require some group work, and so \textbf{I have assigned you to
-groups of three:}
+groups of three or four:}
 
 \begin{itemize}
 
-\item  Group 1:  Anita, Sierra, Steven V.
+\item  Group 1:  Allison, Brennom, Justin, Tessa
 \vspace{-2mm}
 
-\item  Group 2:  Zilin, Jack, Stephen W.
+\item  Group 2:  Grace, McKenna, Meir, Tom
 
 \vspace{-2mm}
-\item  Group 3:  Elias, Emily, Carolyn
+\item  Group 3:  John, Sydney, Cassidy
 
 \end{itemize}
 
@@ -332,7 +333,10 @@ solutions, etc.
   check out that branch,
   fix the two code bugs from last time, and push those changes and new
   branch to
-  GitHub as well.
+  GitHub as well.  If there is a fourth group member (not all groups
+  have one!) make an additional branch, make some simple edit to the
+  code (to, e.g., modify some existing print statements), and issue a
+  PR for that.
   Coordinate with your group members to make sure that you've edited
   at least one of the same lines of code in a different way in each
   branch -- \textbf{you want to deliberately create a merge conflict
