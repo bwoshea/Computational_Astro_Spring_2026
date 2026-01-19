@@ -3,4 +3,4 @@
 *.log
 *.out
 .ipynb_checkpoints
-
+.virtual_documents
