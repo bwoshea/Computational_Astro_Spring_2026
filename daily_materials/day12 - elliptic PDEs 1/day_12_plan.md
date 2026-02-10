@@ -1,4 +1,4 @@
-# Day 11 - Elliptic PDEs, 1
+# Day 12 - Elliptic PDEs, 1
 
 ## Goals for today's class
 
@@ -6,7 +6,6 @@
 
 ## Pre-class assignments
 
-* [NOT TRUE IN 2023 - MOVE TO HYPERBOLIC PDES]Read Zingale: Norms, PDE classification, Finite-Volume grids sections
 * Pang 7.1-7.5: PDEs, matrix method, relaxation method
 * Newman 9.1, 9.2: more PDEs.
 * Code up the distorted bench problem w/relaxation method.

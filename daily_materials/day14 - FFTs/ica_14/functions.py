@@ -1,5 +1,9 @@
 import numpy as np
 
+# Noise amplitude - 2.0 by default.
+# You can make this bigger to make signal noisier and smaller to reduce noise.
+noise_amplitude = 2.0
+
 # set up our time domain
 t_start = 0
 t_stop = 4.0*np.pi
@@ -16,6 +20,6 @@ t = np.linspace(0,N_samples*dt,N_samples,endpoint=False)
 fx = 4.0*np.sin(30.0*np.pi*t) + 1.5*np.cos(60.0*np.pi*t) + 3.0*np.cos(120.0*np.pi*t)
 
 # function with noise added
-fx_noisy = fx + 2.0*np.random.rand(N_samples)
+fx_noisy = fx + noise_amplitude*np.random.rand(N_samples)
 
 
