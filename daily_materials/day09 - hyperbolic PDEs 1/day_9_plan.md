@@ -10,25 +10,29 @@
 
 ## Pre-class assignments
 
-* Read Zingale Ch. 4
+* Read Zingale Chs. 1.2.4, 2, 3.1-3.4, and 4 (pretty good amount of reading)
 * Implement FTCS and upwind method for one smooth (Gaussian pulse) and one discontinous (top hat) initial condition
 
 **Plan for the day:** 
 
 ## Announcements
 
-* Talk about plans for moving forward
-* Overview of the hyperbolic PDE days / how this leads to hydro algorithms
-* I'll get you the pre-class assignment for the next class session by tomorrow!
+* ... 
 
 ## In-class activity details
 
 * Talk about plan for next couple weeks
-  * Next week: more hypberbolic PDEs
-  * Week after: I'm out of town.  ICER workshop (in class both days)
+  * Thursday and next Tuesday: more hypberbolic PDEs.  
+  * Then Elliptic and Parabolic PDEs, then FFTS.  Then spring break.
   * After that: parallel computing!
 
+
 * Discuss pre-class assignment
+  * **The point of the PCA was to get people to think about grids and solving problems on grids, since that's one primary way that we deal with PDEs.**
+  * **We spend a lot of time solving hyperbolic PDEs, and it directly leads to hydro, MHD, etc. - that is why we're spending a few days on it.**
+  * Norms: why do we have different norms?  For example, "inf norm" vs. L2 norm?  (One highlights the most extreme error, the other highlights a more global sense of error.) 
+  * PDE types: mathematically, there are three categories.  What are the practical differences?  Hyperbolic: initial-value/time-dependent (local solutions).  Elliptic: boundary value/time-independent (requires global solutions).  Parabolic: aspects of both; time-dependent but global.
+  * Grids:  Why grids?  Why finite difference vs. finite volume?  (sampled point in space vs. actual volume element w/average value stored).  Indices of cell centers vs. cell faces.  Finite volume is useful for conservation laws, as we'll see.  What about boundary conditions?
   * FTCS is unconditionally unstable; upwinding works better
   * Smooth profiles are better 'maintained' than sharp profiles.  What happens with this as you change the grid resolution?  (Higher resolution should equate to better solutions, less weird behavior at corners in the top hat solution, etc.)
 
@@ -43,7 +47,7 @@
   * I want people to clean up their codes, make sure that they are readable and make sense - we're going to do some peer review
   * Make sure code can handle both positive and negative values of velocity (u < 0 and u > 0).  If you don't get the same answer for u < 0 and u > 0, something's wrong!
   * Do some tests with upwinding with various grid sizes, C, u>0, u<0?
-  * Hvae a discussion about how this went!
+  * Have a discussion about how this went!
 
 
 

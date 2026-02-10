@@ -14,8 +14,7 @@
 
 Announcements:
 
-* We need to find a time to have a makeup class, since I was sick.  (If possible!)  Please fill out the Doodle poll I shared!
-* Homework 1 is out - questions?  (Discuss)
+* Homework 1 has been out for a while and is due next week - questions?  (Discuss; possibly defer to Tuesday.)
 
 ### Pre-class assignment
 
@@ -27,7 +26,7 @@ What problems did they have with the SciPy version?  (It's tricky to use.)
 
 **Share my PCA solutions with them!**
 
-Note that BVP ODEs are used to solve the [Sturm-Liouville](https://en.wikipedia.org/wiki/Sturm%E2%80%93Liouville_theory) problem.  One example of this is the time-independent Schodinger equation.  Another example would be time-independent wave solutions in general - i.e., standing-wave type problems.
+Note that BVP ODEs are used to solve the [Sturm-Liouville](https://en.wikipedia.org/wiki/Sturm%E2%80%93Liouville_theory) problem.  One example of this is the time-independent Schrodinger equation.  Another example would be time-independent wave solutions in general - i.e., standing-wave type problems.
 
 Other methods for BVP ODEs: there are discrete variable methods that are analogous to the methods we use to solve elliptic PDEs, which are basically relaxation methods.  There are also other methods that create approximate solutions as a set of basis functions to solve it (polynomials, splines, trig functions, etc.).  Also Galerkin methods, which are another interesting minimization method.  Look in the `supp_materials` directory for some information I found online.
 
@@ -50,4 +49,4 @@ This went OK; I need to actually have a worked solution to the SciPy version!  I
 
 Spring 2021:
 
-Kind of a dumpster fire. I ended up giving the students the worked solution for SciPy, heavily docunented (how in the PCA directory).  Students really struggled with the in-class assignment, because they had a lot of problems with the boundary conditions.  I think I need to have them do a flowchart first - draw pictures, etc., and diagram the code!
+Kind of a dumpster fire. I ended up giving the students the worked solution for SciPy, heavily docunented (now in the PCA directory).  Students really struggled with the in-class assignment, because they had a lot of problems with the boundary conditions.  I think I need to have them do a flowchart first - draw pictures, etc., and diagram the code!

@@ -17,7 +17,7 @@
 
 Announcements:
 
-* Today is the last day of hyperbolic PDEs.  If you are interested in learning about hydro for your semester project, let me know!
+* Next class is the last day of hyperbolic PDEs.  If you are interested in learning about hydro for your semester project, let me know!
 * Discuss plans for the rest of the semester - where are we at?
 
 ### Pre-class assignment
