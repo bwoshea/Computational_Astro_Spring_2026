@@ -17,13 +17,15 @@
 
 Announcements:
 
-* 
-
+* HW 2 out - any questions?  Due the Friday **after** break.
+* Next week is spring break - enjoy.
+* Claire Kopenhafer will be teaching the week after break - we'll have pre-class assignments out shortly.
 
 ### Pre-class assignment
 
 * Discussion
-* What happened with the different C?  (C=2 should be unstable)
+* What happened with the different C for the explicit solver?  (C=2 should be very unstable)
+* Did anybody try changing the resolution?
 
 ### In-class assignment
 
@@ -36,3 +38,5 @@ Announcements:
 **Leave feedback on what happened in class today!**
 
 2021: I'm starting to think I need to put parabolic, elliptic PDEs after hypberbolic.  Otherwise it doesn't really make sense compared to what Zingale has in his lecture notes.
+
+2023:  Did parabolic after elliptic.  It worked out fine.

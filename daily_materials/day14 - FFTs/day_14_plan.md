@@ -15,14 +15,15 @@
 
 Announcements:
 
-* Switching over to Feigelson (stats stuff) starting next class.
-* Expect HW 1 grades, all PCA and ICA grades, very soon.
+* Switching over to parallel computing and then Feigelson (stats stuff) starting next class.  (After spring break.)
+* Expect HW 1 grades, all PCA and ICA grades up to now, by the end of spring break.  So please turn in everything you haven't done yet!  (Or let me know your ETA if you haven't yet.)
 
 ### Pre-class assignment
 
 * Share with your group what you did, and discuss the answers to the questions asked in the PCA
 * We'll have an in-class discussion about the questions first!
 * Also, give a brief presentation on correlation functions and how the FFT works.
+* The major limitation for FFTs is that the signal must be periodic (or at least plausibly so) and must be evenly sampled in time and/or space.
 
 ### In-class assignment
 
@@ -39,3 +40,5 @@ Announcements:
 2021: Also went well; next time I will probably keep things as-is.
 
 2023: very happy with it.  Also have students read about cross-correlation functions next time - https://en.wikipedia.org/wiki/Cross-correlation . 
+
+2026: Forgot to add cross-correlations, have them do it next time I teach it.
