@@ -8,7 +8,7 @@
 
 ## Pre-class assignment
 
-* Read Chapter 6
+* Read Chapter 6 of Zingale
 * Extend previous finite volume code to implement Burgers' equation using 2nd order method w/limiter
 * Test that code on the rarefaction, sinusoidal ICs and verify it behaves correctly.
 
@@ -18,8 +18,8 @@
 
 Announcements:
 
-* Doing computational fluid dynamics next week!  Today's class will build on that.  PCAs for next week, as well as homework #2 and the semester project, are going to be made available later this week.
-
+* Moving on to elliptical, parabolic equations, then FFTs!
+* Please get homework #1 in soon - I'm going to grade everything this weekend (starting Saturday morning)
 
 ### Pre-class assignment
 
@@ -33,7 +33,7 @@ Assignment:
 
 Talk through Section 6.1, focusing on explaining the shock formation: characteristics intersect, which means you can't go backwards to find an initial state.  Opposite of this is a rarefaction, where characteristics diverge.  We can think of any solution to Burgers' equation as locally being one or the other; so, we can think of our conservative update to u(x,t) to u(x,t+dt) as using fluxes at cell faces calculated using a simple set of logic for shocks vs. not-shocks (converging vs. diverging values at a cell face).  
 
-**Walk through this logic - equations 6.12 - 6.15**
+**Walk through this logic - Zingale equations 6.12 - 6.15**
 
 This means that each interface is only informed by the characteristics (linear projections of wave information) that's propagated toward that interface from cell centers.  This is simple for Burgers' equation but gets more complicated when there are more waves (like in a fluid; sound wave + advection + shocks in each direction).
 

@@ -35,3 +35,4 @@ Implement the pre-class assignment (distortion of a bench due to a person sittin
 **Leave feedback on what happened in class today!**
 
 2021: the pre-class assignment and relating discussion went VERY long -  we didn't get to do the in-class assignment.  Instead, we talked through how to implement it and then we moved on.  The students really need to be reminded about notation for space vs. time/iterations (i,n sub and super scripts), which is a real point of contention.
+ 
