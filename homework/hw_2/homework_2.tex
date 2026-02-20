@@ -9,25 +9,24 @@
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
 
 \title{Homework \# 2}
-\author{PHY-905-005\\Computational Astrophysics and
-  Astrostatistics\\Spring 2023}
+\author{PHY-905-003\\Computational Astrophysics and
+  Astrostatistics\\Spring 2026}
  \date{} % leave blank to have no date
 
 \begin{document}
  
 \maketitle
 
-\vspace{-5mm}
+\vspace{-10mm}
 
 \centerline{ {\large
-\textbf{This assignment is due by 11:59 p.m. on Friday March 24,
-  2023.} } }
+\textbf{This assignment is due by 11:59 p.m. on Friday March 13,
+  2063.} } }
 
 
-\vspace{5mm}
+\vspace{3mm}
 
-\noindent
-\textbf{Instructions:}
+\noindent\textbf{Instructions:}
 Turn in all materials via GitHub.  Create a separate subdirectory
 for each part of the homework, named \texttt{part\_1},
 \texttt{part\_2}, etc., which should contain the code, plots, and
@@ -36,12 +35,18 @@ descriptive file names for everything).  Your code must adhere to the
 class coding and commenting standards, as documented in the file
 \texttt{class\_coding\_standards.txt} from Homework \#1 (and please
 note that adhering to these standards will constitute a significant
-part of your homework grade).   Plots should be named
+part of your homework grade).  To that end, please put your code in
+text files, \textbf{not} Jupyter notebooks!  Also, please run
+\href{https://pypi.org/project/pylint/}{PyLint} and make sure that
+your code doesn't have any obvious issues (i.e., don't spend a lot of
+time fixing warnings about style issues that don't indicate bugs). 
+Plots should be named
 sensibly, should have easily readable and logical axis labels and
 titles, and the source code and data used to generate the plots should
 be included in the subdirectories.  Questions for each section should
 be answered in a file named \texttt{ANSWERS.md} or in a
-PDF document of a similar name (e.g., \texttt{ANSWERS.pdf}).
+PDF document of a similar name (e.g., \texttt{ANSWERS.pdf}).  Please
+also report how much time that you spend on each problem!
 
 \vspace{5mm}
 
@@ -99,7 +104,8 @@ compared to the initial solution, normalized by $\Delta x$ (so,
 scaling the error with the number of grid points).  \textbf{Plot
 $\epsilon_{\Delta x}$ vs. $\Delta x$ for several power-of-two grid resolutions on a
 log-log plot and estimate the convergence rate from the slope of the
-line.}  Note: if you don't see a convergence rate of
+line.  Also plot a second lot that shows $\epsilon_{\Delta x} \propto
+\Delta t^2$ for comparison.}  Note: if you don't see a convergence rate of
 $\mathcal{O}(\Delta t^2)$, you almost certainly have a bug somewhere!
 \textbf{Hint:} You have already done almost all of the coding in class
 -- this problem should only require writing a few additional lines of
@@ -142,7 +148,10 @@ the domain (i.e., between the ghost zone and the first ``real'' zone
 in your 3D array) is identical to the slope of the cells immediately
 inside the boundary.  This is effectively an ``isolated'' boundary
 condition.  How might you implement a periodic boundary condition in
-this circumstance?
+this circumstance?  Hint: make sure that you're consistent with units!  If the gravitational
+constant is in CGS, positions and densities must also be in CGS. Note
+also that the
+routine in \texttt{star\_array\_generator.py} returns densities in CGS units.
 
 \item Test the function that you have written using the
 \texttt{single\_star\_array}, which by default has $101^3$ cells
@@ -153,10 +162,14 @@ answer -- in other words, that the potential falls off as $1/r$ and
 that it has the correct units.  You should do this by making a line
 plot that includes calculated values of the potential from the cell
 containing the star to the edge of the domain, as well as the analytic
-solution that you would expect.  You may also want to make an image of
-a slice of the potential array (Hint: you may wish to take the log of
+solution that you would expect\footnote{Hint: make a log-log plot of the
+magnitude of the potential vs. distance -- if you're calculating it
+correctly you should get a line with a slope of $\pm 1$ depending on
+which side of the star you're on.}.  You may also want to make an image of
+a slice of the potential array\footnote{Hint: you may wish to take the log of
 the absolute magnitude of a slice of the array to be able to see
-dynamic range!)  For the default resolution, how many iterations does it take for your solution to
+dynamic range!}.
+For the default resolution, how many iterations does it take for your solution to
 converge to an accuracy in the residual of $10^{-1}$, $10^{-2}$,and $10^{-3}$,
 respectively?  How does this change if you make the grid half the size
 in each dimension ($51^3$ cells, $53^3$ with ghost zones)?
@@ -171,8 +184,10 @@ comparable accuracy change between this part of the problem and the
 single-star version?
 
 \item Congratulations!  You've written a (very slow) gravity solver.  If you wanted
-  to turn this into a simple simulation of the evolution of a cluster
-  of stars, how might you do that?  You don't need to write the actual
+  to turn this into a simple simulation of the dynamical evolution of a cluster
+  of stars, how might you do that?  (To be clear, ``dynamical
+  evolution'' in this case means following the evolution of the stars'
+  positions and velocities over time.)  You don't need to write the actual
   code, just outline the steps you'd take!
 
 \end{enumerate}
@@ -217,6 +232,11 @@ For the final year, plot T(x) as a function of depth at 4 different time periods
 correspond to the four seasons.  By how much does the temperature of
 the ground at 1 m, 3 m, 5 m, 10 m, and 15 m below ground vary throughout
 the year?
+
+Hints: when working on this problem, think carefully about the inner and
+outer boundary conditions.  What should those look like, in terms of
+their values and how you implement that?  Where do you expect the
+temperature to be a maximum, and where should it be a minimum?
 
 
 \end{document}
