@@ -19,7 +19,8 @@ Announcements:
 
 * HW 2 out - any questions?  Due the Friday **after** break.
 * Next week is spring break - enjoy.
-* Claire Kopenhafer will be teaching the week after break - we'll have pre-class assignments out shortly.
+* Claire Kopenhafer will be teaching the week after break - we'll have pre-class assignments out shortly. **Also, I signed everybody up for ICER HPCC accounts -- make sure to do the asynchronous training if you have not already!**
+
 
 ### Pre-class assignment
 
