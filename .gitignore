@@ -2,6 +2,7 @@
 *.aux
 *.log
 *.out
+*.xwm
 .ipynb_checkpoints
 .virtual_documents
 .vscode
