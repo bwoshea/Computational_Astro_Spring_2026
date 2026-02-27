@@ -2,12 +2,17 @@
 
 ## Goals for today's class
 
-* Fill me in!
+* Understand how the von Neumann architecture handles instructions and data
+* Follow the movement of data through the memory hierarchy
+* Understand how cache lines and the memory hierarchy enable vectorization
+* See how to leverage NumPy's API to take advantage of vectorization
 
 ## Pre-class assignment
 
-* What do I read/watch?
-* What do I do?
+* Read **all pages** of this overview on the [basics of the CPU](https://www.bbc.co.uk/bitesize/guides/zws8d2p/revision/1).
+* Watch [this video](https://thecrashcourse.com/courses/data-structures-crash-course-computer-science-14/) on data structures. This video is not specific to Python. The first roughly 6 minutes are the most relevant for our next class, but you may find all of it interesting and informative.
+* Read the accompanying PDF on Lists and Tuples to understand how these data structures function under the hood.
+* **If you've never used NumPy,** I suggest reading the [beginner guide](https://numpy.org/doc/stable/user/absolute_beginners.html).
 
 ## In-class activity details
 
@@ -15,19 +20,17 @@
 
 Announcements:
 
-* TBD
+* These lessons are adapted from Claire's High Performance Computing for Python class (CMSE890-601), a 2 credit class she teaches every fall.
+* Claire's classes start with a lecture (usually brief except for today's) and then students work on in-class assignments (Jupyter notebooks). Her pre-class assignments are light; instead, in-class assignments should be finished outside of class if necessary.
 
 ### Pre-class assignment notes
 
-* What should the students do for this?  (Specific discussion questions?)
-* What do we want to make sure to talk about / ask about?
+* Nothing specific; the pre-class materials are intended to prime students for the lecture.
 
 ### In-class assignment nodes
 
-* What to talk about to tee up in-class assignment?
-* What are the students going to do?
-* What to discuss to wrap up the session?
-
+* The lecture slides are in this directory. Give this first.
+* The in-class assignment cover memory hierarchy data movement for lists vs arrays and NumPy vectorization. I've also tacked on part of the following assignment where students convert a list-based 1D diffusion solver to one that uses NumPy. Removed from the original lessons are list comprehensions.
 
 ## Instructor notes (for next time)
 
