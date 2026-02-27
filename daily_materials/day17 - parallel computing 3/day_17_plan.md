@@ -2,12 +2,14 @@
 
 ## Goals for today's class
 
-* Fill me in!
+* Understand what "just in time" compilation is
+* Anticipate data structures that Numba will struggle or fail to compile
+* Identify the situations where different Numba tools are useful
 
 ## Pre-class assignment
 
-* What do I read/watch?
-* What do I do?
+* Watch this [video explaining JIT compilers](https://www.youtube.com/watch?v=d7KHAVaX_Rs&t=494s) (content is optional after about 8 minutes)
+* Read this brief [introduction to Numba](https://numba.readthedocs.io/en/stable/user/5minguide.html). Note that "broadcasting" here refers to [NumPy functionality](https://numpy.org/doc/stable/user/basics.broadcasting.html); e.g. multiplying an array by a scalar is "broadcasting" that scalar to the whole array.
 
 ## In-class activity details
 
@@ -24,9 +26,8 @@ Announcements:
 
 ### In-class assignment nodes
 
-* What to talk about to tee up in-class assignment?
-* What are the students going to do?
-* What to discuss to wrap up the session?
+* The lecture slides are very short. One important thing to highlight are Numba's dependence on C types (and not Python built-ins) and its use of thread vs processes (since running compiled code is not subject to the GIL).
+* Students will learn about the `@jit` decorator (and it's limitations), use Numba's built in thread parallelism, and the `@vectorize` decorator which allows for the creation of custom NumPy-like functions for use on arrays. This is a really short lesson!
 
 
 ## Instructor notes (for next time)

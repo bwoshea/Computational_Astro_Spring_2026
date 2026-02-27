@@ -2,12 +2,18 @@
 
 ## Goals for today's class
 
-* Fill me in!
+* Understand how multiprocessing divides work among multiple processes
+* Think through the process of parallelizing a problem
+* Run parallel jobs on the HPCC with SLURM
 
 ## Pre-class assignment
 
-* What do I read/watch?
-* What do I do?
+Next lesson we'll start working with multiple CPU cores. A common way to do this is to use *threads* - multiple streams of program execution that share memory. It's this shared memory aspect that makes threads an attractive way to run a program on multiple CPUs; however, Python's design means threads aren't as helpful as they are in other languages. This design feature is called the Global Interpreter Lock (GIL), and the following pre-class resources are intended to make you more familiar with this parallel programming roadblock.
+
+* What is an interpreter anyway? Read this overview of [compiled vs interpreted languages](https://www.freecodecamp.org/news/compiled-versus-interpreted-languages/). The article points out that Python can be run in compiled mode (if you've ever seen a `.pyc` file, that's compiled Python code) but this is usually reserved for imported modules.
+* Watch this video [introducing the GIL](https://www.youtube.com/watch?v=XVcRQ6T9RHo).
+* Read this article explaining [why the GIL is necessary](https://realpython.com/python-gil/).
+* **Optional:** a recent Python Enhancement Proposal (PEP) lays out a road map for removing the GIL! If you're interested, you can read more [here](https://www.infoworld.com/article/3704248/python-moves-to-remove-the-gil-and-boost-concurrency.html). This proposal is slated to be included with Python 3.13, which is currently in the "pre-release" stage.
 
 ## In-class activity details
 
@@ -15,18 +21,16 @@
 
 Announcements:
 
-* TBD
+* Homework 3 will be released?
 
 ### Pre-class assignment notes
 
-* What should the students do for this?  (Specific discussion questions?)
-* What do we want to make sure to talk about / ask about?
+* If the GIL is going away, why am I still teaching multiprocessing? Answer: removable of GIL still not mainstream, lag in packages catching up, multiprocessing's more suitable API (from the historical split)
 
 ### In-class assignment nodes
 
-* What to talk about to tee up in-class assignment?
-* What are the students going to do?
-* What to discuss to wrap up the session?
+* Go over the attached slides, which also has instructions for setting up the necessary jobs on the HPCC (this is the class that really requires the HPCC)
+* The lesson will have students play with the data structure returned by multiprocessing's Pool.map() function, walk them through parallelizing a Monte Carlo estimation of pi, ask them to parallelize another small program while holding their hand a little less, and then walk them through writing a SLURM script for the last of these programs.
 
 
 ## Instructor notes (for next time)
