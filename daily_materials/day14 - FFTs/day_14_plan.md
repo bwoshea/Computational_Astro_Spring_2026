@@ -41,4 +41,5 @@ Announcements:
 
 2023: very happy with it.  Also have students read about cross-correlation functions next time - https://en.wikipedia.org/wiki/Cross-correlation . 
 
-2026: Forgot to add cross-correlations, have them do it next time I teach it.
+2026: Forgot to add cross-correlations, have them do it next time I teach it.  Also, added some notes from Meir Shimon.
+
