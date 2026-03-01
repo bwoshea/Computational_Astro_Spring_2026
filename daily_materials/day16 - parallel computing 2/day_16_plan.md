@@ -10,7 +10,7 @@
 
 Next lesson we'll start working with multiple CPU cores. A common way to do this is to use *threads* - multiple streams of program execution that share memory. It's this shared memory aspect that makes threads an attractive way to run a program on multiple CPUs; however, Python's design means threads aren't as helpful as they are in other languages. This design feature is called the Global Interpreter Lock (GIL), and the following pre-class resources are intended to make you more familiar with this parallel programming roadblock.
 
-* What is an interpreter anyway? Read this overview of [compiled vs interpreted languages](https://www.freecodecamp.org/news/compiled-versus-interpreted-languages/). The article points out that Python can be run in compiled mode (if you've ever seen a `.pyc` file, that's compiled Python code) but this is usually reserved for imported modules.
+* What is an interpreter anyway? Read this overview of [compiled vs. interpreted languages](https://www.freecodecamp.org/news/compiled-versus-interpreted-languages/). The article points out that Python can be run in compiled mode (if you've ever seen a `.pyc` file, that's compiled Python code) but this is usually reserved for imported modules.
 * Watch this video [introducing the GIL](https://www.youtube.com/watch?v=XVcRQ6T9RHo).
 * Read this article explaining [why the GIL is necessary](https://realpython.com/python-gil/).
 * **Optional:** a recent Python Enhancement Proposal (PEP) lays out a road map for removing the GIL! If you're interested, you can read more [here](https://www.infoworld.com/article/3704248/python-moves-to-remove-the-gil-and-boost-concurrency.html). This proposal is slated to be included with Python 3.13, which is currently in the "pre-release" stage.
