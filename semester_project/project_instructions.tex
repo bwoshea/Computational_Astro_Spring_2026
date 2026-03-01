@@ -12,7 +12,7 @@
 
 \setlength{\droptitle}{-20mm} 
 
-\usepackage[colorlinks=true,linkcolor=red,urlcolor=blue]{hyperref}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
 
 \title{Semester project instructions}
 \author{PHY-905-003\\Computational Astrophysics and
@@ -253,6 +253,28 @@ CPU cores as you.  This will ensure that your answers are more precise!
 
 
 \end{enumerate}
+
+\noindent
+\textbf{Hint:} You're going to need Python \textit{partial functions}
+for the Multiprocessing component of this option.  Check out
+\href{https://www.pythontutorial.net/python-basics/python-partial-functions/}{this
+  tutorial}
+on partial functions.  Here's an example of how to use a partial
+function:
+
+\begin{verbatim}
+my_partial = functools.partial(my_func, arg1=val1, arg2=val2)
+
+with multiprocessing.Pool(processes=nprocs) as p:
+    results = p.map(my_partial, work_to_share)
+\end{verbatim}
+
+Alternately, you can use \texttt{mutliprocessing.Pool().starmap},
+which is similar to the function taught in class
+(\texttt{multiprocessing.Pool().map}) but handles functions with
+multiple arguments. This option is useful if you don't want every
+process to run your desired function with the same arguments (as will
+happen when using a partial function). 
 
 \subsection{Option 3 -- Choose your own adventure}
 \label{sec:adventure}
