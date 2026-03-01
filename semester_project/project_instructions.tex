@@ -7,7 +7,7 @@
 \usepackage[printwatermark]{xwatermark}
 
 
-\newwatermark[allpages,color=red!15,angle=45,scale=5,xpos=-12,ypos=0]{DRAFT}
+%\newwatermark[allpages,color=red!15,angle=45,scale=5,xpos=-12,ypos=0]{DRAFT}
 
 
 \setlength{\droptitle}{-20mm} 
@@ -114,7 +114,7 @@ are as follows:
   the Riemann problem as applied to these equations.
 
 \item Implement a 1D finite volume hydro solver using the Piecewise
-  Linear update (Section 8.2.2 of Zingale) and implementing the
+  Linear update (Section 8.2.2 of Zingale).  Also implement the
   two-shock Riemann solver (as discussed in Section 8.3) and the
   conservative update discussed in Section 8.4.  Implement a boundary
   condition routine that allows you to set all of the boundary
@@ -123,7 +123,7 @@ are as follows:
 
 \item Verify that your 1D hydro code works by implementing some
   standard test problems: specifically, the Sod shock tube
-   and double rarefaction problem (Sec. 8.9.1), and the advection
+   and double rarefaction problem (Sec. 8.9.1) and the advection
    problem (Sec. 8.9.3).  Show that this works with the appropriate
    boundary conditions, and compare the solutions (using the L2
    norm) to either the initial conditions or reference solutions, as
@@ -140,14 +140,14 @@ and double rarefaction problem in the x and (separately) y directions,
 and then make sure that your code correctly couples the dimensions
 using the Sedov blast wave test (Section 8.9.2).  Also use the
 advection test where you allow the Gaussian profile to evolve in both
-the $\pm x$ and $\pm y$ directions, as well as along all four
+the $\pm$x and $\pm$y directions, as well as along all four
 diagonals, and demonstrated that it works correctly and identically in
 all directions.
 
 \item Make sure to document all of your tests, including convergence
   and CFL tests, with plots and documentation.  I strongly suggest
   writing the code in a way that allows you to run it via command line
-  arguments and put out plots comparing to reference solutions!
+  arguments and automatically output plots comparing to reference solutions!
 
 \end{enumerate}
 
@@ -155,11 +155,11 @@ all directions.
 \label{sec:parallel-option}
 
 
-\vspace{3mm}
-\noindent
-\textbf{\textcolor{red}{NOTE: The details of this project may change depending on
-    feedback from Claire!}}
-\vspace{3mm}
+% \vspace{3mm}
+% \noindent
+% \textbf{\textcolor{red}{NOTE: The details of this project may change depending on
+%     feedback from Claire!}}
+% \vspace{3mm}
 
 The two-dimensional diffusion equation is (in Cartesian coordinates
 and with a constant diffusion coefficient):
@@ -179,7 +179,7 @@ computationally expensive by changing the grid resolution and/or by
 changing the 3-point stencil for the second spatial derivatives to a
 \href{https://en.wikipedia.org/wiki/Five-point_stencil#1D_higher-order_derivatives}{5-point
 stencil}, which is a higher-order solution to the same derivative
-(though going to a will require you to add an additional ghost
+(though it will also require you to add an additional ghost
 zone!).
 
 The steps you'll take for this problem are:
@@ -207,8 +207,8 @@ measure the simulation runtime using the Python
 \href{https://docs.python.org/3/library/time.html}{time} module for
 the parallel component of the problem as you increase the number of
 CPU cores by powers of two.  Do this for simulation grids of various
-sizes and numbers of grids, and plot the timing for both the
-\href{https://hpc-wiki.info/hpc/Scaling}{strong and weak scaling}
+sizes and numbers of grids, and plot the timing for both a
+\href{https://hpc-wiki.info/hpc/Scaling}{strong and weak scaling} test 
 (i.e, constant problem size vs. constant work per core), plotted
 vs. ideal scaling.  You may wish to use a log-log plot for this!
 (Hint: turn off all print statements for the parallel component of the
@@ -218,7 +218,8 @@ consider the cost of communication and synchronization between CPU
 cores, and also consider
 \href{https://en.wikipedia.org/wiki/Amdahl%27s_law}{Amdahl's law}.)  I
 strongly suggest running these tests on the ICER cluster, preferably
-using a batch job to ensure that nobody else is running on the same
+using a batch job (either using a \href{https://docs.icer.msu.edu/SLURM_overview/}{Slurm script} or
+\href{https://docs.icer.msu.edu/Interactive_Job/}{interactive job} to ensure that nobody else is running on the same
 CPU cores as you.  This will ensure that your answers are more precise!
 
 \item Parallelize your code with either \href{https://cupy.dev/}{CuPy}
@@ -321,7 +322,7 @@ analysis products or model outputs.
 \begin{enumerate}
 
 \item \textbf{Project proposal, due Wednesday 3/18/2026}.  Write a
-brief ($\simeq 1-2$~paragraph) proposal describing which project
+brief ($\simeq 1$~paragraph) proposal describing which project
 option you plan to pursue.  For Options 1 and 2 just explain why
 you're interested in this project.  For Option 3 (``choose your own
 adventure'') please go into detail as explained in
@@ -370,9 +371,9 @@ adhere to the class coding standard and pass checks with
 \href{https://pypi.org/project/pylint/}{PyLint}.}  We'll have a brief
 set of updates in class the  day following this deadline.
 
-\item \textbf{Project presentations and code demonstrations, due
-before the course's final exam session the week of finals (the week of
-4/27/2026 -- exact date/time for this is TBD)}.  Your final
+\item \textbf{Project presentations and code demonstrations, due 7:45
+    a.m. on Friday 5/1/2026 -- immediately before this course's final
+    exam session}. Your final
 presentation can use any of the standard presentation file formats
 (Powerpoint, Keynote, Google Slides, etc.), and an exported PDF
 version should be put in the \texttt{presentation\_demo} subdirectory.
