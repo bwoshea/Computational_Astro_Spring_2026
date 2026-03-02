@@ -1,4 +1,4 @@
-# Day 22 - time series analysis, 1
+# Day 25 - time series analysis, 1
 
 ## Goals for today's class
 
