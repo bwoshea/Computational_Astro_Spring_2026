@@ -1,4 +1,4 @@
-# Day 17 - Regression
+# Day 20 - Regression
 
 ## Goals for today's class
 
