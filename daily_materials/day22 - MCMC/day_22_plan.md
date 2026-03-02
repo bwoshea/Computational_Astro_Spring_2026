@@ -1,4 +1,4 @@
-# Day 19 - Markov Chain MOnte Carlo
+# Day 22 - Markov Chain MOnte Carlo
 
 ## Goals for today's class
 
