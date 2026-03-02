@@ -1,4 +1,4 @@
-# Day 21 - Bayesian stats, 2
+# Day 24 - Bayesian stats, 2
 
 ## Goals for today's class
 
