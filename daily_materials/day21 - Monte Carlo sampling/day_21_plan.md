@@ -1,4 +1,4 @@
-# Day 18 - Monte Carlo sampling
+# Day 21 - Monte Carlo sampling
 
 ## Goals for today's class
 
