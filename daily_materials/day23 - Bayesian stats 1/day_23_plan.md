@@ -1,4 +1,4 @@
-# Day 20 - Bayesian Stats, I
+# Day 23 - Bayesian Stats, I
 
 ## Goals for today's class
 
