@@ -1,4 +1,4 @@
-# Day 15 - probability and statistical inference
+# Day 18 - probability and statistical inference
 
 ## Goals for today's class
 

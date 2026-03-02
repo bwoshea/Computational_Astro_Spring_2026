@@ -1,4 +1,4 @@
-# Day 16 - nonparametric statistics and data smoothing
+# Day 19 - nonparametric statistics and data smoothing
 
 ## Goals for today's class
 
