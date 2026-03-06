@@ -1,3 +1,5 @@
+NOTE -- THIS IS NO LONGER USED!  KEPT FOR HISTORICAL REASONS!
+
 # Semester wrap-up, Spring 2021
 
 **Due date:**  This assignment is due by the end 
