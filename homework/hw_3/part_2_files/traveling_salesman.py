@@ -66,7 +66,7 @@ salesman travels between cities, and plots out the initial path.
 number_of_cities = 30
 
 # seed for random number generator so we get the same value every time!
-np.random.seed(2024561414)
+np.random.seed(505606707)
 
 # create random x,y positions for our current number of cities.  (Distance scaling is arbitrary.)
 city_x = np.random.random(size=number_of_cities)*20.0
