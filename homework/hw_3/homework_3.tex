@@ -1,7 +1,8 @@
 \documentclass[10pt]{article}
  \usepackage[margin=1in]{geometry} 
 \usepackage{amsmath,amsthm,amssymb,amsfonts,color, titling}
- \usepackage{listings}
+\usepackage{listings}
+\usepackage{xcolor}
 \usepackage{gensymb}
 
 \setlength{\droptitle}{-20mm} 
@@ -160,20 +161,26 @@ Some questions to answer/tests to do:
   a single run significantly speed convergence? 
 
 \item Assuming you can test one model per microsecond 
-  per core on the Blue Waters supercomputer (which has approximately
-  $3 \times 10^5$ computational cores), how long would it take to test
-  every single combination for $N_C = 30$, and how does that compare
+  per core using ICER's High Performance Computing Center (which has approximately
+  $7 \times 10^4$ CPU cores across several clusters), how long would it take to test
+  every single combination for $N_C = 30$ to get the provably best solution, and how does that compare
   to how long it takes to get a reasonably good solution using your implementation?
 
 \end{enumerate}
 
-Note that you should do many trials per choice of $N_S$ to get typical
-behavior!
+Note that you should do many trials per choice of $N_S$ to get a sense
+of the typical
+behavior!  \textcolor{red}{Regarding trials, it's very important to recall that Python's random library
+uses the Mersenne Twister algorithm, which is a pseudorandom number generator -- it uses an algorithm that
+generates a sequence of numbers that are \textit{statistically random},
+but which are repeatable given the same initial number.  This means
+that you need to change the initial ``random seed'' number to get a
+different sequence of ensuing numbers!}
 
-\textbf{A suggestion:} You will parallelize the code that you write here in the
-next section of this homework assignment, so consider ways that you can
-write your code that will facilitate doing so!  (For example, use
-NumPy as much as possible rather than lists!)
+%\textbf{A suggestion:} You will parallelize the code that you write here in the
+%next section of this homework assignment, so consider ways that you can
+%write your code that will facilitate doing so!  (For example, use
+%NumPy as much as possible rather than lists!)
 
 \newpage
 \noindent {\large\textbf{Part 3:}}  In this section you're going to
@@ -185,10 +192,16 @@ along the way with tables, figures, and/or text):
 \begin{enumerate}
   \item Establish a performance baseline by timing the single-core
     version of your code for a variety of different numbers of
-    cities (from just a few cities up to 100 cities).  Also use timers to identify the costly part(s) of your
+    cities (from just a few cities up to 100 cities).  Also use timers
+    (from the Python
+    \href{https://docs.python.org/3/library/time.html}{time library}
+    -- e.g. \texttt{time.perf\_counter()}) to identify the costly part(s) of your
     code, as an opportunity for future optimization. How does the cost
-    change?  (Hint: do multiple trials and change the random seed in
-    the random number generator to get a sense of performance variability.)
+    change?  Hint: run multiple trials and change the random seed in
+    the random number generator to get a sense of performance
+    variability as a function of system load (i.e., what other
+    processes are running on the CPU core) and the number of
+    iterations at a given cost.
 
   \item Examine your code and look for serial ``hot spots'' -- i.e., places
     where the code is taking significant fractions of the computing
@@ -234,7 +247,31 @@ along the way with tables, figures, and/or text):
  an optimal number of CPU cores where you get the best speedup?  How
  does that vary as a function of the problem size and optimization technique?
 
+\vspace{2mm}
+ \noindent
+\textbf{Hint:} You're going to need Python \textit{partial functions}
+for the Multiprocessing component of this option.  Check out
+\href{https://www.pythontutorial.net/python-basics/python-partial-functions/}{this
+  tutorial}
+on partial functions.  Here's an example of how to use a partial
+function:
 
+\begin{verbatim}
+my_partial = functools.partial(my_func, arg1=val1, arg2=val2)
+
+with multiprocessing.Pool(processes=nprocs) as p:
+    results = p.map(my_partial, work_to_share)
+\end{verbatim}
+
+Alternately, you can use \texttt{mutliprocessing.Pool().starmap},
+which is similar to the function taught in class
+(\texttt{multiprocessing.Pool().map}) but handles functions with
+multiple arguments. This option is useful if you don't want every
+process to run your desired function with the same arguments (as will
+happen when using a partial function). 
+
+
+ 
 \newpage
 \noindent {\large\textbf{Part 4:}}  ``Stellar population synthesis''
 models are a broad class of astrophysical models that are used to make
@@ -364,7 +401,7 @@ including plots as necessary to make your points:
 \noindent {\large\textbf{Part 5:}}  It has been hypothesized that the
 stellar initial mass function may have an environmental dependence.
 To test this, you are being provided with two data files (in the
-directory \texttt{part\_4\_files}) containing a
+directory \texttt{part\_5\_files}) containing a
 list of measured stellar masses for two separate star clusters -- one
 toward the galactic anticenter (\texttt{IMF\_1.dat}) and the other
 very close to the center of the galaxy (\texttt{IMF\_2.dat}).  Given
@@ -376,7 +413,8 @@ same mass function, and (2) quantify your confidence in this result.
 Clearly explain the statistical techniques that you have used for both
 of these things!  \textbf{Complicating factors:} Note that the star
 clusters have substantially different total masses and somewhat
-different (non-zero) ages.  How might this affect your approach?
+different (non-zero) ages.  How might this affect your approach and/or
+your interpretation of the results?
 
 
 \end{document}
