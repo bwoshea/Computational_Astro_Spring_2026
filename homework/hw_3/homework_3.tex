@@ -78,7 +78,7 @@ constructing your analysis and your report:
     \href{https://docs.scipy.org/doc/scipy/reference/generated/scipy.fftpack.fft.html}{\texttt{scipy.fftpack.fft}}
     returns complex numbers that encode both amplitude and phase
     information -- in other words, recall from your pre-class readings that the ``real'' component
-    of the signal is in phase with (has a $0\degree$/ 0 radian phase shift from)
+    of the signal is in phase with (has a $0\degree$/$0$ radian phase shift from)
     a reference signal, and the ``imaginary'' component is $90\degree$/$0.5\pi$~radians
     out of phase with the reference signal.  An arbitrary signal at
     a given frequency can have both real and imaginary components, which indicates a
@@ -108,11 +108,12 @@ constructing your analysis and your report:
 \noindent {\large\textbf{Part 2:}}   
 The
 \href{https://simple.wikipedia.org/wiki/Travelling\_salesman\_problem}{Traveling
-Salesman Problem} is a classic problem in computer science where the
-focus is on optimization.  The problem is as follows: Imagine there is
+Salesman Problem} is a classic and challenging problem in computer science where the
+focus is on optimization 
+The problem is as follows: Imagine there is
 a salesman who has to travel to $N_C$ cities.  The order is
-unimportant, as long as he only visits each city once on each trip,
-and finishes where he started.  The salesman wants to keep the
+unimportant, as long as they only visit each city once on each trip,
+and finishes where they started.  The salesman wants to keep the
 distance traveled (and thus travel costs) as low as possible.  This
 problem is interesting for a variety of reasons - it applies to
 transportation (finding the most efficient bus routes), logistics
@@ -166,10 +167,76 @@ Some questions to answer/tests to do:
 
 \end{enumerate}
 
-Note that you should do many trials per choice of $N_S$ to get typical behavior!
+Note that you should do many trials per choice of $N_S$ to get typical
+behavior!
+
+\textbf{A suggestion:} You will parallelize the code that you write here in the
+next section of this homework assignment, so consider ways that you can
+write your code that will facilitate doing so!  (For example, use
+NumPy as much as possible rather than lists!)
 
 \newpage
-\noindent {\large\textbf{Part 3:}}  ``Stellar population synthesis''
+\noindent {\large\textbf{Part 3:}}  In this section you're going to
+speed up the Python code that you wrote in Part 2 of this homework
+problem using the parallelism techniques you learned in class.  To
+that end, do the following (and document timing and other progress
+along the way with tables, figures, and/or text):
+
+\begin{enumerate}
+  \item Establish a performance baseline by timing the single-core
+    version of your code for a variety of different numbers of
+    cities (from just a few cities up to 100 cities).  Also use timers to identify the costly part(s) of your
+    code, as an opportunity for future optimization. How does the cost
+    change?  (Hint: do multiple trials and change the random seed in
+    the random number generator to get a sense of performance variability.)
+
+  \item Examine your code and look for serial ``hot spots'' -- i.e., places
+    where the code is taking significant fractions of the computing
+    time in its current serial (single CPU core) form.  It's useful to do this for different numbers of cities --
+    as you change that, you'll see that due to the algorithmic
+    complexity of the problem different parts will change in cost
+    while others remain the same!
+    
+  \item Try to speed up the hot spots by making simple fixes -- for
+    example, try to find places where you can replace lists with NumPy
+    arrays, loops with NumPy operations, etc. Test those fixes with
+    additional timing tests and document what you did and how it
+    changed the code's speed. Note that if you did a good job
+    writing your code you may not see much improvement here!
+
+  \item Try accelerating your serial code using
+    \href{https://numba.pydata.org/}{Numba} decorators.  How much does
+    this accelerate your code for different numbers of cities for a
+    given random seed (i.e., a given number of iterations per number
+    of cities)?  If you try Numba's
+    \href{https://numba.readthedocs.io/en/stable/user/parallel.html}{parallelization}
+    options, what happens?  (Hint: think about what Numba does to
+    parallelize this problem -- how easily can it be parallelized as
+    you've currently formulated it?)
+   
+  \item Now accelerate the code by using the Python
+    \href{https://docs.python.org/3/library/multiprocessing.html}{multiprocessing}
+    library (do this separately from your Numba effort).  Focus your parallelism efforts on the hot spots you
+    identified.  Document the speedup compared to the serial case.
+    Hint: how would you parallelize this optimization problem?  Which
+    parts of the problem do you need to distribute to different CPU cores, and how would you
+    do that?  Also, what do you need to do with regard to the random
+    seed(s) you use for optimization?  (Think about what would happen
+    if every CPU core uses the same random seed - what would you
+    expect to happen?)
+
+  \end{enumerate}
+
+ Submit the various versions of the code that you've written in
+ clearly-named files.  Also, make sure to write a narrative explaining
+ the things that you've done to speed up your code and the results
+ that you see.  For the problem you're trying to accelerate, is there
+ an optimal number of CPU cores where you get the best speedup?  How
+ does that vary as a function of the problem size and optimization technique?
+
+
+\newpage
+\noindent {\large\textbf{Part 4:}}  ``Stellar population synthesis''
 models are a broad class of astrophysical models that are used to make
 predictions about (and understand observations probing) phenomena
 relating to stellar populations.  This can include understanding the
@@ -294,7 +361,7 @@ including plots as necessary to make your points:
 
 %\newpage
 \vspace{5mm}
-\noindent {\large\textbf{Part 4:}}  It has been hypothesized that the
+\noindent {\large\textbf{Part 5:}}  It has been hypothesized that the
 stellar initial mass function may have an environmental dependence.
 To test this, you are being provided with two data files (in the
 directory \texttt{part\_4\_files}) containing a
