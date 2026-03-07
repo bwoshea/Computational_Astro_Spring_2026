@@ -170,12 +170,16 @@ Some questions to answer/tests to do:
 
 Note that you should do many trials per choice of $N_S$ to get a sense
 of the typical
-behavior!  \textcolor{red}{Regarding trials, it's very important to recall that Python's random library
-uses the Mersenne Twister algorithm, which is a pseudorandom number generator -- it uses an algorithm that
+behavior!  Regarding trials, it's very important to recall that Python's \href{https://docs.python.org/3/library/random.html}{random} library
+uses the
+\href{https://en.wikipedia.org/wiki/Mersenne_Twister}{Mersenne
+  Twister} algorithm, which is a \href{https://en.wikipedia.org/wiki/Pseudorandom_number_generator}{pseudorandom number generator} -- it uses an algorithm that
 generates a sequence of numbers that are \textit{statistically random},
-but which are repeatable given the same initial number.  This means
+but which are repeatable given the same initial number. In other
+words, the sequence of numbers has properties that approximate a truly
+random sequence of numbers, but the order of numbers is \textit{deterministic}.  This means
 that you need to change the initial ``random seed'' number to get a
-different sequence of ensuing numbers!}
+different sequence of ensuing numbers!
 
 %\textbf{A suggestion:} You will parallelize the code that you write here in the
 %next section of this homework assignment, so consider ways that you can
