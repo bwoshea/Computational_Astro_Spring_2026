@@ -3,24 +3,26 @@
 ## Goals for today's class
 
 * Learn about time series analysis, and think about its applications in astronomy (part 2)
-* Talk about semester wrapup assignment
+* Talk about (and do!) semester wrapup assignment
 
 ## Pre-class assignments
 
-None!
+* Semester wrap-up assignment (due the night before)
 
 ## In-class activity details
 
-**Plan for the day:** Discussion of semester wrap-up, then time series analysis 
+**Plan for the day:** Semester wrap-up, then time series analysis 
 
 Announcements:
 
-* Talk about semester wrap-up activity. The idea is to get you to synthesize what you've learned this semester and reflect a bit about how it'll be useful to you in the future.
-* Also talk about final exam session/presentations.  What is the plan?
+* Remind people about final exam session/presentations.  What is the plan?
 
 ### Pre-class assignment
 
-Nothing!  Just post and discuss the semester wrap-up assignment.
+* Semester wrap-up activity.
+  * The idea is to get you to synthesize what you've learned this semester and reflect a bit about how it'll be useful to you in the future.
+  * See if I can get groups to identify and agree on big themes.
+  * How do sub-topics fit into the big themes?
 
 ### In-class assignment
 

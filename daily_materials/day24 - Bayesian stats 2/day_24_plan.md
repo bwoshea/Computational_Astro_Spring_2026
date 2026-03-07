@@ -15,8 +15,9 @@
 
 Announcements:
 
-* Will have just a single pre-class assignment for next week (due Sunday night), which is on time series analysis (from Feigelson)
 * Next week is the last week of class!
+* Will have just a single "real" pre-class assignment for next week (due Monday night), which is on time series analysis (from Feigelson)
+* We will have a semester wrap-up assignment due next Wednesday (the night before the last day of class), and the goal of that is to synthesize what you've done over the semester.  The wrapup assignment is VERY short, and we'll spend a bit of time on it in class.
 
 ### Pre-class assignment
 

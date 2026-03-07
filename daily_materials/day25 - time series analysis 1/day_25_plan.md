@@ -17,7 +17,13 @@
 Announcements:
 
 * we're going to spend two days doing time series analysis: no pre-class assignment for next class!
-* There's going to be a semester wrap-up assignment, which we will talk about on Thursday.  It's going to be VERY short.
+* There's going to be a semester wrap-up assignment, which is due tomorrow (Wednesday) night.  It's very short and the goal is to try to synthesize your thoughts about the class.
+* This is the last week of class!  All assignments are due at the end of next week, on Friday.  This is a **firm deadline** - I need time to grade everything!
+* Also talk about final exam session/presentations.  What is the plan?
+  * Meeting is on Friday of finals week at 7:45 a.m.
+  * I have no control over the time, I'm sorry!
+  * Presentations should be 7-8 minutes, plus 2 minutes for Q\&A.
+  * Final code, etc. is due that evening along with everything else.
 
 
 Key points:
@@ -50,4 +56,4 @@ Lomb-Scargle periodogram!
 
 2021: Great discussion, we never actually made it to the in-class assignment.  Students seemed to like it.  For next year, make sure to have solutions to the ACF and also for the structure function.
 
-2023: A key point to make is is "everything is a convolution, and all convolutions are correlation functions".  FFTs are a convolution between sin/cosines and a signal; autororrelations are a convolution between a signal and itself; cross-correlations are a convolution between a signal and another signal; the Lomb-Scargle periodogram is a convolution as well, just done in a different way.
+2023: A key point to make is is "everything is a convolution, and all convolutions are correlation functions" (well, not everything, but many things).  FFTs are a convolution between sin/cosines and a signal; autororrelations are a convolution between a signal and itself; cross-correlations are a convolution between a signal and another signal; the Lomb-Scargle periodogram is a convolution as well, just done in a different way.
