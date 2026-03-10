@@ -2,9 +2,10 @@
 
 ## Goals for today's class
 
-* Revisit git
+* Revisit git/GitHub (from previous class)
 * Learn to use GitHub to fork/branch/issue PRs/do code review
 * Learn to use GitHub Actions
+* Learn about best practices for scientific software development (and how it ties back to debugging from previous class)
 
 ## Pre-class assignments
 

@@ -8,7 +8,7 @@
 
 ## Pre-class assignment
 
-* Watch this [video explaining JIT compilers](https://www.youtube.com/watch?v=d7KHAVaX_Rs&t=494s) (content is optional after about 8 minutes)
+* Watch this [video explaining JIT compilers](https://www.youtube.com/watch?v=d7KHAVaX_Rs) (content is optional after about 8 minutes)
 * Read this brief [introduction to Numba](https://numba.readthedocs.io/en/stable/user/5minguide.html). Note that "broadcasting" here refers to [NumPy functionality](https://numpy.org/doc/stable/user/basics.broadcasting.html); e.g. multiplying an array by a scalar is "broadcasting" that scalar to the whole array.
 
 ## In-class activity details

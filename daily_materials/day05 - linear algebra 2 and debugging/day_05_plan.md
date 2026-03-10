@@ -2,9 +2,9 @@
 
 ## Goals for today's class
 
-* Learn about gradient descent methods
-* Learn about eigenvalues and eigenvectors
-* Learn about debugging
+* Learn about gradient descent methods and their relative merits
+* Learn about eigenvalues and eigenvectors and how to solve for them
+* Learn about debugging, ways to do it, why it's important to think about how to write code to facilitate debugging.
 
 ## Pre-class assignments
 

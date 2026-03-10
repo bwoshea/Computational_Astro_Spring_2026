@@ -21,8 +21,8 @@
 \vspace{-5mm}
 
 \centerline{ {\large
-\textbf{This assignment is due by 11:59 p.m. on Friday May 5,
-  2023.} } }
+\textbf{This assignment is due by 11:59 p.m. on Friday May 1,
+  2026.} } }
 
 \vspace{5mm}
 
@@ -65,8 +65,8 @@ Alternately, this equation can be written in terms of
 \href{https://en.wikipedia.org/wiki/Magnitude_(astronomy)}{magnitudes}\footnote{A
 unitless, logarithmic measurement of brightness of objects that is used in
 astronomy.  Its invention predates telescopes and its continued usage is
-traditional but difficult to justify in the 21st century, not unlike the CGS unit
-system.}:
+traditional but difficult to justify in the 21st century, in the
+opinion of your admittedly theory-centric professor.}:
 
 \begin{equation}
 n(M)dM = (0.4~\mathrm{ln}(10))\phi^* (10^{0.4(M^*-M)})^{\alpha+1}e^{-10^{0.4(M^*-M)}}dM
@@ -82,7 +82,8 @@ $\phi^*\simeq1.2\times10^{-2}$~h$^3$~Mpc$^{-3}$ (with h being the Hubble
 parameter in units of 100 km/s/Mpc), and M$^* \simeq -23$.
 
 \textbf{In this problem we are going to experiment with the significance of
-assumptions about Bayesian priors, the amount of data, the magnitude of errors in data,
+assumptions about Bayesian priors, the amount of data, the properties
+of errors in data,
 and the impact of these things on the resulting model fits.}  The file
 \texttt{luminosity\_schechter.py} contains two importable functions
 that have detailed doc strings explaining their inputs and outputs.
@@ -100,7 +101,12 @@ bins and values for the Schechter function model parameters and
 returns number densities for each bin.
 
 Using the Bayesian Markov Chain Monte Carlo code we wrote in class as
-your starting point, conduct the following experiments and report the
+your starting point\footnote{Note that we're using the MCMC code from
+  class for this assignment because it's easy to understand and modify, but if you use MCMC for your own research
+you should use a tool like
+\href{https://emcee.readthedocs.io/en/stable/}{emcee} instead -- it
+uses a more modern and efficient MCMC algorithms, can be run in
+parallel, and has lots of useful plotting tools associated with it!}, conduct the following experiments and report the
 outcome in an appropriately-named file.  Use a reasonable likelihood
 function for comparing your model and data (reduced chi-square is
 fine) and create a function describing the Bayesian prior distribution
@@ -108,7 +114,8 @@ for your input model parameters $\alpha$,~$\phi^*$, and M$^*$,
 assuming a lognormal distribution for each model parameter with a
 user-specified mean and variance.
 
-\newpage
+% \newpage
+\vspace{2mm}
 \noindent
 The experiments you will conduct are:
 
@@ -157,31 +164,44 @@ adjusting the mean value, how does the posterior distribution change?
   Qualitatively, how do your posterior distributions behave as you
   change these properties of your ``observed'' dataset?
 
-\item In the document describing your answers, reflect on the sum
+\item Finally, repeat experiment \#1 keeping the number of bins
+  constant but modifying the nature of
+  the errors for each bin.  In the \texttt{luminosity\_function()}
+  routine, look for the string ``UNCOMMENT AND ADD YOUR CODE HERE''
+  and read the comment block above it, which talks about the nature of
+  galaxy surveys.  Try setting up error estimates that approximate
+  different types of galaxy surveys and note how those errors impact
+  both the best-fit model as well as the behavior of the posterior
+  distributions.
+
+\end{enumerate}
+
+In the document describing your answers, reflect on the sum
 total of what you've observed as you experiment with the various
 components of Bayesian MCMC model fitting.  What intuition have you
 developed about the use of Bayesian priors in Markov Chain Monte
 Carlo?  In particular, comment on the relationships between the amount
-of observed data, the magnitude of the errors in observed data, your
-assumptions about the prior distribution, and the measured posterior
-distribution.
-  
-\end{enumerate}
+of observed data, the magnitude and nature of the errors in observed data, your
+assumptions about the prior distribution, and the measured best-fit
+parameters and posterior distribution.  I'm looking for qualitative
+comments here -- what are the takeaways that you can generalize to
+interpreting papers or talks that deal with this type of model
+fitting in the future?
 
 
-%\newpage
+\newpage
 
 \vspace{5mm}
 \noindent {\large\textbf{Part 2:}} We're going to examine exoplanet
 data obtained using two different methods -- by the transit method
-(using, e.g., the \href{https://kepler.nasa.gov/}{Kepler mission}),
+(using, e.g., the \href{https://science.nasa.gov/mission/kepler/}{Kepler mission}),
 and by using radial velocity measurements of the central star.  For
 the transit method we will use the star
 \href{http://keplerebs.villanova.edu/overview/?k=8554498}{KIC-8554498}
 (in the data file \texttt{KIC-8554498\_lightcurve.dat}, which contains
 the relative flux of the star as a function of time since the start of
 the Kepler mission) and for radial velocity measurements we will use
-\href{http://exoplanet.eu/catalog/51_peg_b/}{51-Pegasi} (in the data
+\href{https://exoplanet.eu/catalog/51_peg_b--12/}{51-Pegasi} (in the data
 file \texttt{51\_Pegasi\_RadVel.dat}, which contains the Julian date,
 the star's radial velocity, and the error in the radial velocity).
 
