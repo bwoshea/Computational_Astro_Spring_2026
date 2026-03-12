@@ -40,6 +40,7 @@ Announcements:
 2026: 
 * I demo'd OnDemand in class (planned), showing how create a `.condarc` file that will let students use the class environment and launch JupyterLab. Plan on this in future.
 * oops, students need to setup SSH keys or personal access tokens in order to clone github repos to the HPCC. I also had to demo SSH keys in class (unplanned) via the OnDemand terminal. I'm not sure this is great as a pre-class though, since some students may be new to the HPCC. It took time away from the in class assignment but if anticipated could be streamlined
+* Students should *not* use VS Code on their desktop but instead use JupyterLab on OnDemand. There isn't time to explain how to set up/best use personal VS Code.
 * some students were also unfamiliar with git from the command line so I wrote out commands on the blackboard.
 * some students had also not encountered dictionaries before!
 * The class environment I made did not work correctly for the assignment so students had to switch to the default environment in OnDemand...
