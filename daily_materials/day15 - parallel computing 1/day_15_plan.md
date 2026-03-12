@@ -37,3 +37,7 @@ Announcements:
 **Leave feedback on what happened in class today!**
 
 2026: 
+* Need to introduce `%%timeit` in the instructions for the Vectorization section of the in-class assignment
+* I cut the section on list comprehensions but a few of the astro students are so used to using numpy arrays they don't know how to create a list full of items or do math on them
+* Students got through the bulk of the workbook in class, save the Diffusion refactor
+* I didn't quite set up that the creation of a NumPy array comes with some amount of overhead; the first refactor of the Diffusion section is intentionally slow both because of this reason and the quirk that iterating over a NumPy array is slower than a list. The latter is discovered by students through the course of the workbook but the former is not.
