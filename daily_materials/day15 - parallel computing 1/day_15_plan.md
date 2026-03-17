@@ -37,6 +37,7 @@ Announcements:
 **Leave feedback on what happened in class today!**
 
 2026: 
+
 * Need to introduce `%%timeit` in the instructions for the Vectorization section of the in-class assignment
 * I cut the section on list comprehensions but a few of the astro students are so used to using numpy arrays they don't know how to create a list full of items or do math on them
 * Students got through the bulk of the workbook in class, save the Diffusion refactor
