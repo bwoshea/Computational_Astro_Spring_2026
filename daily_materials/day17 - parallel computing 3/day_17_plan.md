@@ -35,3 +35,4 @@ Announcements:
 **Leave feedback on what happened in class today!**
 
 2026: 
+* Notebook references using `time.perf_counter` but could use a little clearer instruction since students in this class aren't used to using it

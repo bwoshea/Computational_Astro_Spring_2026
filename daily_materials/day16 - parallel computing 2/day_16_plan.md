@@ -43,4 +43,4 @@ Announcements:
 * Students should *not* use VS Code on their desktop but instead use JupyterLab on OnDemand. There isn't time to explain how to set up/best use personal VS Code.
 * some students were also unfamiliar with git from the command line so I wrote out commands on the blackboard.
 * some students had also not encountered dictionaries before!
-* The class environment I made did not work correctly for the assignment so students had to switch to the default environment in OnDemand...
+* ~~The class environment I made did not work correctly for the assignment so students had to switch to the default environment in OnDemand...~~ Python 3.14's multiprocessing didn't want to work; this version changed how processes are launched and this may have caused issues. Simply downgrade to 3.13
