@@ -23,8 +23,6 @@ Get everybody to get together in small groups and talk about the chapters.  What
 
 After discussion: Get students to answer questions: round-robin.
 
-
-
 ### In-class assignment
 
 Points to make:
@@ -42,6 +40,7 @@ Questions:
   * Must generally assume a model when making estimates or interpreting data
   * Must use limited samples / limited numbers of measurements with a strong selection function.
 * How is statistics used in astronomy?
+* How do you think these things will change as we move to very large-area and/or deep sky surveys?
 
 Activity: get individual students to talk about stuff!
 

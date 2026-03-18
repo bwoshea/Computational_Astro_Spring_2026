@@ -18,9 +18,9 @@
 
 Announcements:
 
-* Final commits for Homeworks 1 and 2 are still being turned in - does anybody have any additional things to commit for HW1 or HW2?  Please let me know via MatterMost or email ASAP.  I have to get this stuff graded!
-* For Thursday:  Ch. 7 of Feigelson, on linear and nonlinear regression
-* Also for Thursday:  We're going to do a quick project roundtable.
+* Working on grading HW 2 this week! 
+* For next Tuesday:  Ch. 7 of Feigelson, on linear and nonlinear regression
+* Also for next Tuesday:  We're going to do a quick project roundtable.
 * Is anybody getting the sense that Feigelson and Babu really think astronomers are bad at statistics?  (In all fairness, statisticians think everybody who isn't a statistician is bad at statistics, and any positive outcomes they get are purely coincidental.)
 
 ### Pre-class assignment
