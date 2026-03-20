@@ -9,4 +9,5 @@ Make sure to go through the student submissions - they identified some problems 
 * **I need to update the class coding standard - it feels very old-fashioned, particularly around comments.**
 * Students in 2026 took SO much time to do many of the pre-class and in-class assignments (I'm thinking specifically about the differential equation sections here).  I need to think about how to make this class take less time for the students.  **Maybe do some more scaffolding in the pre-class and in-class assignments?
 * Watch this video on teaching with AI: https://www.youtube.com/watch?v=7E78BH6gS0k
-* 
+* add .gitignore files to all of the assignments.  Include .ipynb_checkpoints, .DS_Store, aux, log, out, pycache directories, etc.
+* make a manifest for each PCA and ICA for what files go into the assignment repositories
