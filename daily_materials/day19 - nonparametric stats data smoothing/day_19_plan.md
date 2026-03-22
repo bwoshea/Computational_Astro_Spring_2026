@@ -18,10 +18,14 @@
 
 Announcements:
 
+* We're going to do a quick project roundtable today.
 * Working on grading HW 2 this week! 
 * For next Tuesday:  Ch. 7 of Feigelson, on linear and nonlinear regression
-* Also for next Tuesday:  We're going to do a quick project roundtable.
 * Is anybody getting the sense that Feigelson and Babu really think astronomers are bad at statistics?  (In all fairness, statisticians think everybody who isn't a statistician is bad at statistics, and any positive outcomes they get are purely coincidental.)
+
+### Before we do PCA
+
+Roundtable: **What are you doing for your semester project?**
 
 ### Pre-class assignment
 
