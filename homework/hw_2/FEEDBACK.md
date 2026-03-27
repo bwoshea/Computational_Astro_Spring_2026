@@ -12,6 +12,6 @@
 
  / 60
 
-**Overall grade:**  / 235 points
+**Overall grade:**  / 210 points
 
 Note: Different homework assignments may have different total points, but each homework assignment contributes equally to the overall grade.
