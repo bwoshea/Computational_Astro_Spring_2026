@@ -1,4 +1,4 @@
-# Day 22 - Markov Chain MOnte Carlo
+# Day 22 - Markov Chain Monte Carlo
 
 ## Goals for today's class
 
@@ -14,21 +14,26 @@
 
 Announcements:
 
-* Project update #2 is next Tuesday!
+* Homework #3 is due next Friday!  (April 10th)
 
 ### Pre-class assignment
 
 * Make sure to mention that "The MCMC Handbook" (Brooks et al.; PDF provided, and available online) is a great reference.
-* Walk through the Metropolis-Hastings algorithm - empasize it's the easiest MCMC algorithm to understand, but there are better ones now!  (emcee, for example)
+* Walk through the Metropolis-Hastings algorithm - empasize it's the easiest MCMC algorithm to understand, but there are better ones now!  (emcee, for example, is much better - they should use that for doing actual research!)
 * Show MCMC video from Jordan - gives them a clue what the algorithm is actually doing!
 * MCMC can easily incorporate a Bayesian component, which we will get to later.
 * It also parallelizes well, and scales well to many dimensions.
+* **Question:** what happens as errors in the dataset get bigger?  (The distributions that are returned are broader - the correct answer is in there, but less well-constrained)
+
 
 ### In-class assignment
 
 * Building on the pre-class assignment - go for it!
 * Make sure to use the correct errors!
 * At the end, give them the solution.
+  * A = 8.3
+  * Omega = 2*pi/35 ~= 0.1795 
+  * Phi = 0.2 * pi = 0.6283
 
 ## Instructor notes (for next time)
 
@@ -50,7 +55,6 @@ MCMC video is from Jordan Mirocha.  Make sure to use this!
 * For in-class assignment, if people are seeing weird results I should suggest that they try different initial values of the parameters.  One of the problems several people saw today was when they chose bad starting values - the MCMC walkers got stuck in weird spots.
 * Reference for next time: https://arxiv.org/pdf/1909.11827.pdf (basic point is that there are lots of ways to measure convergence for MCMC)
 * Tell students about "particle swarms" as an alternative to MCMC: https://pyswarms.readthedocs.io/en/latest/
-* 
 
 
 
