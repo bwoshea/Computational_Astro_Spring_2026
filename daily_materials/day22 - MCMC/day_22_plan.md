@@ -54,7 +54,9 @@ MCMC video is from Jordan Mirocha.  Make sure to use this!
 
 * For in-class assignment, if people are seeing weird results I should suggest that they try different initial values of the parameters.  One of the problems several people saw today was when they chose bad starting values - the MCMC walkers got stuck in weird spots.
 * Reference for next time: https://arxiv.org/pdf/1909.11827.pdf (basic point is that there are lots of ways to measure convergence for MCMC)
+
+
+2026:
+
 * Tell students about "particle swarms" as an alternative to MCMC: https://pyswarms.readthedocs.io/en/latest/
-
-
-
+* Add this reference to the pre-class assignment: https://ui.adsabs.harvard.edu/abs/2020AnRSA...7..387R/abstract 
