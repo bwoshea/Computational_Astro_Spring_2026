@@ -14,7 +14,13 @@
 
 **Plan for the day:** 
 
-Announcements:
+New announcements in 2026:
+
+* Next week is the last week of class!
+* Will have just a single "real" pre-class assignment for next week (due Monday night), which is on time series analysis (from Feigelson)
+* We will have a semester wrap-up assignment due next Wednesday (the night before the last day of class), and the goal of that is to synthesize what you've done over the semester.  The wrapup assignment is VERY short, and we'll spend a bit of time on it in class.
+
+Announcements (old, need to clean up):
 
 * we're going to spend two days doing time series analysis: no pre-class assignment for next class!
 * There's going to be a semester wrap-up assignment, which is due tomorrow (Wednesday) night.  It's very short and the goal is to try to synthesize your thoughts about the class.

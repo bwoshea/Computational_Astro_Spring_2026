@@ -15,9 +15,9 @@
 
 Announcements:
 
-* Next week is the last week of class!
-* Will have just a single "real" pre-class assignment for next week (due Monday night), which is on time series analysis (from Feigelson)
-* We will have a semester wrap-up assignment due next Wednesday (the night before the last day of class), and the goal of that is to synthesize what you've done over the semester.  The wrapup assignment is VERY short, and we'll spend a bit of time on it in class.
+* Homework #3 is due on Friday 4/10!
+* No class next Tuesday 4/14 - I will be out of town.  Start time series analysis next Thursday (4/16).  One PCA for both days of time series analysis!
+* Next semester project update next Wednesday 4/15 - code should be close to completion!
 
 ### Pre-class assignment
 
@@ -39,3 +39,5 @@ We're going to modify some code from last time to include Bayesian priors, and t
 **Leave feedback on what happened in class today!**
 
 2021: today went well, the students liked the in-class assignment!
+
+2026: I really need to update the dataset!  It's very old.  Maybe Megan can give me a new version?

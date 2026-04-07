@@ -15,16 +15,17 @@
 
 Announcements:
 
-* We're going to do Update #2 for the semester project!
-* There IS a PCA for next time - it's short.  We'll be implementing a Bayesian MCMC in class!
-* Next week is time series analysis, and the last week of class!  (One PCA for the whole week.)
+* Homework #3 is due on Friday 4/10!
+* No class next Tuesday 4/14 - I will be out of town
+* Next semester project update next Wednesday 4/15 - code should be close to completion!
+
 
 ### Pre-class assignment
 
 Discuss PCA - get people to compare notes!  What are your answers to the two questions?
 
 1.  What is the utility of the inclusion of prior and evidence probabilities?
-2. Fundamentally, what is the difference between the frequentist and Bayesian approahces toward statistical inference?  How does this manifest in the way these approaches are used?
+2. Fundamentally, what is the difference between the frequentist and Bayesian approaches toward statistical inference?  How does this manifest in the way these approaches are used?
 
 Q1 answer:  "prior" encodes what we know about the model before considering the data (useful because we almost always know omething about the data).  "evidence" or "model evidence" or "marginal likelihood" encodes our understanding of the underlying sample out of which our dataset is generated, to the extent we have it.  (This is very hard to calculate in astronomy).  Taken together, this allows us to update our beliefs based on observations, given a prior state of knowledge.
 
@@ -55,3 +56,9 @@ Claire shared this - make sure to use it next time:  https://www.youtube.com/wat
 2021: went OK, didn't get to the photo-z section.  I forgot to share Claire's video - do that next time!
 
 2023: it went great and we got through everything.  I think the students really liked it.  We used the slides from last time, which were VERY helpful.  I did notice that slide #10 has a typo - it should be p(data fit to high-z model)*p(low-z galaxies) in the second term in the denominator.  Fix that for next time!
+
+2026:
+
+* I am not convinced that my note from 2023 is correct.
+* in pre-class assignment mention that chapter 2 rehashes material from Feigelson & Babu; also suggest they think a lot about chapter 5.
+* Class went well this week!  See if I can find a more up-to-date version of the photo-z example (the data has gotten much better in the last decade)
