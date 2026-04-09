@@ -62,3 +62,4 @@ Claire shared this - make sure to use it next time:  https://www.youtube.com/wat
 * I am not convinced that my note from 2023 is correct.
 * in pre-class assignment mention that chapter 2 rehashes material from Feigelson & Babu; also suggest they think a lot about chapter 5.
 * Class went well this week!  See if I can find a more up-to-date version of the photo-z example (the data has gotten much better in the last decade)
+* I'm really starting to dislike the Andreon book - the focus on the weird programming language is annoying and distracting.  Can I go back to Feigelson & Babu chapter on Bayesian stats and see if there's a good supplement?

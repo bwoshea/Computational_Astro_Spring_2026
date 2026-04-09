@@ -40,4 +40,7 @@ We're going to modify some code from last time to include Bayesian priors, and t
 
 2021: today went well, the students liked the in-class assignment!
 
-2026: I really need to update the dataset!  It's very old.  Maybe Megan can give me a new version?
+2026:
+ 
+* I really need to update the dataset!  It's very old.  Maybe Megan can give me a new version?  Add link to the ACCEPT 2 paper (https://ui.adsabs.harvard.edu/abs/2026ApJS..282...61D/abstract) 
+* Also, I'm really starting to dislike the Andreon book - the focus on the weird programming language is annoying and distracting.  Can I go back to Feigelson & Babu chapter on Bayesian stats and see if there's a good supplement?
