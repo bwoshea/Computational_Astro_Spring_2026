@@ -15,6 +15,15 @@
 
 Announcements:
 
+* This is the last week of class!  All assignments are due at the end of next week, on Friday.  This is a **firm deadline** - I need time to grade everything!
+* Also talk about final exam session/presentations.  What is the plan?
+  * Meeting is on Friday of finals week at 7:45 a.m.
+  * I have no control over the time, I'm sorry!
+  * Presentations should be 7-8 minutes, plus 2 minutes for Q\&A.
+  * Final code, etc. is due that evening along with everything else.
+
+
+
 * Remind people about final exam session/presentations.  What is the plan?
 
 ### Pre-class assignment

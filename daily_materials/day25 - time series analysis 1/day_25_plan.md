@@ -17,25 +17,15 @@
 New announcements in 2026:
 
 * Next week is the last week of class!
-* Will have just a single "real" pre-class assignment for next week (due Monday night), which is on time series analysis (from Feigelson)
-* We will have a semester wrap-up assignment due next Wednesday (the night before the last day of class), and the goal of that is to synthesize what you've done over the semester.  The wrapup assignment is VERY short, and we'll spend a bit of time on it in class.
-
-Announcements (old, need to clean up):
-
-* we're going to spend two days doing time series analysis: no pre-class assignment for next class!
-* There's going to be a semester wrap-up assignment, which is due tomorrow (Wednesday) night.  It's very short and the goal is to try to synthesize your thoughts about the class.
-* This is the last week of class!  All assignments are due at the end of next week, on Friday.  This is a **firm deadline** - I need time to grade everything!
-* Also talk about final exam session/presentations.  What is the plan?
-  * Meeting is on Friday of finals week at 7:45 a.m.
-  * I have no control over the time, I'm sorry!
-  * Presentations should be 7-8 minutes, plus 2 minutes for Q\&A.
-  * Final code, etc. is due that evening along with everything else.
-
+* There will not be a PCA for next Tuesday; there will be a SHORT one for next Thursday (due Wednesday night, the night before the last day of class).  The goal of that PCA is to synthesize what you've done over the semester.  The wrapup assignment is VERY short, and we'll spend a bit of time on it in class.
+* I'm grading this weekend, starting Saturday morning.  All assignments (including the PCA and ICA for today's class) are due by the end of tomorrow (Friday, April 17th).
 
 Key points:
 
 * Time series analysis is widely used in astronomy
 * Sometimes FFTS are not availabale to us (if the data is irregularly spaced).  Also, there are things that we want to do that can't easily reduce to FFTS!
+* "(Almost) everything when we're doing time series is a convolution, and all convolutions are correlation functions". FFTs are a convolution between sin/cosines and a signal; autororrelations are a convolution between a signal and itself; cross-correlations are a convolution between a signal and another signal; the Lomb-Scargle periodogram is a convolution like a FFT as well, just done in a different way.
+
 
 ### Pre-class assignment
 
