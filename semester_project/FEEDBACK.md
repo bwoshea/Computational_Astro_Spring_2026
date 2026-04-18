@@ -12,18 +12,16 @@
  
  / 40 
 
-## Final code and writeup
+## Final code
 
  / 100 (code, including ability to reproduce)
- / 50 (writeup)
 
 ## Project presentation
 
  / 100
  
- 
 ## TOTAL
 
- / 350 points
+ / 300 points
   
  

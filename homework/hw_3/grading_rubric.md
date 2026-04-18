@@ -26,7 +26,21 @@ Is code correct?  10 points
 
 Questions: 40 points (10 points/question)
 
-## Part 3 - Stellar population synthesis
+## Part 3 - Parallelizing traveling salesman
+
+**80 points total**
+
+Coding standard (including text files instead of Jupyter notebooks): 10 points
+
+Initial performance baseline and hotspot analysis: 20 points
+
+Simple fixes: 10 points
+
+Numba decorators + measurements: 20 points
+
+Multiprocessing acceleration: 20 points
+
+## Part 4 - Stellar population synthesis
 
 **140 points total**
 
@@ -36,7 +50,7 @@ Is code correct?  30 points
 
 Questions (5 total; 20 points per question, 10 for answer and 10 for plots): 100 
 
-## Part 4 - IMF statistics
+## Part 5 - IMF statistics
 
 **60 points total**
 
@@ -50,4 +64,4 @@ Q2: 10 points (5 points argument; 5 points evidence)
 
 ## TOTAL
 
-**350 points total**
+**430 points total**
