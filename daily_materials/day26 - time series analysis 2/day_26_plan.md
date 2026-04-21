@@ -31,7 +31,11 @@ None!
 
 Implement cross-correlation and self-correlation function (it's the same thing, so write it in a general way!)
 
-Try this on a bunch of different signals (I generated a bunch)
+Try this on a bunch of different signals (I generated a bunch).  Things to emphasize:
+
+* Scipy's "correlate" does indexing in a way that is backwards from what we're doing, so if you want to compare the correlations between the two you have to reverse the order of one of the arrays.
+* Signals with different periods have complicated correlation relationships.  You can see things like beat frequencies.
+* Signals with different shapes have non-sinusoidal correlation function shapes (typically much "peakier").  Ask about delta functions and what that would look like for a correlation function compared to, say, a sine wave.
 
 ## Instructor notes (for next time)
 
@@ -43,4 +47,8 @@ Try this on a bunch of different signals (I generated a bunch)
 
 2023: This day went pretty well.  Given that we talked about correlation functions today, I think we could probably swap the previous day of time series in-class assignment (which focused on Lomb-Scargle) with this one, and be just fine.  Also, definitely add some extra signals for next time - really hit on the point that signals that have no correlation at all should have very low-amplitude correlation numbers (nothing is exactly zero, but a number of around 1 indicates a very high correlation).  Maybe come up with some signals that have very low correlation because they have very different periods, and then some signals that have very different shapes (infrequent Gaussian pulses, maybe?) so the correlation function is not particularly sinusoidal.
 
-2026: split the semester wrap-up off to another day.  Implemented a bunch of new signals.
+2026: split the semester wrap-up off to another day.  Implemented a bunch of new signals.  Some things for next time:
+
+* Scipy's "correlate" does indexing in a way that is backwards from what we're doing, so if you want to compare the correlations between the two you have to reverse the order of one of the arrays.  Make a note about this in the notebook!
+* Add a very delta function-y pulse to the set of signals, which should result in something interesting in terms of the shape of the correlation function (comparing it to the top hat, for example).
+* 
