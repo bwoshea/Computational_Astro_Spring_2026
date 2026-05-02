@@ -24,7 +24,7 @@ Q6:
 
 Coding standard: 
 
-Code corrrectness:
+Code correctness:
 
 Q1: 
 
@@ -36,7 +36,7 @@ Q2:
 
 Coding standard: 
 
-Code corrrectness:
+Code correctness:
 
 Model: 
 

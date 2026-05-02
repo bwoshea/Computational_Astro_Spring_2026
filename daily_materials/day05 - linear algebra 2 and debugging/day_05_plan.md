@@ -55,3 +55,6 @@ Debugging:
 * need to revise the pre-class assignment for next time to make it clear that they don't have to dive into Section 6.3 of Newman, because it's VERY long.
 * Think about having them write some unit tests for their first homework assignment?
 
+2026:
+
+* Think about including the included new PDF (6-Debugging.pdf), which is from a Stanford course of some sort.  It's pretty good.  Maybe just link to the version that's on the web instead?  (In the pre-class assignment.)
