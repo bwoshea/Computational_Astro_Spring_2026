@@ -22,8 +22,9 @@ Announcements:
 
 * Share with your group what you did, and discuss the answers to the questions asked in the PCA
 * We'll have an in-class discussion about the questions first!
-* Also, give a brief presentation on correlation functions and how the FFT works.
-* The major limitation for FFTs is that the signal must be periodic (or at least plausibly so) and must be evenly sampled in time and/or space.
+* Question: why are FFTs beneficial compared to normal Fourier transforms?  (Wildly faster -- NlogN instead of N^2, which makes a huge difference).
+* Also, give a brief presentation on correlation functions and how the FFT works.  This is a very useful way to think about Fourier transforms!
+* The major limitation for FFTs is that the signal must be periodic (or at least plausibly so) and must be **evenly sampled** in time and/or space.  (But we do have tools for these limitations - Lomb-Scargle, for example.  We'll get to it later this semester.)
 
 ### In-class assignment
 

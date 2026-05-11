@@ -25,7 +25,7 @@ Announcements:
 * Have them discuss it and compare notes!
   * We're going to try something new: each group is responsible for putting two questions up today at the end of this discussion.
   * What is gaussian elimination?  What is pivoting?  What about partial pivoting?
-  * What is LU decomposition?
+  * What is LU decomposition?  (And why is it useful?)
 * Make sure to talk about class coding standard.  Why am I having them do that?  (My sanity, but also their collaboration, and they'll find it useful in the future.)
 * Short presentation on Gaussian elimination
 

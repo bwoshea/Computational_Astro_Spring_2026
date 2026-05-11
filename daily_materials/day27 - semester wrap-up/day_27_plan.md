@@ -15,6 +15,7 @@
 Announcements:
 
 * This is the last week of class!  All assignments are due at the end of next week, on Friday.  This is a **firm deadline** - I need time to grade everything!
+* If you have not filled out SPLS, please do it as soon as you possibly can!
 * Also talk about final exam session/presentations.  What is the plan?
   * Meeting is on Friday of finals week at 7:45 a.m.
   * I have no control over the time, I'm sorry!
@@ -34,10 +35,11 @@ Announcements:
 
 * Semester wrap-up activity.
   * See if I can get groups to identify and agree on big themes.  Write these on the board!
-  * How do sub-topics fit into the big themes?  
+  * Also get them to write down takeaways
+  * How do sub-topics (specific things we did in class) fit into the big themes?  What are the connections?
 
 ## Instructor notes (for next time)
 
 **Leave feedback on what happened in class today!**
 
-2026:
+2026:  This went really well, I'm very happy with it.

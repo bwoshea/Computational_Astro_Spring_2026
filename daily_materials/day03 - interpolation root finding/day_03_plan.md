@@ -17,6 +17,7 @@
 Announcements:
 
 * We're going to be working on linear algebra and debugging next!  There are two new PCAs up.  **These may take time - get started early!**
+* Homework #1 is up - link is in spreadsheet!
 
 ### Pre-class assignment
 
@@ -38,3 +39,7 @@ Announcements:
 ## Instructor notes (for next time)
 
 **Leave feedback on what happened in class today!**
+
+2026:
+
+* For next time, tell students more about VS Code - get that installed sooner!  (Ask everybody to do it)

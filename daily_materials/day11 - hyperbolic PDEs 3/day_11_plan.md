@@ -28,10 +28,14 @@ Assignment:
 * Discuss the pre-class assignment: did you get it working?
 * What are the questions that you have from the reading?
 * What's the idea behind this shock thing?  What about characteristic tracing?
+* Specific questions I asked:
+  * What are shocks?
+  * What are characteristics?
+  * How is Burgers equation fundamentally different from a linear equation?  (In terms of concepts/solution, not just its form.)
 
 ### In-class assignment
 
-Talk through Section 6.1, focusing on explaining the shock formation: characteristics intersect, which means you can't go backwards to find an initial state.  Opposite of this is a rarefaction, where characteristics diverge.  We can think of any solution to Burgers' equation as locally being one or the other; so, we can think of our conservative update to u(x,t) to u(x,t+dt) as using fluxes at cell faces calculated using a simple set of logic for shocks vs. not-shocks (converging vs. diverging values at a cell face).  
+Talk through Section 6.1, focusing on explaining the shock formation: characteristics intersect, which means you can't go backwards to find an initial state.  Opposite of this is a rarefaction, where characteristics diverge.  **We can think of any solution to Burgers' equation as locally being one or the other**; so, we can think of our conservative update to u(x,t) to u(x,t+dt) as using fluxes at cell faces calculated using a simple set of logic for shocks vs. not-shocks (converging vs. diverging values at a cell face).  
 
 **Walk through this logic - Zingale equations 6.12 - 6.15**
 
@@ -41,7 +45,7 @@ This means that each interface is only informed by the characteristics (linear p
 
 Because u(x,t) varies through the domain, this means that our timestep varies, and we have to take the smallest timestep available.
 
-**ACTUAL ACTIVITY:** Everybody should get my code, look at it, and create a variety of initial conditions with both positive and negative velocities.  Experiment with different ICs (esp. top-hat and Gaussian) and see if you can figure out why it behaves the way it does, thinking of it in terms of what the local characteristics are doing.  Then we'll discuss!
+**ACTUAL ACTIVITY:** Everybody should get my code, look at it, and create a variety of initial conditions with both positive and negative velocities.  Experiment with different ICs (esp. top-hat and Gaussian) and see if you can figure out why it behaves the way it does, **thinking of it in terms of what the local characteristics are doing**.  Then we'll discuss!
 
 ## Instructor notes (for next time)
 

@@ -24,7 +24,7 @@ Announcements:
 Questions:
 
 * How do you do a multi-parameter estimation?
-* Ch. 10: what are the advantages and shortcomings of Bayesian methods against non-Bayesian alternatives?
+* Ch. 10: what are the advantages and shortcomings of Bayesian methods against non-Bayesian alternatives?  (Note that the authors are clearly Bayesian partisans, but they make reasonable points.)
 
 ### In-class assignment
 

@@ -26,6 +26,11 @@ Announcements:
 * Talk through their experiences - who got the NLA thing to work?  Who didn't?  What problems do we think we might have with multi-d gradient descent?
 * What were their debugging experiences?  In what ways will the debugging methods be helpful?
 * What additional debugging techniques have people found to be helpful?  Are there specific IDEs or text editors that have built-in debugging tools?  (Beyond Visual Studio Code and JupyterLab, which we talked about in the PCA)
+* What are eigenvalues and eigenvectors, and why do we care?
+  * Eigenvectors are special directions in a system that do not rotate during a linear transformation - they only stretch/shring.  They reveal the fundamental structure or "main axes" of a physical system (e.g., key directions like normal modes or rotational axes)
+  * Eigenvalues are the factor by which these directions are scaled.
+  * Together they reveal fundamental structures of a physical system.
+  * Examples: in mechanics, eigenvectors represent normal modes of a system (vibration patterns that vibrate at a single frequency).  In rotation, eigenvectors of a moment of inertia matrix represent the principle axes around which a solid body rotates stably.  In quantum  mechanics, eigenvectors represent possible states of a system, and eigenvalues indicate the measurable values of properties in those states (e.g., energies)
 
 ### In-class assignment
 
@@ -58,3 +63,5 @@ Debugging:
 2026:
 
 * Think about including the included new PDF (6-Debugging.pdf), which is from a Stanford course of some sort.  It's pretty good.  Maybe just link to the version that's on the web instead?  (In the pre-class assignment.)
+* Consider including wikipedia page on eigenvalues and eigenvectors - https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors .  This comes up as a point of "I can calculate it but don't understand it"
+* 

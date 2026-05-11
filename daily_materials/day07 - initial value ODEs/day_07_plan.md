@@ -17,8 +17,7 @@
 
 Announcements:
 
-* Explain the plan for the next few weeks: this week is ODEs, and then we'll move on to various PDEs followed by computational fluid dynamics.
-* The first homework will come out in a week or so!
+* Explain the plan for the next few weeks: this week is ODEs, and then we'll move on to various PDEs followed by FFTs, then parallel computing and then statistics.
 
 ### Pre-class assignment
 
@@ -71,3 +70,7 @@ Seems to have gone better.  The in-class assignment is still too long; need to t
 **2023 notes** 
 
 I didnt' make any changes from 2021 due to lack of time, and we did not finish the in-class assignment, though we were pretty close.  Next time I should scaffold it a bit more - maybe give them some skeleton code to work with that takes care of the plotting?
+
+**2026 notes**
+
+Students really struggled with ODEs and PDEs this year.  I need to think about how to scaffold it next time.

@@ -27,13 +27,16 @@ Discuss PCA - get people to compare notes!  What are your answers to the two que
 1.  What is the utility of the inclusion of prior and evidence probabilities?
 2. Fundamentally, what is the difference between the frequentist and Bayesian approaches toward statistical inference?  How does this manifest in the way these approaches are used?
 
-Q1 answer:  "prior" encodes what we know about the model before considering the data (useful because we almost always know omething about the data).  "evidence" or "model evidence" or "marginal likelihood" encodes our understanding of the underlying sample out of which our dataset is generated, to the extent we have it.  (This is very hard to calculate in astronomy).  Taken together, this allows us to update our beliefs based on observations, given a prior state of knowledge.
+Q1 answer:  "prior" encodes what we know about the model before considering the data (useful because we almost always know something about the data).  "evidence" or "model evidence" or "marginal likelihood" encodes our understanding of the underlying sample out of which our dataset is generated, to the extent we have it.  (This is very hard to calculate in astronomy).  Taken together, this allows us to update our beliefs based on observations, given a prior state of knowledge.
 
 Q2 anwer:  "Frequentist" -- probability calculated in terms of a limiting case of repeated measurements (i.e., probability fundamentally related to frequency of events).  Variations are due to statistical error of measuring device, so it's meaningless to talk about "true" values - it's by definition a single, fixed value (so an extended distribution of 'truth' is undefined, but in reality ranges quantify our uncertainty of measurements).  
 
-"Bayesian" -- probability is extended to cover degrees of certainty about statements ("reasoing with belief"), and is fundamentally related to the observer's knowledge of an event.  So, it's meaningful to say that the "true value" of a parameter or observation lies within a given range.
+"Bayesian" -- probability is extended to cover degrees of certainty about statements ("reasoning with belief"), and is fundamentally related to the observer's knowledge of an event.  So, it's meaningful to say that the "true value" of a parameter or observation lies within a given range.
 
 Bayes' theorem itself is not controversial; it's the interpretation of probability that is controversial.
+
+  * Expression of "truth" vs. "belief" -- this is a philosophical distinction at some level, but a very important one.
+  * Converges with frequentist approach with sufficiently large (or sufficiently good/small error bar) data sets.
 
 ### In-class assignment
 

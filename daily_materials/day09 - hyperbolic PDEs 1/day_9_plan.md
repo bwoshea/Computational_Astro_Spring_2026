@@ -28,8 +28,13 @@
 
 
 * Discuss pre-class assignment
+  * This is the good stuff!  (From my perspective)
   * **The point of the PCA was to get people to think about grids and solving problems on grids, since that's one primary way that we deal with PDEs.**
   * **We spend a lot of time solving hyperbolic PDEs, and it directly leads to hydro, MHD, etc. - that is why we're spending a few days on it.**
+  * Difference between ODEs and PDEs?
+      * ODEs = derivs/fctns of a single variable
+      * PDEs = functions of several variables, derivative of 1 with others held constant.
+      * ODEs = simple/constrained PDE (if you want to think about it that way)
   * Norms: why do we have different norms?  For example, "inf norm" vs. L2 norm?  (One highlights the most extreme error, the other highlights a more global sense of error.) 
   * PDE types: mathematically, there are three categories.  What are the practical differences?  Hyperbolic: initial-value/time-dependent (local solutions).  Elliptic: boundary value/time-independent (requires global solutions).  Parabolic: aspects of both; time-dependent but global.
   * Grids:  Why grids?  Why finite difference vs. finite volume?  (sampled point in space vs. actual volume element w/average value stored).  Indices of cell centers vs. cell faces.  Finite volume is useful for conservation laws, as we'll see.  What about boundary conditions?

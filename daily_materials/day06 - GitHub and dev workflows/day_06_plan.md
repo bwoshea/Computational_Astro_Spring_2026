@@ -28,7 +28,7 @@ Announcements:
 * Some questions:
   * The practices we're talking about have overhead - when do we start using them?  [when the project is big enough, long-lived enough, important enough, etc...  not for some simple plotting script...]
   * What is the value of open source software in astrophysics (or science more generally)?  [make sure to talk about NSF/etc. mandates]
-  * Forks vs. branches - what's the difference and why would you use one vs. the other?  (Forks = longer-lived/permanently diverged changes; branches = )
+  * Forks vs. branches - what's the difference and why would you use one vs. the other?  (Forks = longer-lived/permanently diverged changes with a full copy of the repository; branches = short-lived, stays in repository; good for experimentation.)  Choose one vs. the other when thinking about scope of isolation of changes, access permissions, etc.
   * Linting/style: who cares?  (consistency in style helps reduce cognitive load)
   * Testing: who cares?  (Ultimately speeds up development by speeding up debugging; test-driven development is very important for lending confidence in code results.)
   * Don't forget documentation!

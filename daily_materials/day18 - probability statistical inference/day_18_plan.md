@@ -23,6 +23,8 @@ Get everybody to get together in small groups and talk about the chapters.  What
 
 After discussion: Get students to answer questions: round-robin.
 
+Important observation for the students: Feigelson + Babu tend to provide huge lists of options in terms of statistics.  Focus on trying to extract the key points - what are the overall points they're making?  When there are lots of options, what problems are being solved?
+
 ### In-class assignment
 
 Points to make:

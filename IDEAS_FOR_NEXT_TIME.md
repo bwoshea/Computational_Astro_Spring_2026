@@ -1,5 +1,6 @@
 Make sure to go through the student submissions - they identified some problems in the pre-class assignments.  Also choose representative solutions from students for solutions for future semesters!
 
+* It seems that basically everybody uses VS Code - get them to install that for Day 1 and provide lots of support.
 * **I need to update the class coding standard - it feels very old-fashioned, particularly around comments.**
 * Need to go through all of my written notes for the semester and scan them - can share them with the students in the future.
 * **The hyperbolic conservation law days are too hard** -- the in-class and pre-class assignments take way too much work.  I need to figure out how to make those simpler next time - maybe scaffold them in some way?  Maybe more scaffolding in the pre-class and in-class assignments?
@@ -11,3 +12,6 @@ Make sure to go through the student submissions - they identified some problems 
 * Watch this video on teaching with AI: https://www.youtube.com/watch?v=7E78BH6gS0k
 * add .gitignore files to all of the assignments.  Include .ipynb\_checkpoints, .DS\_Store, aux, log, out, pycache directories, .pyc files, etc.
 * make a manifest for each PCA and ICA for what files go into the assignment repositories
+* I was far too permissive about turning things in late, which generated a lot of frustration for me at the end and encouraged bad behavior from the students.
+
+

@@ -15,6 +15,7 @@
 Announcements:
 
 * Homework 1 has been out for a while and is due next week - questions?  (Discuss; possibly defer to Tuesday.)
+* Moving on to PDEs after this week, then FFTs, then parallel computing.
 
 ### Pre-class assignment
 

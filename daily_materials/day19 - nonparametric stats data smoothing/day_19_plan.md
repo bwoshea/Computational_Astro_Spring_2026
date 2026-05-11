@@ -44,6 +44,8 @@ Roundtable: **What are you doing for your semester project?**
   * When we're talking about kernels in this chapter, what are they and why is their choice potetntially important?
   * How does data smoothing get harder as datasets go to higher dimensionality?
 
+**Observation for the students:** This is another "big list of options" chapter from F&B - remind them that they should approach these things in the spirit of trying to get the key points, and then they should remember that this reference exists for the future.
+
 ### In-class assignment
 
 Focusing on discussion of the pre-class assignment.

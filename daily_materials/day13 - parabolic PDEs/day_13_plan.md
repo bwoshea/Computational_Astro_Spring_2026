@@ -25,14 +25,15 @@ Announcements:
 ### Pre-class assignment
 
 * Discussion
-* What happened with the different C for the explicit solver?  (C=2 should be very unstable)
-* Did anybody try changing the resolution?
+* What happened with the different C for the explicit solver?  (C=2 should be very unstable; C=0.8 should be fine.)
+* Did anybody try changing the resolution?  How did that affect the timestep?  (dt goes as 1/dx^2, so it's pretty punitive.  This motivates an implicit solve!)
 
 ### In-class assignment
 
 * Implement backward-Euler implicit discretization of 1D diffusion equation, test with varied C and N.
 * Discuss this - much more stable!
 * Why do we really care about this: we want to be able to model diffusive processes in a sensible way - this if often much more expensive because the explicit time steps are very short compared to other things we care about!  (talk about Spitzer conduction as an example - section 10.5 of Zingale's notes!)
+  * Note that implicit = unconditionally stable, but it does not make statements about *accuracy*.  This means you have to think carefully about how big of a timestep you take!
 
 ## Instructor notes (for next time)
 

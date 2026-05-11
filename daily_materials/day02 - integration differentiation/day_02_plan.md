@@ -17,7 +17,7 @@
 
 Announcements:
 
-* Pre-class for next week's sessions are out
+* Pre-class for next week's sessions are out - **check spreadsheet for links!**
 
 ### Pre-class assignment
 
@@ -25,8 +25,11 @@ Question: how long did it take to complete this assignment?
 
 * Discussion in groups of 3:
   * Discuss the two readings and the actual assignments.
+    * Key points (at least 2 per reading, assignment)
+    * Questions/points of confusion (aim for 1 per reading, assignment)
+    * Ask students to make lists on board!
   * Compare questions you have about the readings: what questions remain?
-  * Compare the results from the code: do you get the same answers?  What's the answer to part 3 of the PCA?
+  * Compare the results from the code: do you get the same answers?  What's the answer to part 3 of the PCA?  (Sketch plots on the board!)
 * Floating point arithmetic: what are the implications?  
   * You can only ever get answers that are so good when you're using floating point numbers...) - no answer is every completely accurate!
   * A whole lot of numerical analysis (methods) are trying to get around the limitations of floating-point numbers, or at least mitigate things like summation error

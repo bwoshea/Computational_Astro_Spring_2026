@@ -19,11 +19,12 @@ Announcements:
 
 * Welcome to the class!
 * Did everybody get MatterMost and GitHub account set up?  Any problems?
+* Look at spreadsheet for pre-class assignments!
 
 ### In-class assignment
 
 * Welcome
-* Quick round of introductions (me + students)
+* Quick round of introductions (me + students).  What's your favorite game (of any sort - board, video, etc.)?
 * Talk about syllabus: course structure, expectations, grading
 * Talk about my expectations for this course
   * This is a 900-level elective; I assume you're taking it for your own benefit!
@@ -42,6 +43,8 @@ Announcements:
   * Newman/Wilson readings: groups of 3 (via breakout groups).  Summarize key points.  Questions?  Discussion points?
   * High and low-level programming languages: what does that mean?  why have both?  Compare and contrast: Fortran vs. Python
   * Good programming style: what is it, and who cares?
+    * Making it easy to update/debug 
+    * protecting **future you** form **current you** (which ends up being surprisingly important)
   * Version control: what is it, why is it useful, what do you put in it, and not put in it?
   * Wilson paper: beyond coding style, what are your takeaways?  Does it resonate?  Is there anything you disagree with?
 
